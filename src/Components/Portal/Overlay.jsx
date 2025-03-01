@@ -13,7 +13,7 @@ const Overlay = ({ children }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className={`absolute top-0 left-0 w-full h-full backdrop-blur-[5px]`}
+          className={`absolute top-0 left-0 w-full h-full backdrop-blur-[5px] z-10`}
           onClick={() => action(closeOverlay())}
         >
           {children}

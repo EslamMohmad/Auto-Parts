@@ -1,5 +1,12 @@
+import BannersGrid from "./BannersGrid";
+import Navbar_Bottom from "./Navbar_Bottom";
 const Home = () => {
-  return <div className="">home</div>;
+  return (
+    <section>
+      <Navbar_Bottom />
+      <BannersGrid />
+    </section>
+  );
 };
 
 export default Home;

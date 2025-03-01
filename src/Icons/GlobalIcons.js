@@ -5,6 +5,9 @@ import {
   faBars,
   faArrowRightLong,
   faChevronRight,
+  faHouse,
+  faShop,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -26,5 +29,8 @@ export const globalIcons = () => {
     faPinterest,
     faXTwitter,
     faTiktok,
+    faHouse,
+    faShop,
+    faXmark,
   ]);
 };

@@ -5,6 +5,10 @@
   --default-font-family: "Bai Jamjuree", serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ::first-letter {
   text-transform: capitalize;
 }

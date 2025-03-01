@@ -6,6 +6,7 @@ const PortalSlice = createSlice({
     overlayState: false,
     cartMenuState: false,
     mainMenuState: false,
+    searchMenuState: false,
   },
   reducers: {
     closeOverlay: (state) => {
@@ -16,15 +17,29 @@ const PortalSlice = createSlice({
     toggleMainMenu: (state, { payload }) => {
       state.overlayState = payload;
       state.mainMenuState = payload;
+      state.searchMenuState = false;
+      state.cartMenuState = false;
     },
     toggleCartMenu: (state, { payload }) => {
       state.overlayState = payload;
       state.cartMenuState = payload;
+      state.searchMenuState = false;
+      state.mainMenuState = false;
+    },
+    toggleSearchMenu: (state, { payload }) => {
+      state.overlayState = payload;
+      state.searchMenuState = payload;
+      state.cartMenuState = false;
+      state.mainMenuState = false;
     },
   },
 });
 
-export const { toggleMainMenu, toggleCartMenu, closeOverlay } =
-  PortalSlice.actions;
+export const {
+  closeOverlay,
+  toggleMainMenu,
+  toggleCartMenu,
+  toggleSearchMenu,
+} = PortalSlice.actions;
 
 export default PortalSlice.reducer;

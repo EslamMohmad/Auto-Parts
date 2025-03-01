@@ -5,7 +5,7 @@ import Portal from "./Portal/Portal";
 
 const WrapperComponent = () => {
   return (
-    <div className="max-w-screen-2xl px-[25px] mx-auto">
+    <div className="max-w-screen-2xl px-[25px] mx-auto mb-[63px] sm:mb-0">
       <Navbar />
       <Outlet />
       <Portal />

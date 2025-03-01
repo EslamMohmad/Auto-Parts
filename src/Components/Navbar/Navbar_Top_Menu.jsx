@@ -9,7 +9,7 @@ const Navbar_Top_Menu = () => {
   return (
     <div
       className="block lg:hidden hover:text-red-600 transition-colors cursor-pointer"
-      onClick={() => action(toggleMainMenu(true))}
+      onClick={() => action(toggleMainMenu(mainMenuState ? false : true))}
     >
       <div className="w-[20px] flex flex-col gap-1 group [&>span]:group-hover:bg-red-600 [&>span]:transition-all ">
         <span

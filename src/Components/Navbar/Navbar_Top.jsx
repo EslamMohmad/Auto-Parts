@@ -4,8 +4,12 @@ import Navbar_Top_Search from "./Navbar_Top_Search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar_Top_Menu from "./Navbar_Top_Menu";
 import Navbar_Top_Cart from "./Navbar_Top_Cart";
+import { useSelector } from "react-redux";
+import Navbar_Top_Mobile_Search from "./Navbar_Top_Mobile_Search";
 
 const Navbar_Top = () => {
+  const { cartMenuState } = useSelector(({ PortalSlice }) => PortalSlice);
+
   const navigation = [
     { name: "home", path: "" },
     { name: "shop", path: "shop" },
@@ -14,13 +18,15 @@ const Navbar_Top = () => {
   ];
 
   return (
-    <section className="py-[55px] flex items-center sm:flex-wrap lg:flex-nowrap   justify-between gap-5">
+    <section
+      className={`py-4 sm:pt-[50px] sm:pb-0 lg:pb-[50px] flex items-center sm:flex-wrap lg:flex-nowrap justify-between gap-5 shadow-lg shadow-gray-200 sm:shadow-none -mx-[25px] sm:mx-auto px-[15px] sm:px-0 relative sm:static ${
+        cartMenuState ? "sm:z-auto" : "z-20"
+      }`}
+    >
       <Navbar_Top_Menu />
-      <div className="hover:text-red-600 cursor-pointer transition-colors sm:hidden block">
-        <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-      </div>
+      <Navbar_Top_Mobile_Search />
       <Link to="" className="mx-auto sm:mr-auto lg:mr-0 sm:mx-0">
-        <img src={logo} className="sm:min-w-[150px] w-[190px]" />
+        <img src={logo} className="sm:min-w-[150px] w-[170px]" />
       </Link>
       <ul className="gap-10 mr-5 hidden lg:flex">
         {navigation.map(({ name, path }) => (
