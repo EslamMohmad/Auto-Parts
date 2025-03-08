@@ -30,7 +30,7 @@ const Navbar_Top_Search = () => {
       <button className="ml-auto mr-2">
         <FontAwesomeIcon
           icon="fa-solid fa-magnifying-glass"
-          className="grow hover:text-red-600 cursor-pointer transition-colors"
+          className="grow hover:text-red-600 active:text-red-600 cursor-pointer transition-colors"
         />
       </button>
     </div>

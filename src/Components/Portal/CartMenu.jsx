@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { toggleCartMenu } from "../../Store/PortalSlice";
+import { toggleCartMenu } from "../../Store/PortalSlice.js";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar_Top_Cart from "../Navbar/Navbar_Top_Cart";
 
@@ -31,7 +31,7 @@ const CartMenu = () => {
               Your cart is currently empty. Let us help you find the perfect
               item!
             </p>
-            <button className="uppercase py-4 px-10 rounded-4xl bg-gray-200 text-[11px] font-bold cursor-pointer hover:bg-red-500 transition-colors hover:text-white">
+            <button className="uppercase py-4 px-10 rounded-4xl bg-gray-200 text-[11px] font-bold cursor-pointer hover:bg-red-500 active:bg-red-500 transition-colors hover:text-white active:text-white">
               continue shopping
             </button>
           </div>

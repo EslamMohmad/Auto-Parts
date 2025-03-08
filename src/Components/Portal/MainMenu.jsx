@@ -44,7 +44,7 @@ const MainMenu = () => {
                   className="outline-none placeholder:uppercase  text-gray-500 text-[12px] w-full"
                 />
               </form>
-              <button className="cursor-pointer hover:bg-red-500 rounded-full w-[30px] h-[30px] hover:text-white transition-colors">
+              <button className="cursor-pointer hover:bg-red-500 active:bg-red-500 rounded-full w-[30px] h-[30px] hover:text-white active:text-white transition-colors">
                 <FontAwesomeIcon icon="fa-solid fa-arrow-right-long" />
               </button>
             </div>
@@ -53,7 +53,7 @@ const MainMenu = () => {
                 <li key={path}>
                   <Link
                     to={path}
-                    className="uppercase text-sm hover:text-red-600 transition-colors duration-300 block text-left relative"
+                    className="uppercase text-sm hover:text-red-600 active:text-red-600 transition-colors duration-300 block text-left relative"
                   >
                     {name}
                     <FontAwesomeIcon
@@ -89,7 +89,7 @@ const MainMenu = () => {
                 {soicalMediaIcons.map((icon) => (
                   <button
                     key={icon}
-                    className="w-[30px] h-[30px] leading-[30px] rounded-full bg-gray-900 text-center text-white cursor-pointer hover:bg-red-600 transition-colors"
+                    className="w-[30px] h-[30px] leading-[30px] rounded-full bg-gray-900 text-center text-white cursor-pointer hover:bg-red-600 actiev:bg-red-600 transition-colors"
                   >
                     <FontAwesomeIcon icon={icon} />
                   </button>

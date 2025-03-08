@@ -8,6 +8,14 @@ import {
   faHouse,
   faShop,
   faXmark,
+  faTruckFast,
+  faCreditCard,
+  faUmbrella,
+  faHeadphonesSimple,
+  faHeart as faSolidHeart,
+  faStar,
+  faChartSimple,
+  faExpand,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -32,5 +40,13 @@ export const globalIcons = () => {
     faHouse,
     faShop,
     faXmark,
+    faTruckFast,
+    faCreditCard,
+    faUmbrella,
+    faHeadphonesSimple,
+    faSolidHeart,
+    faStar,
+    faChartSimple,
+    faExpand,
   ]);
 };

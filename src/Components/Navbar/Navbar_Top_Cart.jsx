@@ -1,12 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { toggleCartMenu } from "../../Store/PortalSlice";
+import { toggleCartMenu } from "../../Store/PortalSlice.js";
 import { useDispatch } from "react-redux";
+import { js } from "@eslint/js";
 
 const Navbar_Top_Cart = () => {
   const action = useDispatch();
 
   return (
-    <span className="relative hover:text-red-600 cursor-pointer transition-colors">
+    <span className="relative hover:text-red-600 active:text-red-600 cursor-pointer transition-colors">
       <FontAwesomeIcon
         icon="fa-solid fa-cart-shopping"
         size="xl"

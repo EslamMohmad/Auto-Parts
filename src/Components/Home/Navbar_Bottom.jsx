@@ -38,7 +38,7 @@ const Navbar_Bottom = () => {
         {slides.map(({ img, text }) => (
           <SwiperSlide
             key={img}
-            className="bg-gray-100 !flex gap-3 py-6 px-4 items-center rounded-xl cursor-pointer hover:bg-white !transition-all border border-white hover:border-amber-400 group hover:shadow-[7px_7px_5px] shadow-gray-300 group"
+            className="bg-gray-100 !flex gap-3 py-6 px-4 items-center rounded-xl cursor-pointer hover:bg-white active:bg-white !transition-all border border-white hover:border-amber-400 active:border-amber-400 group hover:shadow-[7px_7px_5px] active:shadow-[7px_7px_5px] shadow-gray-300 group"
           >
             <img src={img} className="w-[50px]" />
             <h1 className="text-sm group-hover:text-red-500 transition-colors">

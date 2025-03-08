@@ -31,7 +31,7 @@ const SearchMenu = () => {
               {tags.map((list) => (
                 <li
                   key={list}
-                  className="text-[11px] bg-gray-200 py-2 px-5 text-gray-500 cursor-pointer hover:bg-red-500 hover:text-white transition-colors"
+                  className="text-[11px] bg-gray-200 py-2 px-5 text-gray-500 cursor-pointer hover:bg-red-500 hover:text-white active:text-white transition-colors"
                 >
                   {list}
                 </li>

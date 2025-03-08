@@ -9,7 +9,7 @@ const Navbar_Top_Mobile_Search = () => {
 
   return (
     <div
-      className="hover:text-red-600 cursor-pointer transition-colors sm:hidden block"
+      className="hover:text-red-600 active:text-red-600 cursor-pointer transition-colors sm:hidden block"
       onClick={() => action(toggleSearchMenu(searchMenuState ? false : true))}
     >
       <FontAwesomeIcon

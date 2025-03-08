@@ -4,10 +4,16 @@ import MainMenu from "./MainMenu";
 import { useEffect } from "react";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 import { useDispatch, useSelector } from "react-redux";
-import { closeOverlay, toggleSearchMenu } from "../../Store/PortalSlice";
 import CartMenu from "./CartMenu";
 import SearchMenu from "./SearchMenu";
 import Navbar_Mobile_Bottom from "./Navbar_Mobile_Bottom";
+import NewsLetters_Popup from "./NewsLetters_Popup";
+import {
+  closeOverlay,
+  toggleNewsLetterPopup,
+  toggleSearchMenu,
+} from "../../Store/PortalSlice.js";
+import Fixed_Navbar from "./Fixed_Navbar.jsx";
 
 const Portal = () => {
   const props = useSelector(({ PortalSlice }) => PortalSlice);
@@ -23,12 +29,25 @@ const Portal = () => {
     props?.searchMenuState && !isMobile && action(toggleSearchMenu(false));
   }, [lessDesktop, isMobile, props?.searchMenuState]);
 
+  //newsletter popup
+  useEffect(() => {
+    const debounce = setTimeout(() => {
+      if (document.readyState === "complete") {
+        action(toggleNewsLetterPopup(true));
+      }
+    }, 1500);
+
+    return () => clearTimeout(debounce);
+  }, []);
+
   return createPortal(
     <>
+      <Fixed_Navbar />
       <Overlay>
         <MainMenu />
         <CartMenu />
         <SearchMenu />
+        <NewsLetters_Popup />
       </Overlay>
       {isMobile && <Navbar_Mobile_Bottom />}
     </>,
