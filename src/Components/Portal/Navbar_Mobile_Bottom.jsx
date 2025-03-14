@@ -10,7 +10,7 @@ const Navbar_Mobile_Bottom = () => {
   ];
 
   return (
-    <nav className="fixed bottom-0 w-full shadow-[0_-5px_55px] shadow-black/25 transition-none bg-white">
+    <nav className="fixed bottom-0 w-full shadow-top transition-none bg-white z-[1]">
       <ul className="flex">
         {navigation.map(({ name, path, icon }) => (
           <li

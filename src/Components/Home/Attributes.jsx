@@ -25,22 +25,26 @@ const Attributes = () => {
   ];
 
   return (
-    <div>
+    <section>
       <div className="flex py-10 flex-wrap lg:flex-nowrap">
         {attributes.map(({ icon, heading, text }) => (
           <div
             key={heading}
             className="sm:w-1/2 lg:w-1/4 flex flex-col gap-5 group p-5"
           >
-            <div className="w-[60px] h-[60px] leading-[60px] text-center bg-gray-200 rounded-full text-red-500 group-hover:text-white group-hover:bg-red-500 transition-colors">
-              <FontAwesomeIcon icon={icon} size="xl" />
+            <div className="w-[70px] h-[70px] leading-[70px] text-center bg-gray-200 rounded-full text-red-500 transition-colors">
+              <FontAwesomeIcon
+                icon={icon}
+                size="xl"
+                className="group-hover:animate-vibration"
+              />
             </div>
             <h1 className="uppercase text-[sm]">{heading}</h1>
             <p className="text-black/45 text-sm">{text}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

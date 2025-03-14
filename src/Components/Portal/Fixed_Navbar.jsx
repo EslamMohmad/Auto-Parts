@@ -36,7 +36,7 @@ const Fixed_Navbar = () => {
           animate={{ top: 0 }}
           exit={{ top: "-100%" }}
           transition={{ duration: 1.2 }}
-          className={`fixed top-0 w-[100vw] shadow-[0_5px_15px] shadow-black/10 ${
+          className={`fixed top-0 w-[100vw] shadow-bottom ${
             cartMenuState || newsLetterPopupState || (isTablet && mainMenuState)
               ? "z-10"
               : "z-20"

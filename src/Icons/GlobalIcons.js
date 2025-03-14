@@ -16,6 +16,8 @@ import {
   faStar,
   faChartSimple,
   faExpand,
+  faChevronDown,
+  faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -48,5 +50,7 @@ export const globalIcons = () => {
     faStar,
     faChartSimple,
     faExpand,
+    faChevronDown,
+    faChevronUp,
   ]);
 };

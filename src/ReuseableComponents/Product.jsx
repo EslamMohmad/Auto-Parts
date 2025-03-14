@@ -42,7 +42,7 @@ const Product = ({ currentSlide, index }) => {
         <FontAwesomeIcon icon="fa-solid fa-heart" />
         <ContentTitle title="whishlist" />
       </button>
-      <div className="flex flex-col gap-3 group-hover/options:-translate-y-20 bg-white py-8 group-hover/options:shadow-[0px_-5px_10px_-15px_lightgray] transition-transform relative z-10">
+      <div className="flex flex-col gap-3 group-hover/options:-translate-y-20 bg-white py-8 group-hover/options:shadow-top  relative z-10 transition-all">
         <h1 className="text-gray-400">automotive rims</h1>
         <p className="h-[40px] text-ellipsis overflow-hidden whitespace-break-spaces">
           dorman steel wheel compatible with select honda models

@@ -3,6 +3,64 @@ import bannerTwo from "../../Assets/HomeProducts/productsBanner (2).jpg";
 import Shop_Now_Button from "../../ReuseableComponents/Shop_Now_Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProductsSlider from "./ProductsSlider";
+import useMediaQuery from "../../Hooks/useMediaQuery";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const List = ({ categories }) => {
+  const isMobile = useMediaQuery("(max-width : 640px)");
+  const [listState, setListState] = useState(isMobile ? !false : true);
+
+  useEffect(() => {
+    if (isMobile) setListState(false);
+  }, [isMobile]);
+
+  return (
+    <div className="w-full sm:w-[48%] lg:w-1/5">
+      <div
+        className="uppercase sm:text-xl font-bold mb-8 flex justify-between items-center bg-gray-200 sm:bg-transparent p-2 sm:px-0 rounded-md select-none"
+        onClick={() => setListState(!listState)}
+      >
+        {categories.heading}
+        {isMobile &&
+          (listState ? (
+            <FontAwesomeIcon icon="fa-solid fa-chevron-up" size="sm" />
+          ) : (
+            <FontAwesomeIcon icon="fa-solid fa-chevron-down" size="sm" />
+          ))}
+      </div>
+      <AnimatePresence>
+        {listState && (
+          <motion.div
+            className="overflow-hidden"
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
+          >
+            <ul className="flex flex-col gap-3 ">
+              {categories.categories.map((li) => (
+                <li
+                  key={li}
+                  className="text-gray-500 text-sm hover:text-red-500 active:text-red-500 select-none transition-colors cursor-pointer"
+                >
+                  {li}
+                </li>
+              ))}
+            </ul>
+            <button className="text-black/30 text-[12px] mt-8 hover:text-black active:text-black transition-colors cursor-pointer">
+              shop all categories
+              <FontAwesomeIcon
+                icon="fa-solid fa-arrow-right-long"
+                className="ml-3"
+              />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const ProductsBanner = () => {
   const productsComInfo = [
     {
@@ -58,34 +116,13 @@ const ProductsBanner = () => {
   ];
 
   return (
-    <div className="py-5">
+    <section>
       {productsComInfo.map(({ categories, banner, products }) => (
         <div
           key={categories.heading}
           className="flex flex-col sm:flex-row justify-between flex-wrap lg:flex-nowrap gap-5 py-10"
         >
-          <div className="w-full sm:w-[48%] lg:w-1/5">
-            <h1 className="uppercase text-xl font-bold mb-8">
-              {categories.heading}
-            </h1>
-            <ul className="flex flex-col gap-3">
-              {categories.categories.map((li) => (
-                <li
-                  key={li}
-                  className="text-gray-500 text-sm hover:text-red-500 active:text-red-500 select-none transition-colors cursor-pointer"
-                >
-                  {li}
-                </li>
-              ))}
-            </ul>
-            <button className="text-black/30 text-[12px] mt-8 hover:text-black active:text-black transition-colors cursor-pointer">
-              shop all categories
-              <FontAwesomeIcon
-                icon="fa-solid fa-arrow-right-long"
-                className="ml-3"
-              />
-            </button>
-          </div>
+          <List categories={categories} />
           <div className="relative text-center overflow-hidden rounded-2xl group w-full sm:w-[45%] lg:w-1/4">
             <img
               src={banner.img}
@@ -96,7 +133,7 @@ const ProductsBanner = () => {
               <h1 className="text-xl text-white w-[max-content]">
                 {banner.text}
               </h1>
-              <div className="mt-[160px]">
+              <div className="mt-[140px]">
                 <Shop_Now_Button />
               </div>
             </div>
@@ -104,7 +141,7 @@ const ProductsBanner = () => {
           <ProductsSlider products={products} />
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

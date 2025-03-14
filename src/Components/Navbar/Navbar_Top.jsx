@@ -30,7 +30,7 @@ const Navbar_Top = ({ fixedNavbar }) => {
           : "z-20 relative"
       } ${
         fixedNavbar
-          ? "px-[49px] sm:px-[24px] py-[16px] sm:py-[12px]"
+          ? "px-[49px] sm:px-[24px] py-[20px] sm:py-[12px]"
           : "py-4 px-[15px] sm:pt-[40px] sm:pb-0 sm:px-0 lg:pb-[40px]  "
       }`}
     >
