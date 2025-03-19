@@ -36,19 +36,18 @@ const Services = () => {
       >
         {services.map(({ heading, img }) => (
           <SwiperSlide key={img}>
-            <div className="flex flex-col gap-14 rounded-2xl items-center shadow-lightBox p-10 px-8 border-gray-300 border group">
+            <div className="flex flex-col gap-14 rounded-xl items-center shadow-lightBox p-10 px-8 border-gray-300 border group">
               <h1 className="font-bold">{heading}</h1>
               <img
                 src={img}
-                className="w-[150px] h-[100px] object-cover group-hover:animate-vibration group-active:animate-vibration"
+                className="w-[130px] h-[100px] object-cover group-hover:animate-vibration group-active:animate-vibration"
               />
               <p className="text-black/50 text-[13px] font-extralight">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro
                 quod, ipsum, tenetur a quos nulla quisquam, iure earum tempore
-                quam cumque maiores debitis dignissimos aspernatur provident
-                accusantium laudantium minima at.
+                quam cumque maiores debitis
               </p>
-              <button className="bg-gray-300 py-3 px-7 rounded-3xl text-[11px] uppercase outline-none cursor-pointer hover:bg-red-500 active:bg-red-500 hover:text-white active:text-white transition-colors">
+              <button className="bg-gray-400/30 py-3 px-7 rounded-3xl text-[11px] uppercase outline-none cursor-pointer hover:bg-red-500 active:bg-red-500 hover:text-white active:text-white transition-colors">
                 learn more
               </button>
             </div>

@@ -8,6 +8,7 @@
   --shadow-bottom: 0 30px 30px -15px rgba(0, 0, 0, 0.15);
   --shadow-box: 7px 7px 5px rgba(0, 0, 0, 0.15);
   --shadow-lightBox: 1px 1px 5px rgba(0, 0, 0, 0.15);
+  --shadow-bottom-left: -7px 7px 5px rgba(0, 0, 0, 0.15);
   --color-lightGray: #dddada9e;
 
   @keyframes vibration {

@@ -2,9 +2,11 @@ import Attributes from "./Attributes";
 import BannersGrid from "./BannersGrid";
 import Brands from "./Brands";
 import FeaturedProducts from "./FeaturedProducts";
+import LastNews from "./LastNews";
 import Navbar_Bottom from "./Navbar_Bottom";
 import ProductsBanner from "./ProductsBanner";
 import Services from "./Services";
+import Testimonials from "./Testimonials";
 const Home = () => {
   return (
     <>
@@ -15,6 +17,8 @@ const Home = () => {
       <Brands />
       <FeaturedProducts />
       <Services />
+      <Testimonials />
+      <LastNews />
     </>
   );
 };

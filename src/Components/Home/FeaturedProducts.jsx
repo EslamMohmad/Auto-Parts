@@ -4,7 +4,7 @@ import Product from "../../ReuseableComponents/Product";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 import { AnimatePresence, motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const FilterProductsRow = () => {
   const [selectedItems, setSelectedItems] = useState([
@@ -27,11 +27,11 @@ const FilterProductsRow = () => {
   };
 
   return (
-    <ul>
+    <ul className="md:w-[max-content] lg:w-auto">
       {selectedItems.map(({ itemsType, selected }) => (
         <li
           key={itemsType}
-          className={`inline-block mr-5 py-1 px-5 cursor-pointer rounded-2xl transition-colors text-sm ${
+          className={`inline-block not-last-of-type:mr-5 py-1 px-5 cursor-pointer rounded-2xl transition-colors text-sm ${
             selected
               ? "text-red-600 bg-gray-300/50"
               : "text-black/25 hover:text-red-600 hover:bg-gray-300/50"
@@ -129,6 +129,7 @@ const FeaturedProducts = () => {
           </h1>
 
           {isMobile ? <FilterProductsList /> : <FilterProductsRow />}
+          <div className="featured-products-pagination ml-auto flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 !w-auto"></div>
         </div>
         <Swiper
           spaceBetween={20}
@@ -145,7 +146,8 @@ const FeaturedProducts = () => {
           onActiveIndexChange={(e) => setCurrentSlide(e.activeIndex)}
           autoplay={{ pauseOnMouseEnter: true }}
           speed={1500}
-          modules={[Autoplay]}
+          modules={[Autoplay, Pagination]}
+          pagination={{ clickable: true, el: ".featured-products-pagination" }}
         >
           {products.map((product, index) => (
             <SwiperSlide key={product}>
