@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import slide_1 from "../../Assets/Navbar/categorie (1).svg";
-import slide_2 from "../../Assets/Navbar/categorie (2).svg";
-import slide_3 from "../../Assets/Navbar/categorie (3).svg";
-import slide_4 from "../../Assets/Navbar/categorie (4).svg";
-import slide_5 from "../../Assets/Navbar/categorie (5).svg";
-import slide_6 from "../../Assets/Navbar/categorie (6).svg";
+import slide_1 from "../../Assets/Home/Navbar/categorie (1).svg";
+import slide_2 from "../../Assets/Home/Navbar/categorie (2).svg";
+import slide_3 from "../../Assets/Home/Navbar/categorie (3).svg";
+import slide_4 from "../../Assets/Home/Navbar/categorie (4).svg";
+import slide_5 from "../../Assets/Home/Navbar/categorie (5).svg";
+import slide_6 from "../../Assets/Home/Navbar/categorie (6).svg";
 
 const Navbar_Bottom = () => {
   const slides = [

@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Product from "../../ReuseableComponents/Product";
 import useMediaQuery from "../../Hooks/useMediaQuery";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, Pagination } from "swiper/modules";
 
@@ -27,7 +27,7 @@ const FilterProductsRow = () => {
   };
 
   return (
-    <ul className="md:w-[max-content] lg:w-auto">
+    <ul className="md:w-[max-content] lg:w-auto whitespace-nowrap">
       {selectedItems.map(({ itemsType, selected }) => (
         <li
           key={itemsType}
@@ -90,7 +90,7 @@ const FilterProductsList = () => {
             initial={{ height: 0 }}
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
-            className="absolute z-10 w-full bg-white shadow-bottom overflow-hidden"
+            className="absolute z-[1] w-full bg-white shadow-bottom overflow-hidden"
           >
             {selectedItems.map(({ itemsType, selected }) => (
               <li
@@ -120,7 +120,12 @@ const FeaturedProducts = () => {
   const isMobile = useMediaQuery("(max-width : 640px)");
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: "300px" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: ".5" }}
+      viewport={{ margin: "-100px", once: true }}
+    >
       <div className="py-8">
         <div className="flex flex-wrap lg:flex-nowrap gap-6 items-center">
           <h1 className="uppercase text-2xl font-bold mx-auto sm:mx-0">
@@ -129,7 +134,7 @@ const FeaturedProducts = () => {
           </h1>
 
           {isMobile ? <FilterProductsList /> : <FilterProductsRow />}
-          <div className="featured-products-pagination ml-auto flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 !w-auto"></div>
+          <div className="featured-products-pagination ml-auto hidden md:flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 !w-auto"></div>
         </div>
         <Swiper
           spaceBetween={20}
@@ -138,7 +143,7 @@ const FeaturedProducts = () => {
             1350: { slidesPerView: 5 },
             1200: { slidesPerView: 4 },
             860: { slidesPerView: 3 },
-            450: { slidesPerView: 2 },
+            450: { slidesPerView: 2, pagination: false },
             0: { slidesPerView: 1 },
           }}
           className="!py-8 !px-5 !-mx-5"
@@ -156,7 +161,7 @@ const FeaturedProducts = () => {
           ))}
         </Swiper>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

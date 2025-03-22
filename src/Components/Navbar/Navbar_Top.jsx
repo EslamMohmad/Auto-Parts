@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../Assets/Navbar/logo.png";
+import logo from "../../Assets/Home/Navbar/logo.png";
 import Navbar_Top_Search from "./Navbar_Top_Search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar_Top_Menu from "./Navbar_Top_Menu";

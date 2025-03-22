@@ -3,7 +3,7 @@ import { toggleCartMenu } from "../../Store/PortalSlice.js";
 import { useDispatch, useSelector } from "react-redux";
 import Navbar_Top_Cart from "../Navbar/Navbar_Top_Cart";
 
-import cart from "../../Assets/Cart_Menu/icon-cart.webp";
+import cart from "../../Assets/Portal/Cart_Menu/icon-cart.webp";
 
 const CartMenu = () => {
   const { cartMenuState } = useSelector(({ PortalSlice }) => PortalSlice);

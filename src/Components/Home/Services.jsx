@@ -6,6 +6,7 @@ import service3 from "../../Assets/Home/Services/service (3).png";
 import service4 from "../../Assets/Home/Services/service (4).png";
 import service5 from "../../Assets/Home/Services/service (5).png";
 import { Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
@@ -17,7 +18,12 @@ const Services = () => {
   ];
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: "300px" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: ".5" }}
+      viewport={{ margin: "-100px", once: true }}
+    >
       <Swiper
         slidesPerView={5}
         spaceBetween={30}
@@ -54,7 +60,7 @@ const Services = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </motion.section>
   );
 };
 

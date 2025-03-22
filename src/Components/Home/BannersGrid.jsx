@@ -1,8 +1,8 @@
 import BannersGrid_Slider from "./BannersGrid_Slider";
 
-import img_1 from "../../Assets/BannersGrid/bannar (1).jpg";
-import img_2 from "../../Assets/BannersGrid/bannar (2).jpg";
-import img_3 from "../../Assets/BannersGrid/bannar (3).jpg";
+import img_1 from "../../Assets/Home/BannersGrid/bannar (1).jpg";
+import img_2 from "../../Assets/Home/BannersGrid/bannar (2).jpg";
+import img_3 from "../../Assets/Home/BannersGrid/bannar (3).jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Shop_Now_Button from "../../ReuseableComponents/Shop_Now_Button";
 

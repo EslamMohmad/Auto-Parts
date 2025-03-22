@@ -6,7 +6,8 @@ import testimonial_3 from "../../Assets/Home/Testimonial/testimonial (3).jpg";
 
 import mark from "../../Assets/Home/Testimonial/mark.jpg";
 import Rating from "../../ReuseableComponents/Rating";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const testimonials = [
@@ -34,7 +35,12 @@ const Testimonials = () => {
   ];
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: "300px" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: ".5" }}
+      viewport={{ margin: "-100px", once: true }}
+    >
       <h1 className="text-center font-bold text-2xl uppercase my-10">
         testimonials
       </h1>
@@ -48,8 +54,9 @@ const Testimonials = () => {
         }}
         pagination={{ clickable: true, el: ".testimonials-pagination" }}
         className="!px-5 !-mx-5 !py-5"
-        modules={[Pagination]}
-        speed={1500}
+        modules={[Pagination, Autoplay]}
+        speed={2500}
+        autoplay
       >
         {testimonials.map(
           ({ heading, img, text, info: { name, contry }, rating }) => (
@@ -75,8 +82,8 @@ const Testimonials = () => {
           )
         )}
       </Swiper>
-      <div className="testimonials-pagination flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 justify-center py-5"></div>
-    </section>
+      <div className="testimonials-pagination hidden sm:flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 justify-center py-5"></div>
+    </motion.section>
   );
 };
 

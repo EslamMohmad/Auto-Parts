@@ -7,6 +7,8 @@ import news_5 from "../../Assets/Home/Last News/news (5).jpg";
 import news_6 from "../../Assets/Home/Last News/news (6).jpg";
 import banner from "../../Assets/Home/Last News/banner.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Autoplay } from "swiper/modules";
+import { motion } from "framer-motion";
 
 const LastNews = () => {
   const news = [
@@ -20,54 +22,62 @@ const LastNews = () => {
     },
     {
       img: news_2,
-      text: "lighting",
+      text: "batteries power",
       heading: "growing in a recession: maximize sales in the parts department",
       paragraph:
         "Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...",
-      date: "08th jun 2024",
+      date: "04th jun 2024",
     },
     {
       img: news_3,
-      text: "lighting",
+      text: "performance parts",
       heading: "growing in a recession: maximize sales in the parts department",
       paragraph:
         "Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...",
-      date: "08th jun 2024",
+      date: "15th may 2024",
     },
     {
       img: news_4,
-      text: "lighting",
+      text: "performance parts",
       heading: "growing in a recession: maximize sales in the parts department",
       paragraph:
         "Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...",
-      date: "08th jun 2024",
+      date: "14th may 2024",
     },
     {
       img: news_5,
-      text: "lighting",
+      text: "car tire",
       heading: "growing in a recession: maximize sales in the parts department",
       paragraph:
         "Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...",
-      date: "08th jun 2024",
+      date: "14th mar 2024",
     },
     {
       img: news_6,
-      text: "lighting",
+      text: "batteries power",
       heading: "growing in a recession: maximize sales in the parts department",
       paragraph:
         "Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit...",
-      date: "08th jun 2024",
+      date: "12th mar 2024",
     },
   ];
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0, y: "300px" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: ".5" }}
+      viewport={{ margin: "-100px", once: true }}
+    >
       <h1 className="text-center font-bold text-2xl uppercase my-10">
         from last news
       </h1>
       <Swiper
         spaceBetween={30}
         loop
+        autoplay
+        modules={[Autoplay]}
+        speed={1000}
         breakpoints={{
           1400: { slidesPerView: 4 },
           980: { slidesPerView: 3 },
@@ -104,7 +114,7 @@ const LastNews = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="relative my-10 rounded-2xl overflow-hidden">
+      <div className="relative sm:my-10 rounded-2xl overflow-hidden">
         <img src={banner} className="min-h-[300px] object-cover" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-2xl w-3/4">
           <h1 className="text-red-600 uppercase">best car servicing</h1>
@@ -116,7 +126,7 @@ const LastNews = () => {
           </button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

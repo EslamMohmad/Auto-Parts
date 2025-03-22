@@ -57,7 +57,7 @@ const Brands = () => {
           0: { slidesPerView: 2, grid: { rows: 2, fill: "row" } },
         }}
         modules={[Grid, Autoplay]}
-        className="!py-6 !px-5 !-mx-7"
+        className="!py-6 !px-5 !-mx-6"
         style={{ zIndex: 0 }}
       >
         {brands.map((brand) => (

@@ -18,13 +18,22 @@ import {
   faExpand,
   faChevronDown,
   faChevronUp,
+  faPhone,
+  faPlus,
+  faMinus,
 } from "@fortawesome/free-solid-svg-icons";
-import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons";
+import {
+  faUser,
+  faHeart,
+  faEnvelope,
+  faClock,
+} from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebookF,
   faPinterest,
   faXTwitter,
   faTiktok,
+  faVimeo,
 } from "@fortawesome/free-brands-svg-icons";
 export const globalIcons = () => {
   return library.add([
@@ -52,5 +61,11 @@ export const globalIcons = () => {
     faExpand,
     faChevronDown,
     faChevronUp,
+    faPhone,
+    faEnvelope,
+    faClock,
+    faVimeo,
+    faPlus,
+    faMinus,
   ]);
 };
