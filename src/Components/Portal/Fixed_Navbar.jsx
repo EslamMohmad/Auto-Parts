@@ -5,9 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 
 const Fixed_Navbar = () => {
-  const { cartMenuState, newsLetterPopupState, mainMenuState } = useSelector(
-    ({ PortalSlice }) => PortalSlice
-  );
+  const {
+    cartMenuState,
+    newsLetterPopupState,
+    mainMenuState,
+    productQuickViewState,
+  } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const [scrollDownState, setScrollDownState] = useState(false);
 
@@ -37,7 +40,10 @@ const Fixed_Navbar = () => {
           exit={{ top: "-100%" }}
           transition={{ duration: 1.2 }}
           className={`fixed top-0 w-[100vw] shadow-bottom ${
-            cartMenuState || newsLetterPopupState || (isTablet && mainMenuState)
+            cartMenuState ||
+            newsLetterPopupState ||
+            productQuickViewState ||
+            (isTablet && mainMenuState)
               ? "z-10"
               : "z-20"
           } `}

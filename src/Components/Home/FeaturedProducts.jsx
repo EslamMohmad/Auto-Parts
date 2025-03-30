@@ -149,7 +149,7 @@ const FeaturedProducts = () => {
           className="!py-8 !px-5 !-mx-5"
           style={{ zIndex: 0 }}
           onActiveIndexChange={(e) => setCurrentSlide(e.activeIndex)}
-          autoplay={{ pauseOnMouseEnter: true }}
+          autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: true }}
           speed={1500}
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true, el: ".featured-products-pagination" }}

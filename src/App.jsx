@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import WrapperComponent from "./Components/WrapperComponent";
-import Home from "./Components/Home/Home";
+import Home from "./Pages/Home";
 
 function App() {
   return (

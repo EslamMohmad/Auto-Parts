@@ -9,10 +9,12 @@ import { useEffect, useState } from "react";
 
 const List = ({ categories }) => {
   const isMobile = useMediaQuery("(max-width : 640px)");
-  const [listState, setListState] = useState(isMobile ? !false : true);
+  const [listState, setListState] = useState(isMobile ? false : true);
 
   useEffect(() => {
-    if (isMobile) setListState(false);
+    if (isMobile) {
+      setListState(false);
+    } else setListState(true);
   }, [isMobile]);
 
   return (

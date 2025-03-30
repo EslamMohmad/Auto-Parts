@@ -4,7 +4,6 @@ import {
   faCartShopping,
   faBars,
   faArrowRightLong,
-  faChevronRight,
   faHouse,
   faShop,
   faXmark,
@@ -18,6 +17,8 @@ import {
   faExpand,
   faChevronDown,
   faChevronUp,
+  faChevronLeft,
+  faChevronRight,
   faPhone,
   faPlus,
   faMinus,
@@ -27,6 +28,7 @@ import {
   faHeart,
   faEnvelope,
   faClock,
+  faCircleCheck,
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebookF,
@@ -43,7 +45,6 @@ export const globalIcons = () => {
     faCartShopping,
     faBars,
     faArrowRightLong,
-    faChevronRight,
     faFacebookF,
     faPinterest,
     faXTwitter,
@@ -61,11 +62,14 @@ export const globalIcons = () => {
     faExpand,
     faChevronDown,
     faChevronUp,
+    faChevronLeft,
+    faChevronRight,
     faPhone,
     faEnvelope,
     faClock,
     faVimeo,
     faPlus,
     faMinus,
+    faCircleCheck,
   ]);
 };

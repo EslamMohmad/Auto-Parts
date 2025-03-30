@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { setTrueTargetState } from "../Utils/Function";
 
 const PortalSlice = createSlice({
   name: "PortalSlice",
@@ -8,6 +9,10 @@ const PortalSlice = createSlice({
     mainMenuState: false,
     searchMenuState: false,
     newsLetterPopupState: false,
+    productQuickViewState: false,
+    producCompareState: false,
+    productAddToCardState: false,
+    loadingState: false,
   },
   reducers: {
     closeOverlay: (state) => {
@@ -16,32 +21,32 @@ const PortalSlice = createSlice({
       }
     },
     toggleMainMenu: (state, { payload }) => {
-      state.overlayState = payload;
-      state.mainMenuState = payload;
-      state.searchMenuState = false;
-      state.cartMenuState = false;
-      state.newsLetterPopupState = false;
+      setTrueTargetState(["overlayState", "mainMenuState"], state, payload);
     },
     toggleCartMenu: (state, { payload }) => {
-      state.overlayState = payload;
-      state.cartMenuState = payload;
-      state.searchMenuState = false;
-      state.mainMenuState = false;
-      state.newsLetterPopupState = false;
+      setTrueTargetState(["overlayState", "cartMenuState"], state, payload);
     },
     toggleSearchMenu: (state, { payload }) => {
-      state.overlayState = payload;
-      state.searchMenuState = payload;
-      state.cartMenuState = false;
-      state.mainMenuState = false;
-      state.newsLetterPopupState = false;
+      setTrueTargetState(["overlayState", "searchMenuState"], state, payload);
     },
     toggleNewsLetterPopup: (state, { payload }) => {
-      state.overlayState = payload;
-      state.newsLetterPopupState = payload;
-      state.cartMenuState = false;
-      state.mainMenuState = false;
-      state.searchMenuState = false;
+      setTrueTargetState(
+        ["overlayState", "newsLetterPopupState"],
+        state,
+        payload
+      );
+    },
+    toggleProductQuickView: (state, { payload }) => {
+      setTrueTargetState(
+        ["overlayState", "productQuickViewState"],
+        state,
+        payload
+      );
+    },
+    toggleProductCompare: (state, { payload }) => {},
+    toggleProductAddToCard: (state, { payload }) => {},
+    toggleLoadingState: (state, { payload }) => {
+      state.loadingState = payload;
     },
   },
 });
@@ -52,6 +57,10 @@ export const {
   toggleCartMenu,
   toggleSearchMenu,
   toggleNewsLetterPopup,
+  toggleProductQuickView,
+  toggleProductCompare,
+  toggleProductAddToCard,
+  toggleLoadingState,
 } = PortalSlice.actions;
 
 export default PortalSlice.reducer;
