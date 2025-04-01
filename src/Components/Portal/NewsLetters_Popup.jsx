@@ -48,6 +48,7 @@ const NewsLetters_Popup = () => {
                 onSubmit={(e) => e.preventDefault()}
               >
                 <input
+                  name="newsletter-popup"
                   type="email"
                   placeholder="enter your email"
                   className="placeholder:uppercase placeholder:text-black/50 p-4 px-5 outline-none sm:border focus:border-black hover:border-black border-gray-300 rounded-sm  text-[13px] placeholder:text-[10px] text-black/50 bg-white/90 sm:bg-transparent"

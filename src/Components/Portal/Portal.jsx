@@ -27,7 +27,10 @@ const Portal = () => {
 
   useEffect(() => {
     const allFalseValue = Object.values(props).every((value) => !value);
-    !allFalseValue && !lessDesktop && action(closeOverlay());
+    props?.overlayState &&
+      !allFalseValue &&
+      !lessDesktop &&
+      action(closeOverlay());
     props?.searchMenuState && !isMobile && action(toggleSearchMenu(false));
   }, [lessDesktop, isMobile, props?.searchMenuState]);
 
@@ -53,7 +56,7 @@ const Portal = () => {
         <ProductQuickView />
       </Overlay>
       {isMobile && <Navbar_Mobile_Bottom />}
-      <Scroll_Top />
+      {!isMobile && <Scroll_Top />}
     </>,
     document.getElementById("portal")
   );

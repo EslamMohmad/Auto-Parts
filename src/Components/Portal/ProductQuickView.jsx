@@ -5,9 +5,14 @@ import { productDetails } from "../../Utils/Function";
 import Rating from "../../ReuseableComponents/Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, Navigation } from "swiper/modules";
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import Button_Title from "../../ReuseableComponents/Button_Title";
-import { toggleProductQuickView } from "../../Store/PortalSlice";
+import {
+  toggleCartMenu,
+  toggleProductQuickView,
+} from "../../Store/PortalSlice";
+import Process_Button from "../../ReuseableComponents/Process_Button";
+import { addProductToCart } from "../../Store/CartSlice";
 
 const ProductSize = ({ size, setSize }) => {
   const defaultSelectRef = useRef();
@@ -49,6 +54,7 @@ const ProductSize = ({ size, setSize }) => {
         </h6>
         <div className="grow flex">
           <select
+            name="product-quick-view-select-size"
             className="py-3 px-5 rounded-3xl outline-none border border-black/20 text-[11px] text-black/60 first-letter:uppercase cursor-pointer mr-auto"
             onChange={({ target }) => selectInputHandler(target.value)}
           >
@@ -96,7 +102,7 @@ const ProductSize = ({ size, setSize }) => {
   );
 };
 
-const ProductAmount = () => {
+const ProductAmount = forwardRef((_, ref) => {
   let [amount, setAmount] = useState(1);
 
   return (
@@ -107,7 +113,9 @@ const ProductAmount = () => {
       >
         <FontAwesomeIcon icon="fa-solid fa-minus" size="xs" />
       </button>
-      <div className="px-8">{amount}</div>
+      <div className="px-8" ref={ref}>
+        {amount}
+      </div>
       <button
         className="cursor-pointer hover:bg-white hover:text-red-500 active:bg-white active:text-red-500 transition-colors w-[30px] h-[30px] leading-[30px] text-center rounded-full"
         onClick={() => setAmount((amount += 1))}
@@ -116,14 +124,18 @@ const ProductAmount = () => {
       </button>
     </div>
   );
-};
+});
 
 const ProductQuickView = () => {
-  const { productQuickViewState } = useSelector(
+  const { productQuickViewState, loadingState } = useSelector(
     ({ PortalSlice }) => PortalSlice
   );
 
   const [size, setSize] = useState({ value: "", price: "", stock: "" });
+
+  const productAmountRef = useRef();
+
+  const action = useDispatch();
 
   const {
     categorie,
@@ -136,17 +148,26 @@ const ProductQuickView = () => {
     tags,
   } = productDetails;
 
+  const addProductToCartHandler = () => {
+    const productInfo = {
+      ...productDetails,
+      size,
+      amount: productAmountRef.current?.textContent,
+    };
+    action(addProductToCart(productInfo));
+  };
+
   return (
     <AnimatePresence>
       {productQuickViewState && (
         <motion.div
-          initial={{ opacity: 0, top: "-100%" }}
+          initial={{ opacity: 0, top: "-20%" }}
           animate={{
             opacity: 1,
             top: "50%",
             transition: { delay: 0.5 },
           }}
-          exit={{ opacity: 0, top: "-100%", transition: { duration: 2 } }}
+          exit={{ opacity: 0, top: "20%", transition: { duration: 0.2 } }}
           className="bg-white absolute rounded-2xl  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl p-3 flex flex-col md:flex-row w-[80%] h-[80%] md:h-auto md:w-[90%] md:max-w-[1000px]"
           onClick={(e) => e.stopPropagation()}
         >
@@ -160,9 +181,9 @@ const ProductQuickView = () => {
             autoplay={true}
             loop={true}
             speed="700"
-            className="md:!w-1/2 !mx-0 h-[600px] sm:h-auto"
+            className="md:!w-1/2 !mx-0 h-[600px] sm:h-auto group"
           >
-            <button className="absolute top-1/2 -translate-y-1/2 left-5 z-[2] cursor-pointer w-[50px] h-[50px] leading-[50px] text-center rounded-full shadow-bottom-left bg-white hover:bg-black hover:text-white transition-colors hover:shadow-none quickView-prev-btn-swiper hidden md:block">
+            <button className="absolute top-1/2 -translate-y-1/2 z-[2] cursor-pointer w-[50px] h-[50px] leading-[50px] text-center rounded-full shadow-bottom-left bg-white hover:bg-black hover:text-white hover:shadow-none quickView-prev-btn-swiper hidden md:block left-3 opacity-0 group-hover:left-5 group-hover:opacity-100 transition-all">
               <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
             </button>
             {imgs.map((img) => (
@@ -170,11 +191,11 @@ const ProductQuickView = () => {
                 <img src={img} className="h-full md:h-auto mx-auto" />
               </SwiperSlide>
             ))}
-            <button className="absolute top-1/2 -translate-y-1/2 right-5 z-[2] cursor-pointer  w-[50px] h-[50px] leading-[50px] text-center rounded-full shadow-bottom-left bg-white hover:bg-black hover:text-white transition-colors hover:shadow-none quickView-next-btn-swiper hidden md:block">
+            <button className="absolute top-1/2 -translate-y-1/2 z-[2] cursor-pointer  w-[50px] h-[50px] leading-[50px] text-center rounded-full shadow-bottom-left bg-white hover:bg-black hover:text-white hover:shadow-none quickView-next-btn-swiper hidden md:block right-3 opacity-0 group-hover:right-5 group-hover:opacity-100 transition-all">
               <FontAwesomeIcon icon="fa-solid fa-chevron-right" />
             </button>
           </Swiper>
-          <div className="flex flex-col gap-5 md:w-1/2 p-5 overflow-auto md:max-h-[480px]">
+          <div className="flex flex-col gap-5 md:w-1/2 [&::-webkit-scrollbar]:!w-1.5 p-5 overflow-auto md:max-h-[480px]">
             <h1 className="sm:text-2xl font-bold capitalize text-center">
               {heading}
             </h1>
@@ -188,28 +209,43 @@ const ProductQuickView = () => {
             <p className="text-[11px] text-black/60 text-center">{text}</p>
             <ProductSize size={size} setSize={setSize} />
             <div className="flex gap-5 flex-wrap">
-              <ProductAmount />
-              <button
-                className={`whitespace-nowrap border py-3 px-10 rounded-3xl uppercase text-sm grow ${
+              <ProductAmount ref={productAmountRef} />
+              <Process_Button
+                className={`whitespace-nowrap border py-3 px-10 rounded-3xl uppercase text-sm grow text-center ${
                   size.value
-                    ? "cursor-pointer hover:bg-red-500 active:bg-red-500 hover:text-white active:text-white transition-colors hover:border-transparent active:border-transparent"
+                    ? `cursor-pointer hover:bg-red-500 ${
+                        loadingState.state &&
+                        loadingState.method === "add to cart"
+                          ? "bg-red-500 border-transparent"
+                          : ""
+                      } active:bg-red-500 hover:text-white active:text-white transition-colors hover:border-transparent active:border-transparent`
                     : "cursor-not-allowed"
                 }`}
                 disabled={!size.value}
+                methodname="add to cart"
+                afterloading={toggleCartMenu(true)}
+                clickable={size.value}
+                outermethod={addProductToCartHandler}
               >
                 add to cart
-              </button>
+              </Process_Button>
             </div>
-            <button
-              className={`py-3.5 px-10 rounded-3xl uppercase text-[12px] bg-black text-white ${
+            <Process_Button
+              className={`py-3.5 px-10 rounded-3xl uppercase text-[12px] bg-black text-white text-center ${
                 size.value
-                  ? "cursor-pointer hover:bg-red-500 hover:text-white active:bg-red-500 active:text-white transition-colors"
+                  ? `cursor-pointer hover:bg-red-500 hover:text-white ${
+                      loadingState.state && loadingState.method === "buy it now"
+                        ? "bg-red-500 border-transparent"
+                        : ""
+                    } active:bg-red-500 active:text-white transition-colors`
                   : "cursor-not-allowed"
               }`}
               disabled={!size.value}
+              methodname="buy it now"
+              clickable={size.value}
             >
               buy it now
-            </button>
+            </Process_Button>
             <div className="flex flex-col gap-2 text-[12px]">
               <h1 className="text-black/50">
                 <span className="font-bold text-black">SKU : </span>

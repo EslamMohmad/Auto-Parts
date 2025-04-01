@@ -22,6 +22,7 @@ const SubscripeFrom = () => {
         } p-1.5 rounded-md h-[65px] flex gap-4 justify-between transition-colors`}
       >
         <input
+          name="newsletter-subscripe"
           type="email"
           placeholder="enter your email"
           className="h-full pl-4 outline-none placeholder:uppercase text-[12px] text-black/50 w-[80%]"

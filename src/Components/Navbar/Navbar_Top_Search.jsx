@@ -18,6 +18,7 @@ const Navbar_Top_Search = () => {
       </div>
       <form className="w-[90%]">
         <input
+          name="navbar-search"
           type="text"
           className="pt-4 pb-2 outline-none pl-6 text-[12px] font-extralight tracking-wider text-gray-600 w-full relative"
           value={inputValue}

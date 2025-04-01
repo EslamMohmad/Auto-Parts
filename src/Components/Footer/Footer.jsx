@@ -16,9 +16,16 @@ const Footer = () => {
   const contacts = [
     {
       icon: "fa-solid fa-phone",
-      text: "we're available by phone +01002623871",
+      text: (
+        <a href="tel:+01002623871">we're available by phone +01002623871</a>
+      ),
     },
-    { icon: "fa-regular fa-envelope", text: "eslammohmad998@gmail.com" },
+    {
+      icon: "fa-regular fa-envelope",
+      text: (
+        <a href="mailto:eslammohmad998@gmail.com">eslammohmad998@gmail.com</a>
+      ),
+    },
     { icon: "fa-regular fa-clock", text: "Monday till friday 10 to 6 EST" },
   ];
 

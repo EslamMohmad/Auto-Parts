@@ -1,59 +1,38 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import barsImg from "../Assets/HomeProducts/bars.svg";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useMediaQuery from "./../Hooks/useMediaQuery";
 import {
-  toggleLoadingState,
   toggleProductAddToCard,
   toggleProductCompare,
   toggleProductQuickView,
 } from "../Store/PortalSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { productDetails } from "../Utils/Function";
 import Rating from "./Rating";
 import Button_Title from "./Button_Title";
+import Process_Button from "./Process_Button";
 
 const Button = ({ icon, text, method, index }) => {
-  const [isLoading, setIsLoading] = useState(false);
-
-  const action = useDispatch();
-
-  useEffect(() => {
-    let timer;
-    if (isLoading) {
-      timer = setTimeout(
-        () => (
-          setIsLoading(false),
-          action(method(true)),
-          action(toggleLoadingState(false))
-        ),
-        1000
-      );
-    }
-
-    return () => clearTimeout(timer);
-  }, [isLoading]);
+  const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   return (
-    <motion.button
+    <Process_Button
       initial={{ opacity: 0, transform: "translatey(0)" }}
       animate={{ opacity: 1, transform: "translatey(-20px)" }}
       transition={{ delay: index / 15 + 0.2 }}
-      onClick={() => (setIsLoading(true), action(toggleLoadingState(true)))}
+      afterloading={method(true)}
+      methodname={text}
+      clickable={true}
       className={`relative w-[40px] h-[40px] leading-[40px] text-center ${
-        isLoading ? "bg-red-500 text-white" : "bg-gray-200 text-black"
+        loadingState.state && loadingState.method === text
+          ? "bg-red-500 text-white"
+          : "bg-gray-200 text-black"
       } rounded-full active:text-white hover:text-white hover:bg-red-500 active:bg-red-500 transition-colors cursor-pointer group block`}
     >
-      {isLoading ? (
-        <img src={barsImg} className="w-[15px] mx-auto" />
-      ) : (
-        <>
-          <FontAwesomeIcon icon={icon} size="md" />
-          <Button_Title title={text} />
-        </>
-      )}
-    </motion.button>
+      <FontAwesomeIcon icon={icon} size="md" />
+      <Button_Title title={text} />
+    </Process_Button>
   );
 };
 
@@ -103,7 +82,7 @@ const Product = ({ currentSlide, index }) => {
     <div
       className="relative flex flex-col gap-3 text-sm group/options"
       onMouseOver={() => setOptionComState(true)}
-      onMouseLeave={() => !loadingState && setOptionComState(false)}
+      onMouseLeave={() => !loadingState.state && setOptionComState(false)}
     >
       <img
         src={imgs[0]}
@@ -117,13 +96,18 @@ const Product = ({ currentSlide, index }) => {
           optionsComState ? "opacity-100" : "opacity-0"
         }`}
       />
-
-      <button className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors cursor-pointer group">
+      <Process_Button
+        clickable={true}
+        color="dark"
+        className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors cursor-pointer group"
+      >
         <FontAwesomeIcon icon="fa-solid fa-heart" />
         <Button_Title title="whishlist" />
-      </button>
+      </Process_Button>
       <div
-        className={`flex flex-col gap-3 ${"group-hover/options:-translate-y-20 group-hover/options:shadow-top"} bg-white py-8   relative z-10 transition-all`}
+        className={`flex flex-col gap-3 ${"group-hover/options:-translate-y-20 group-hover/options:shadow-top"} ${
+          optionsComState && loadingState.state && "-translate-y-20 shadow-top"
+        } bg-white py-8 relative z-10 transition-all`}
       >
         <h1 className="text-gray-400">{categorie[0]}</h1>
         <p className="h-[40px] text-ellipsis overflow-hidden whitespace-break-spaces">

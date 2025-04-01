@@ -29,6 +29,7 @@ import {
   faEnvelope,
   faClock,
   faCircleCheck,
+  faTrashCan,
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faFacebookF,
@@ -71,5 +72,6 @@ export const globalIcons = () => {
     faPlus,
     faMinus,
     faCircleCheck,
+    faTrashCan,
   ]);
 };

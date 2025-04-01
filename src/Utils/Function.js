@@ -8,7 +8,7 @@ export function setTrueTargetState(trueArray, object, payload) {
   for (let key in object) {
     if (trueArray.includes(key)) {
       object[key] = payload;
-    } else object[key] = false;
+    } else key !== "loadingState" && (object[key] = false);
   }
 }
 
@@ -28,7 +28,7 @@ export const productDetails = {
   SKU: "woo-belt",
   tags: ["ducati", "hyundai", "kia", "lamborghini", "toyota", "triumph"],
   rating: 3,
-  price: { before: "$20.00", after: "$18.00" },
+  price: { before: "$200.00", after: "$180.00" },
   sale: "-10%",
   imgs: [img_1, img_2, img_3, img_4, img_5],
 };

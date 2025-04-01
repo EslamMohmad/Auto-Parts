@@ -12,12 +12,12 @@ const PortalSlice = createSlice({
     productQuickViewState: false,
     producCompareState: false,
     productAddToCardState: false,
-    loadingState: false,
+    loadingState: { state: false, method: "" },
   },
   reducers: {
     closeOverlay: (state) => {
       for (let key in state) {
-        state[key] = false;
+        key !== "loadingState" && (state[key] = false);
       }
     },
     toggleMainMenu: (state, { payload }) => {
