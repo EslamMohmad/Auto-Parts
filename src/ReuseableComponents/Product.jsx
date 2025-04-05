@@ -8,10 +8,11 @@ import {
   toggleProductQuickView,
 } from "../Store/PortalSlice";
 import { useSelector } from "react-redux";
-import { productDetails } from "../Utils/Function";
 import Rating from "./Rating";
 import Button_Title from "./Button_Title";
 import Process_Button from "./Process_Button";
+import { addProductToQuickView } from "../Store/ProductsSlice";
+import { productDetails } from "../Utils/Function";
 
 const Button = ({ icon, text, method, index }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
@@ -21,7 +22,7 @@ const Button = ({ icon, text, method, index }) => {
       initial={{ opacity: 0, transform: "translatey(0)" }}
       animate={{ opacity: 1, transform: "translatey(-20px)" }}
       transition={{ delay: index / 15 + 0.2 }}
-      afterloading={method(true)}
+      afterloading={[...method(true)]}
       methodname={text}
       clickable={true}
       className={`relative w-[40px] h-[40px] leading-[40px] text-center ${
@@ -36,39 +37,36 @@ const Button = ({ icon, text, method, index }) => {
   );
 };
 
-const Product = ({ currentSlide, index }) => {
+const Product = ({ details, currentSlide }) => {
   const { productQuickViewState, loadingState } = useSelector(
     ({ PortalSlice }) => PortalSlice
   );
+
+  const { heading, id, rating, sale, price, imgs, categorie } =
+    details || productDetails;
 
   const [optionsComState, setOptionComState] = useState(false);
 
   const isMobile = useMediaQuery("(max-width : 445px)");
 
-  const {
-    categorie,
-    heading,
-    price: { after, before },
-    imgs,
-    rating,
-    sale,
-  } = productDetails;
-
   const productOptions = [
     {
       icon: "fa-solid fa-truck-fast",
       text: "add to cart",
-      method: (prop) => toggleProductAddToCard(prop),
+      method: (prop) => [toggleProductAddToCard(prop)],
     },
     {
       icon: "fa-solid fa-chart-simple",
       text: "compare",
-      method: (prop) => toggleProductCompare(prop),
+      method: (prop) => [toggleProductCompare(prop)],
     },
     {
       icon: "fa-solid fa-expand",
       text: "quick view",
-      method: (prop) => toggleProductQuickView(prop),
+      method: (prop) => [
+        toggleProductQuickView(prop),
+        addProductToQuickView(details || productDetails),
+      ],
     },
   ];
 
@@ -118,15 +116,15 @@ const Product = ({ currentSlide, index }) => {
           <span>({rating})</span>
         </div>
         <div className="flex gap-4 text-sm items-center pr-3">
-          <h1>{after}</h1>
-          <h2 className="text-gray-300">{before}</h2>
+          <h1>{price.after}</h1>
+          <h2 className="text-gray-300">{price.before}</h2>
           <div className="bg-red-500 text-white py-1.5 px-2 rounded-sm text-[10px] font-bold tracking-wider relative ml-auto">
             {sale}
             <div className="absolute rotate-45 top-1/2 -left-1  -translate-y-1/2 w-[8px] h-[8px] bg-red-500"></div>
           </div>
         </div>
         <AnimatePresence>
-          {(optionsComState || (isMobile && currentSlide === index)) && (
+          {(optionsComState || (isMobile && currentSlide === +id - 1)) && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

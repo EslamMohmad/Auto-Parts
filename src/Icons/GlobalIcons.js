@@ -22,6 +22,7 @@ import {
   faPhone,
   faPlus,
   faMinus,
+  faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faUser,
@@ -73,5 +74,6 @@ export const globalIcons = () => {
     faMinus,
     faCircleCheck,
     faTrashCan,
+    faGear,
   ]);
 };

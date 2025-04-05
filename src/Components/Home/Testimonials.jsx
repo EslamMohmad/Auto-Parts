@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 const Testimonials = () => {
   const testimonials = [
     {
+      id: 0,
       heading: "great price & services",
       img: testimonial_1,
       rating: 3,
@@ -19,6 +20,7 @@ const Testimonials = () => {
       info: { name: "jennifer", contry: "california" },
     },
     {
+      id: 1,
       heading: "great price & services",
       img: testimonial_2,
       rating: 5,
@@ -26,6 +28,7 @@ const Testimonials = () => {
       info: { name: "christopher", contry: "new orleans" },
     },
     {
+      id: 2,
       heading: "great price & services",
       img: testimonial_3,
       rating: 4,
@@ -55,12 +58,12 @@ const Testimonials = () => {
         pagination={{ clickable: true, el: ".testimonials-pagination" }}
         className="!px-5 !-mx-5 !py-5"
         modules={[Pagination, Autoplay]}
-        speed={2500}
+        speed={1000}
         autoplay
       >
         {testimonials.map(
-          ({ heading, img, text, info: { name, contry }, rating }) => (
-            <SwiperSlide key={name}>
+          ({ id, heading, img, text, info: { name, contry }, rating }) => (
+            <SwiperSlide key={id}>
               <div className="flex flex-col md:flex-row items-center gap-10">
                 <div className="relative">
                   <img src={img} className="max-w-[130px] rounded-full" />

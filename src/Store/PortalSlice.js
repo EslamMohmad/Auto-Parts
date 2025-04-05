@@ -12,6 +12,7 @@ const PortalSlice = createSlice({
     productQuickViewState: false,
     producCompareState: false,
     productAddToCardState: false,
+    authState: false,
     loadingState: { state: false, method: "" },
   },
   reducers: {
@@ -48,6 +49,9 @@ const PortalSlice = createSlice({
     toggleLoadingState: (state, { payload }) => {
       state.loadingState = payload;
     },
+    toggleAuthState: (state, { payload }) => {
+      setTrueTargetState(["overlayState", "authState"], state, payload);
+    },
   },
 });
 
@@ -61,6 +65,7 @@ export const {
   toggleProductCompare,
   toggleProductAddToCard,
   toggleLoadingState,
+  toggleAuthState,
 } = PortalSlice.actions;
 
 export default PortalSlice.reducer;

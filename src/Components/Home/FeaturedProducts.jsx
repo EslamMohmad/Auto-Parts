@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, Pagination } from "swiper/modules";
 
-const FilterProductsRow = () => {
+const FilterProductsRow = ({ setLoadingState }) => {
   const [selectedItems, setSelectedItems] = useState([
     { itemsType: "car audio systems", selected: true },
     { itemsType: "headlight", selected: false },
@@ -36,7 +36,10 @@ const FilterProductsRow = () => {
               ? "text-red-600 bg-gray-300/50"
               : "text-black/25 hover:text-red-600 hover:bg-gray-300/50"
           }`}
-          onClick={() => !selected && selectedItemsHandler(itemsType)}
+          onClick={() =>
+            !selected &&
+            (selectedItemsHandler(itemsType), setLoadingState(true))
+          }
         >
           {itemsType}
         </li>
@@ -45,7 +48,7 @@ const FilterProductsRow = () => {
   );
 };
 
-const FilterProductsList = () => {
+const FilterProductsList = ({ setLoadingState }) => {
   const [selectedItems, setSelectedItems] = useState([
     { itemsType: "car audio systems", selected: true },
     { itemsType: "headlight", selected: false },
@@ -100,7 +103,10 @@ const FilterProductsList = () => {
                     ? "text-red-600"
                     : "text-black/25 hover:text-red-600 active:text-red-600"
                 }`}
-                onClick={() => !selected && selectedItemsHandler(itemsType)}
+                onClick={() =>
+                  !selected &&
+                  (selectedItemsHandler(itemsType), setLoadingState(true))
+                }
               >
                 {itemsType}
               </li>
@@ -115,9 +121,21 @@ const FilterProductsList = () => {
 const FeaturedProducts = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const [loadingState, setLoadingState] = useState(false);
+
   const products = Array.from({ length: 12 }, (li, idx) => (li = idx));
 
   const isMobile = useMediaQuery("(max-width : 640px)");
+
+  useEffect(() => {
+    let timer;
+    if (loadingState) {
+      timer = setTimeout(() => {
+        setLoadingState(false);
+      }, 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [loadingState]);
 
   return (
     <motion.section
@@ -133,7 +151,11 @@ const FeaturedProducts = () => {
             <span className="hidden sm:inline ml-6">|</span>
           </h1>
 
-          {isMobile ? <FilterProductsList /> : <FilterProductsRow />}
+          {isMobile ? (
+            <FilterProductsList setLoadingState={setLoadingState} />
+          ) : (
+            <FilterProductsRow setLoadingState={setLoadingState} />
+          )}
           <div className="featured-products-pagination ml-auto hidden md:flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 !w-auto"></div>
         </div>
         <Swiper
@@ -149,14 +171,25 @@ const FeaturedProducts = () => {
           className="!py-8 !px-5 !-mx-5"
           style={{ zIndex: 0 }}
           onActiveIndexChange={(e) => setCurrentSlide(e.activeIndex)}
-          autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: true }}
-          speed={1500}
+          {...(!loadingState && {
+            autoplay: { pauseOnMouseEnter: true, disableOnInteraction: true },
+            speed: 1500,
+          })}
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true, el: ".featured-products-pagination" }}
         >
           {products.map((product, index) => (
             <SwiperSlide key={product}>
               <Product index={index} currentSlide={currentSlide} />
+              {loadingState && (
+                <div className="absolute top-0 bg-white z-10 w-full h-[104%] rounded-xl flex justify-center items-center border border-black/10">
+                  <FontAwesomeIcon
+                    icon="fa-solid fa-gear"
+                    size="3x"
+                    className="animate-spin text-black/50"
+                  />
+                </div>
+              )}
             </SwiperSlide>
           ))}
         </Swiper>

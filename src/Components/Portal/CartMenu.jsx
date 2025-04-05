@@ -84,9 +84,7 @@ const CartMenu = () => {
                 {products.map((product, index) => {
                   const details = {
                     id: product.id,
-                    img: product.imgs[
-                      Math.round(Math.random() * product.imgs.length)
-                    ],
+                    img: product.imgs[0],
                     heading: product.heading,
                     amount: product.amount,
                     price: product.size.price,
@@ -107,7 +105,7 @@ const CartMenu = () => {
                 <button className="w-full py-3.5 text-[12px] font-bolder uppercase bg-white border rounded-md cursor-pointer border-black/20 transition-colors hover:bg-black active:bg-black hover:text-white active:text-white">
                   view cart
                 </button>
-                <button className="w-full py-3.5 text-[12px] font-bolder uppercase bg-black text-white rounded-md cursor-pointer mt-2 transition-colors hover:bg-red-500 active:bg-red-500">
+                <button className="w-full py-3.5 text-[12px] font-bolder uppercase bg-black text-white rounded-md cursor-pointer mt-2 transition-colors hover:bg-red-600 active:bg-red-600">
                   checkout
                 </button>
               </div>

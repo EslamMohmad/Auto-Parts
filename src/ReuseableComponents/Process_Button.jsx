@@ -39,7 +39,8 @@ const Process_Button = (props) => {
       timer = setTimeout(
         () => (
           setIsLoading(false),
-          props.afterloading && action(props.afterloading),
+          props.afterloading?.length &&
+            props.afterloading.forEach((method) => action(method)),
           props.outermethod && props.outermethod(),
           action(toggleLoadingState({ state: false, method: "" }))
         ),

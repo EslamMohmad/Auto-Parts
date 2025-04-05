@@ -67,7 +67,7 @@ const ProductsBanner = () => {
   const productsComInfo = [
     {
       categories: {
-        heading: "tires & wheels",
+        heading: "Tires & Wheels",
         categories: [
           "michelin",
           "goodyear tires",
@@ -92,7 +92,7 @@ const ProductsBanner = () => {
     },
     {
       categories: {
-        heading: "headlights",
+        heading: "Headlights",
         categories: [
           "multibeam led",
           "Projector headlights",
@@ -140,7 +140,7 @@ const ProductsBanner = () => {
               </div>
             </div>
           </div>
-          <ProductsSlider products={products} />
+          <ProductsSlider type={categories.heading} />
         </div>
       ))}
     </section>

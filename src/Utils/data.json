@@ -1,0 +1,1165 @@
+{
+  "Auto-Parts": {
+    "Accessories": [
+      {
+        "id": "1",
+        "categorie": ["accessories"],
+        "heading": "Car charger with USB-C and USB-A ports - Aluminum - 12V 24V - 5V-3.1A - Silver",
+        "text": "This car charger features USB-C and USB-A ports with a powerful 5V-3.1A output, making it perfect for charging your devices while on the go.",
+        "SKU": "car-charger-usb-c-usb-a-12v-24v",
+        "tags": [
+          "car accessories",
+          "usb-c",
+          "usb-a",
+          "car charger",
+          "aluminum",
+          "12V",
+          "24V"
+        ],
+        "rating": 4,
+        "price": {
+          "before": "$200.00",
+          "after": "$180.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "2",
+        "categorie": ["accessories"],
+        "heading": "Car Steering Wheel Covers for Peugeot",
+        "text": "Enhance the interior of your Peugeot with these premium steering wheel covers that provide both comfort and style.",
+        "SKU": "peugeot-steering-wheel-cover",
+        "tags": [
+          "car accessories",
+          "peugeot",
+          "steering wheel cover",
+          "premium",
+          "interior"
+        ],
+        "rating": 5,
+        "price": {
+          "before": "$50.00",
+          "after": "$45.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "3",
+        "categorie": ["accessories"],
+        "heading": "Exide Extreme Battery Passenger Euro (din)",
+        "text": "Get long-lasting power with the Exide Extreme Battery for your vehicle, perfect for European passenger cars.",
+        "SKU": "exide-extreme-battery-euro-din",
+        "tags": [
+          "car battery",
+          "exide",
+          "european cars",
+          "din",
+          "passenger vehicles"
+        ],
+        "rating": 4,
+        "price": {
+          "before": "$120.00",
+          "after": "$100.00"
+        },
+        "sale": "-17%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "4",
+        "categorie": ["accessories"],
+        "heading": "Mophie Aluminum Charger With Dual USB - C PD Ports 40w",
+        "text": "Mophie’s Aluminum charger with two USB-C PD ports allows for fast charging with 40W power output, ideal for your modern devices.",
+        "SKU": "mophie-aluminum-charger-dual-usb-c-40w",
+        "tags": ["mophie", "aluminum charger", "usb-c", "fast charging", "40w"],
+        "rating": 4,
+        "price": {
+          "before": "$60.00",
+          "after": "$55.00"
+        },
+        "sale": "-8%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "5",
+        "categorie": ["accessories"],
+        "heading": "Pennzoil Platinum Full Synthetic Motor Oil (SAE, SN) 0W-20, 5 Quart - Pack of 2",
+        "text": "Pennzoil Platinum Full Synthetic Motor Oil provides superior performance for modern engines, with a 0W-20 viscosity and 5-quart bottles.",
+        "SKU": "pennzoil-platinum-synthetic-0w-20-5qt",
+        "tags": [
+          "motor oil",
+          "pennzoil",
+          "synthetic oil",
+          "0W-20",
+          "5 quart",
+          "car maintenance"
+        ],
+        "rating": 4,
+        "price": {
+          "before": "$40.00",
+          "after": "$35.00"
+        },
+        "sale": "-12%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "6",
+        "categorie": ["accessories"],
+        "heading": "PXN V9 Race Steering Wheel with 3 Pedals and Gear Shifter",
+        "text": "The PXN V9 Race Steering Wheel provides an immersive racing experience, complete with 3 pedals and a gear shifter for a realistic feel.",
+        "SKU": "pxn-v9-race-steering-wheel",
+        "tags": [
+          "racing",
+          "steering wheel",
+          "pxn",
+          "gear shifter",
+          "pedals",
+          "simulation"
+        ],
+        "rating": 5,
+        "price": {
+          "before": "$250.00",
+          "after": "$225.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "7",
+        "categorie": ["accessories"],
+        "heading": "Rand McNally DASH500 DashCam 500 Dashboard Camera",
+        "text": "Capture every moment on the road with the Rand McNally DASH500 Dashboard Camera, featuring high-definition video recording.",
+        "SKU": "rand-mcnally-dashcam-dash500",
+        "tags": [
+          "dashcam",
+          "car accessories",
+          "rand mcnally",
+          "dashboard camera",
+          "HD video"
+        ],
+        "rating": 4,
+        "price": {
+          "before": "$120.00",
+          "after": "$110.00"
+        },
+        "sale": "-8%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "8",
+        "categorie": ["accessories"],
+        "heading": "Rear Facing Car Seats",
+        "text": "Keep your little ones safe and comfortable with rear-facing car seats designed for maximum protection and support.",
+        "SKU": "rear-facing-car-seats",
+        "tags": ["car seats", "safety", "baby accessories", "rear-facing"],
+        "rating": 5,
+        "price": {
+          "before": "$150.00",
+          "after": "$130.00"
+        },
+        "sale": "-13%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "9",
+        "categorie": ["accessories"],
+        "heading": "Tiers batteries oil brake pads oil filter wiper jounieh sahel alma near LGU",
+        "text": "Complete car maintenance essentials, including tires, batteries, brake pads, oil filters, and wipers for various vehicle needs.",
+        "SKU": "car-maintenance-essentials",
+        "tags": [
+          "car maintenance",
+          "tires",
+          "batteries",
+          "brake pads",
+          "oil filters",
+          "wipers"
+        ],
+        "rating": 4,
+        "price": {
+          "before": "$100.00",
+          "after": "$90.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(4).jpg?alt=media"
+        ]
+      }
+    ],
+    "Automotive Rims": [
+      {
+        "id": "1",
+        "categorie": ["automotive rims"],
+        "heading": "Alloy Wheel Rim isolated on white",
+        "text": "High-quality alloy wheel rim, perfect for automotive applications. Offers great performance and aesthetic value.",
+        "SKU": "AW-RIM-001",
+        "tags": ["alloy wheel", "automotive rim", "car parts", "white rim"],
+        "rating": 4,
+        "price": {
+          "before": "$250.00",
+          "after": "$225.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "2",
+        "categorie": ["automotive rims"],
+        "heading": "Gear 761RM 20x12 6x1356x5.5",
+        "text": "Gear 761RM alloy wheels, size 20x12 with a bolt pattern of 6x135 and offset of 5.5. Built for strength and performance.",
+        "SKU": "GEAR-761RM-2012",
+        "tags": [
+          "Gear wheels",
+          "20x12 rim",
+          "6x135",
+          "automotive rims",
+          "off-road wheels"
+        ],
+        "rating": 5,
+        "price": {
+          "before": "$300.00",
+          "after": "$270.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "3",
+        "categorie": ["automotive rims"],
+        "heading": "HD Wheels Fly Cutter 18x8 +35 5x114.3mm 73.1mm Gloss Red&BKMachined Face",
+        "text": "HD Wheels Fly Cutter 18x8 with a +35 offset. Gloss Red and Black Machined Face finish for a sleek, aggressive look.",
+        "SKU": "HD-FLYCUTTER-188",
+        "tags": [
+          "HD wheels",
+          "18x8 rim",
+          "gloss red",
+          "machined face",
+          "5x114.3mm"
+        ],
+        "rating": 4,
+        "price": {
+          "before": "$220.00",
+          "after": "$200.00"
+        },
+        "sale": "-9%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "4",
+        "categorie": ["automotive rims"],
+        "heading": "Raceline Ryno Alloy Wheel Machined Set of 4 Wheels",
+        "text": "Raceline Ryno alloy wheels, set of 4 machined finish wheels. Ideal for off-road use and performance.",
+        "SKU": "RACELINE-RYNO-4WHEELS",
+        "tags": [
+          "Raceline",
+          "alloy wheels",
+          "set of 4",
+          "machined finish",
+          "off-road wheels"
+        ],
+        "rating": 5,
+        "price": {
+          "before": "$900.00",
+          "after": "$810.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "5",
+        "categorie": ["automotive rims"],
+        "heading": "XD Series by KMC Wheels XD811 20X10 6X1355.5 M-BLK WAcc -24MM AUTO Rim",
+        "text": "XD Series by KMC wheels, model XD811 20x10, with M-BLK WAcc finish. Perfect for off-road and heavy-duty use.",
+        "SKU": "KMC-XD811-2010",
+        "tags": [
+          "KMC wheels",
+          "XD811",
+          "20x10",
+          "off-road wheels",
+          "heavy-duty rims"
+        ],
+        "rating": 4,
+        "price": {
+          "before": "$350.00",
+          "after": "$315.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
+        ]
+      }
+    ],
+    "Brakes Systems": [
+      {
+        "id": "1",
+        "categorie": ["Brakes Systems"],
+        "heading": "Beringer STC-002.1 – 12 Aircraft Wheel & Brake Kit for Pilatus",
+        "text": "The Beringer STC-002.1 is a premium 12-wheel and brake kit designed for Pilatus aircraft. It delivers outstanding braking performance and durability in high-stress aviation environments.",
+        "SKU": "beringer-stc-002-pilatus",
+        "tags": ["aircraft", "pilatus", "brake kit", "aviation"],
+        "rating": 5,
+        "price": {
+          "before": "$5000.00",
+          "after": "$4500.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(5).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "2",
+        "categorie": ["Brakes Systems"],
+        "heading": "Grenier Chevrolet Buick GMC",
+        "text": "Grenier offers high-performance automotive brake systems for Chevrolet, Buick, and GMC vehicles, ensuring enhanced safety and control under various driving conditions.",
+        "SKU": "grenier-chevrolet-buick-gmc",
+        "tags": ["chevrolet", "buick", "gmc", "brakes", "automotive"],
+        "rating": 4,
+        "price": {
+          "before": "$250.00",
+          "after": "$220.00"
+        },
+        "sale": "-12%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(2).jpg?alt=media&token=72589187-d9cc-461d-b07e-328c4a767211",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(3).jpg?alt=media&token=72589187-d9cc-461d-b07e-328c4a767211",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(4).jpg?alt=media&token=72589187-d9cc-461d-b07e-328c4a767211"
+        ]
+      },
+      {
+        "id": "3",
+        "categorie": ["Brakes Systems"],
+        "heading": "Orbis Brakes Higher-Performance Automotive Brakes",
+        "text": "Orbis Brakes offers high-performance brake systems for sports cars and luxury vehicles, providing superior stopping power and heat dissipation for enhanced performance.",
+        "SKU": "orbis-brakes-performance",
+        "tags": ["sports cars", "luxury vehicles", "brakes", "performance"],
+        "rating": 4.5,
+        "price": {
+          "before": "$800.00",
+          "after": "$700.00"
+        },
+        "sale": "-13%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(1).jpg?alt=media",
+          "ihttps://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(2).jpg?alt=media",
+          "ihttps://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "4",
+        "categorie": ["Brakes Systems"],
+        "heading": "Suspension Avant SUV",
+        "text": "Suspension Avant provides innovative suspension and brake systems for SUVs, ensuring a smooth ride and superior braking under all conditions.",
+        "SKU": "suspension-avant-suv",
+        "tags": ["suv", "suspension", "brakes", "automotive"],
+        "rating": 4,
+        "price": {
+          "before": "$1200.00",
+          "after": "$1100.00"
+        },
+        "sale": "-8%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(1).jpeg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "5",
+        "categorie": ["Brakes Systems"],
+        "heading": "These performances pour into the windows of automobiles",
+        "text": "A cutting-edge performance brake system designed to offer maximum safety and performance across a wide range of automotive applications.",
+        "SKU": "performance-windows-automobiles",
+        "tags": ["performance", "brakes", "automotive", "safety"],
+        "rating": 4.7,
+        "price": {
+          "before": "$350.00",
+          "after": "$300.00"
+        },
+        "sale": "-14%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(5).jpg?alt=media"
+        ]
+      }
+    ],
+    "Car Audio Systems": [
+      {
+        "id": "1",
+        "categorie": ["Car Audio Systems"],
+        "heading": "FOCAL AUDITOR R-690C CAR 6X9 COAXIAL 320W MAX 3-WAY SPEAKERS BUILT IN TWEETERS",
+        "text": "Enjoy high-quality sound with the FOCAL AUDITOR R-690C 6x9” 3-way coaxial car speakers. With built-in tweeters and 320W max power, they deliver clear highs, powerful bass, and immersive audio for your car.",
+        "SKU": "focal-r690c-320w",
+        "tags": ["focal", "car speakers", "coaxial", "3-way", "tweeters"],
+        "rating": 4.6,
+        "price": {
+          "before": "$180.00",
+          "after": "$155.00"
+        },
+        "sale": "-14%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(5).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "2",
+        "categorie": ["Car Audio Systems"],
+        "heading": "Infinity Kappa 62ix 6.5 2-Way Car Audio Multi-Element Speaker",
+        "text": "The Infinity Kappa 62ix delivers crystal-clear sound with its 6.5-inch 2-way design. Featuring edge-driven textile dome tweeters and premium materials, it ensures detailed audio and rich bass response.",
+        "SKU": "infinity-kappa-62ix",
+        "tags": ["infinity", "kappa", "car audio", "2-way", "multi-element"],
+        "rating": 4.8,
+        "price": {
+          "before": "$210.00",
+          "after": "$185.00"
+        },
+        "sale": "-12%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(5).jpg?alt=media"
+        ]
+      }
+    ],
+    "Headlights": [
+      {
+        "id": "1",
+        "categorie": ["Headlights"],
+        "heading": "Ford F-150 (15-17) XB Hybrid LED Headlights",
+        "text": "Upgrade your Ford F-150 (15-17) with these advanced XB Hybrid LED headlights, designed for superior illumination, energy efficiency, and a sleek modern look.",
+        "SKU": "ford-f150-xb-led",
+        "tags": [
+          "ford",
+          "f-150",
+          "led headlights",
+          "hybrid",
+          "automotive lighting"
+        ],
+        "rating": 4.7,
+        "price": {
+          "before": "$600.00",
+          "after": "$550.00"
+        },
+        "sale": "-8%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(4).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "2",
+        "categorie": ["Headlights"],
+        "heading": "Front light Opel Astra H 03.04-10 Daylight black",
+        "text": "Enhance the front end of your Opel Astra H (03.04-10) with these stylish Daylight black headlights, offering a high-quality, modern design with exceptional visibility.",
+        "SKU": "opel-astra-h-daylight",
+        "tags": [
+          "opel",
+          "astra h",
+          "daylight",
+          "headlights",
+          "automotive lighting"
+        ],
+        "rating": 4.5,
+        "price": {
+          "before": "$350.00",
+          "after": "$320.00"
+        },
+        "sale": "-9%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(4).jpg?alt=media"
+        ]
+      }
+    ],
+    "Tires & Wheels": [
+      {
+        "id": "1",
+        "categorie": ["Tires & Wheels"],
+        "heading": "Goodyear Eagle LS-2-23545R18 94V SL VSB",
+        "text": "The Goodyear Eagle LS-2 is a high-performance tire designed for all-season driving. With a size of 235/45R18 and a 94V rating, it offers excellent handling, durability, and comfort in both dry and wet conditions.",
+        "SKU": "goodyear-eagle-ls2-23545r18",
+        "tags": ["goodyear", "eagle ls-2", "all-season", "tires", "235/45R18"],
+        "rating": 4.5,
+        "price": {
+          "before": "$180.00",
+          "after": "$160.00"
+        },
+        "sale": "-11%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(6).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "2",
+        "categorie": ["Tires & Wheels"],
+        "heading": "Michelin Pilot Sport All Season 4 Performance Tire 23555ZR18XL 104Y",
+        "text": "The Michelin Pilot Sport All Season 4 offers superior handling and traction for performance vehicles, with excellent wet and dry grip. The 235/55ZR18XL size and 104Y rating provide a perfect balance of performance and durability.",
+        "SKU": "michelin-pilot-sport-4-23555zr18xl",
+        "tags": [
+          "michelin",
+          "pilot sport 4",
+          "performance tire",
+          "all-season",
+          "235/55ZR18"
+        ],
+        "rating": 4.8,
+        "price": {
+          "before": "$250.00",
+          "after": "$225.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(5).jpg?alt=media"
+        ]
+      },
+      {
+        "id": "3",
+        "categorie": ["Tires & Wheels"],
+        "heading": "MODZ® Ambush Red and Black 12 Golf Cart Wheels",
+        "text": "The MODZ® Ambush Red and Black wheels are designed for golf carts, offering a sleek, modern look and superior performance. These 12-inch wheels are perfect for adding style and durability to your golf cart.",
+        "SKU": "modz-ambush-red-black-12",
+        "tags": ["modz", "golf cart", "wheels", "12-inch", "red and black"],
+        "rating": 4.3,
+        "price": {
+          "before": "$300.00",
+          "after": "$270.00"
+        },
+        "sale": "-10%",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(4).jpg?alt=media"
+        ]
+      }
+    ]
+  },
+  "Eco-Shop": {
+    "Fruits": [
+      {
+        "discount": 52,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20strawberry%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20strawberry%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20strawberry%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20strawberry%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20strawberry%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20strawberry%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Fresh strawberry",
+        "price": {
+          "after": 21,
+          "before": 44
+        },
+        "rating": 1
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20watermelon%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20watermelon%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20watermelon%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20watermelon%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20watermelon%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FFresh%20watermelon%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Fresh watermelon",
+        "price": {
+          "after": 30,
+          "before": 0
+        },
+        "rating": 4.5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FGreen%20sliced%20apple%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FGreen%20sliced%20apple%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FGreen%20sliced%20apple%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FGreen%20sliced%20apple%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FGreen%20sliced%20apple%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FGreen%20sliced%20apple%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Green sliced apple",
+        "price": {
+          "after": 22.22,
+          "before": 0
+        },
+        "rating": 5.5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FNatural%20avocado%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FNatural%20avocado%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FNatural%20avocado%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FNatural%20avocado%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FNatural%20avocado%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FNatural%20avocado%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Natural avocado",
+        "price": {
+          "after": 30,
+          "before": 0
+        },
+        "rating": 4
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20banana%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20banana%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20banana%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20banana%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20banana%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20banana%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Organic banana",
+        "price": {
+          "after": 23,
+          "before": 0
+        },
+        "rating": 4
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20orange%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20orange%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20orange%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20orange%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20orange%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FOrganic%20orange%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Organic orange",
+        "price": {
+          "after": 34,
+          "before": 0
+        },
+        "rating": 5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FRed%20fresh%20apple%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FRed%20fresh%20apple%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FRed%20fresh%20apple%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FRed%20fresh%20apple%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FRed%20fresh%20apple%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FFruits%2FRed%20fresh%20apple%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Red Fresh Apple",
+        "price": {
+          "after": 22,
+          "before": 0
+        },
+        "rating": 4
+      }
+    ],
+    "Milk and dairy": [
+      {
+        "discount": 52,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20herbs%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20herbs%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20herbs%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20herbs%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20herbs%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20herbs%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Corn chips herbs",
+        "price": {
+          "after": 21,
+          "before": 44
+        },
+        "rating": 2.5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20sundried%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20sundried%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20sundried%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20sundried%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20sundried%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FCorn%20chips%20sundried%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Corn chips sundried",
+        "price": {
+          "after": 30,
+          "before": 0
+        },
+        "rating": 2.5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FDelux%20walnut%20kernels%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FDelux%20walnut%20kernels%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FDelux%20walnut%20kernels%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FDelux%20walnut%20kernels%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FDelux%20walnut%20kernels%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FDelux%20walnut%20kernels%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Delux walnut kernels",
+        "price": {
+          "after": 11,
+          "before": 0
+        },
+        "rating": 3.7
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20dry%20fruit%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20dry%20fruit%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20dry%20fruit%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20dry%20fruit%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20dry%20fruit%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20dry%20fruit%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Elly nuts dry fruit",
+        "price": {
+          "after": 23,
+          "before": 0
+        },
+        "rating": 3
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20pumpkin%20seeds%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20pumpkin%20seeds%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20pumpkin%20seeds%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20pumpkin%20seeds%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20pumpkin%20seeds%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FElly%20nuts%20pumpkin%20seeds%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Elly nuts pumpkin seeds",
+        "price": {
+          "after": 18,
+          "before": 0
+        },
+        "rating": 1.8
+      },
+      {
+        "discount": 26,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFamly%20punvhmeva%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFamly%20punvhmeva%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFamly%20punvhmeva%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFamly%20punvhmeva%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFamly%20punvhmeva%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFamly%20punvhmeva%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Famly punvhmeva",
+        "price": {
+          "after": 29,
+          "before": 39
+        },
+        "rating": 3.7
+      },
+      {
+        "discount": 40,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20healthy%20cheese%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20healthy%20cheese%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20healthy%20cheese%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20healthy%20cheese%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20healthy%20cheese%2Fimg%20(5).jpg?alt=media"
+        ],
+        "name": "Fresh healthy cheese",
+        "price": {
+          "after": 30,
+          "before": 50
+        },
+        "rating": 4.5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20organic%20egg%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20organic%20egg%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20organic%20egg%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20organic%20egg%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20organic%20egg%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FFresh%20organic%20egg%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Fresh organic egg",
+        "price": {
+          "after": 22,
+          "before": 0
+        },
+        "rating": 5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FGoldern%20buttery%20corn%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FGoldern%20buttery%20corn%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FGoldern%20buttery%20corn%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FGoldern%20buttery%20corn%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FGoldern%20buttery%20corn%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FGoldern%20buttery%20corn%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Goldern buttery corn",
+        "price": {
+          "after": 22,
+          "before": 0
+        },
+        "rating": 3.9
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FKurkure%20playz%20puffcorn%20yummy%20cheese%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FKurkure%20playz%20puffcorn%20yummy%20cheese%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FKurkure%20playz%20puffcorn%20yummy%20cheese%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FKurkure%20playz%20puffcorn%20yummy%20cheese%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FKurkure%20playz%20puffcorn%20yummy%20cheese%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FKurkure%20playz%20puffcorn%20yummy%20cheese%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Kurkure playz puffcorn yummy egg",
+        "price": {
+          "after": 42,
+          "before": 0
+        },
+        "rating": 3.1
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FLays%20Stax%20Cheddar%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FLays%20Stax%20Cheddar%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FLays%20Stax%20Cheddar%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FLays%20Stax%20Cheddar%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FLays%20Stax%20Cheddar%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FLays%20Stax%20Cheddar%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Lays Stax Cheddar",
+        "price": {
+          "after": 22,
+          "before": 0
+        },
+        "rating": 1.8
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPotato%20pop%20crips%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPotato%20pop%20crips%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPotato%20pop%20crips%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPotato%20pop%20crips%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPotato%20pop%20crips%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPotato%20pop%20crips%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Potato pop crips",
+        "price": {
+          "after": 42,
+          "before": 0
+        },
+        "rating": 3.1
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPressed%20organic%20bread%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPressed%20organic%20bread%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPressed%20organic%20bread%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPressed%20organic%20bread%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FPressed%20organic%20bread%2Fimg%20(5).jpg?alt=media"
+        ],
+        "name": "Pressed organic bread",
+        "price": {
+          "after": 30,
+          "before": 0
+        },
+        "rating": 2.9
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FProV%20Select%20-%20Almonds%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FProV%20Select%20-%20Almonds%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FProV%20Select%20-%20Almonds%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FProV%20Select%20-%20Almonds%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FProV%20Select%20-%20Almonds%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FProV%20Select%20-%20Almonds%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "ProV Select - Almonds",
+        "price": {
+          "after": 30,
+          "before": 0
+        },
+        "rating": 3.5
+      },
+      {
+        "discount": 52,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSpanish%20tomato%20chips%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSpanish%20tomato%20chips%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSpanish%20tomato%20chips%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSpanish%20tomato%20chips%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSpanish%20tomato%20chips%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSpanish%20tomato%20chips%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Spanish tomato chips",
+        "price": {
+          "after": 21,
+          "before": 44
+        },
+        "rating": 3.1
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSuper%20fresh%20bread%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSuper%20fresh%20bread%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSuper%20fresh%20bread%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSuper%20fresh%20bread%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSuper%20fresh%20bread%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FSuper%20fresh%20bread%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Super fresh bread",
+        "price": {
+          "after": 18,
+          "before": 0
+        },
+        "rating": 1.5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FTrue%20berries%20seeds%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FTrue%20berries%20seeds%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FTrue%20berries%20seeds%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FTrue%20berries%20seeds%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FTrue%20berries%20seeds%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FTrue%20berries%20seeds%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "True berries seeds",
+        "price": {
+          "after": 30,
+          "before": 0
+        },
+        "rating": 2.6
+      },
+      {
+        "discount": 40,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FVedaka%20Raw%20Peanuts%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FVedaka%20Raw%20Peanuts%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FVedaka%20Raw%20Peanuts%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FVedaka%20Raw%20Peanuts%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FVedaka%20Raw%20Peanuts%2Fimg%20(5).jpg?alt=media"
+        ],
+        "name": "Vedaka Raw Peanuts",
+        "price": {
+          "after": 30,
+          "before": 50
+        },
+        "rating": 2.8
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FWalnut%20kenral%20fresh%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FWalnut%20kenral%20fresh%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FWalnut%20kenral%20fresh%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FWalnut%20kenral%20fresh%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FWalnut%20kenral%20fresh%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FMilk%20and%20dairy%2FWalnut%20kenral%20fresh%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Walnut kenral fresh",
+        "price": {
+          "after": 30,
+          "before": 0
+        },
+        "rating": 3.3
+      }
+    ],
+    "Vegetables": [
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20broccoli%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20broccoli%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20broccoli%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20broccoli%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20broccoli%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20broccoli%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Green broccoli",
+        "price": {
+          "after": 42,
+          "before": 0
+        },
+        "rating": 3
+      },
+      {
+        "discount": 40,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20lemon%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20lemon%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20lemon%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20lemon%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20lemon%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FGreen%20lemon%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Green lemon",
+        "price": {
+          "after": 30,
+          "before": 50
+        },
+        "rating": 5.5
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cucumber%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cucumber%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cucumber%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cucumber%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cucumber%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cucumber%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Organic cucumber",
+        "price": {
+          "after": 11,
+          "before": 0
+        },
+        "rating": 2
+      },
+      {
+        "discount": 0,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FNatural%20carrot%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FNatural%20carrot%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FNatural%20carrot%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FNatural%20carrot%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FNatural%20carrot%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FNatural%20carrot%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Natural carrot",
+        "price": {
+          "after": 18,
+          "before": 0
+        },
+        "rating": 2
+      },
+      {
+        "discount": 26,
+        "images": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cabbage%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cabbage%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cabbage%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cabbage%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cabbage%2Fimg%20(5).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Products%2FFoods%2FVegetables%2FOrganic%20cabbage%2Fimg%20(6).jpg?alt=media"
+        ],
+        "name": "Organic cabbage",
+        "price": {
+          "after": 29,
+          "before": 39
+        },
+        "rating": 3
+      }
+    ]
+  }
+}

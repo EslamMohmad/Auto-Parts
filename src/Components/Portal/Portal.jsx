@@ -16,6 +16,7 @@ import {
 import Fixed_Navbar from "./Fixed_Navbar.jsx";
 import ProductQuickView from "./ProductQuickView.jsx";
 import Scroll_Top from "./Scroll_Top.jsx";
+import Auth from "./Auth.jsx";
 
 const Portal = () => {
   const props = useSelector(({ PortalSlice }) => PortalSlice);
@@ -49,6 +50,7 @@ const Portal = () => {
     <>
       <Fixed_Navbar />
       <Overlay>
+        <Auth />
         <MainMenu />
         <CartMenu />
         <SearchMenu />

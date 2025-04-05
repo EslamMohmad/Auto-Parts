@@ -7,11 +7,11 @@ import Navbar_Top_Cart from "./Navbar_Top_Cart";
 import { useSelector } from "react-redux";
 import Navbar_Top_Mobile_Search from "./Navbar_Top_Mobile_Search";
 import useMediaQuery from "../../Hooks/useMediaQuery";
+import Navbar_Top_Auth from "./Navbar_Top_Auth";
 
 const Navbar_Top = ({ fixedNavbar }) => {
-  const { cartMenuState, newsLetterPopupState, mainMenuState } = useSelector(
-    ({ PortalSlice }) => PortalSlice
-  );
+  const { cartMenuState, newsLetterPopupState, mainMenuState, authState } =
+    useSelector(({ PortalSlice }) => PortalSlice);
 
   const isTablet = useMediaQuery("(min-width: 640px) and (max-width: 1024px)");
 
@@ -25,7 +25,10 @@ const Navbar_Top = ({ fixedNavbar }) => {
   return (
     <section
       className={`-mx-[25px] sm:mx-auto flex items-center sm:flex-wrap lg:flex-nowrap justify-between gap-5 bg-white ${
-        cartMenuState || newsLetterPopupState || (isTablet && mainMenuState)
+        cartMenuState ||
+        newsLetterPopupState ||
+        authState ||
+        (isTablet && mainMenuState)
           ? "sm:z-auto"
           : "z-20 relative"
       } ${
@@ -57,16 +60,7 @@ const Navbar_Top = ({ fixedNavbar }) => {
       </ul>
       {!fixedNavbar && <Navbar_Top_Search />}
       <div className="flex gap-5 items-center">
-        <button className="items-center gap-4 hidden sm:flex group cursor-pointer">
-          <FontAwesomeIcon
-            icon="fa-regular fa-user"
-            className="group-hover:text-red-600 active:text-red-600 duration-300 transition-colors cursor-pointer text-[25px]"
-          />
-          <div>
-            <h1 className="font-bold leading-5">account</h1>
-            <p className="text-[10px] font-light">hello, login</p>
-          </div>
-        </button>
+        <Navbar_Top_Auth />
         <div className="flex gap-7">
           <div className="relative hover:text-red-600 active:text-red-600 cursor-pointer transition-colors hidden sm:block">
             <FontAwesomeIcon icon="fa-regular fa-heart" size="xl" />

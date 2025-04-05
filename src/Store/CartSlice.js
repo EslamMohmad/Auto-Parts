@@ -21,8 +21,7 @@ const CartSlice = createSlice({
       }
     },
     removeProductFromCart: (state, { payload: id }) => {
-      const index = state.products.findIndex((product) => product.id === id);
-      state.products = state.products.slice(0, index);
+      state.products = state.products.filter((product) => product.id !== id);
     },
   },
 });
