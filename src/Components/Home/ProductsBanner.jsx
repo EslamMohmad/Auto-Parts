@@ -21,7 +21,7 @@ const List = ({ categories }) => {
     <div className="w-full sm:w-[48%] lg:w-1/5">
       <div
         className="uppercase sm:text-xl font-bold mb-8 flex justify-between items-center bg-gray-200 sm:bg-transparent p-2 sm:px-0 rounded-md select-none"
-        onClick={() => setListState(!listState)}
+        onClick={() => isMobile && setListState(!listState)}
       >
         {categories.heading}
         {isMobile &&

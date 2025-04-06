@@ -1,31 +1,19 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Product from "../../ReuseableComponents/Product";
 import useMediaQuery from "../../Hooks/useMediaQuery";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, Pagination } from "swiper/modules";
+import useGetProducts from "../../Hooks/useGetProducts";
+import LoadingProduct from "../../ReuseableComponents/LoadingProduct";
+import useLoading from "../../Hooks/useLoading";
 
-const FilterProductsRow = ({ setLoadingState }) => {
-  const [selectedItems, setSelectedItems] = useState([
-    { itemsType: "car audio systems", selected: true },
-    { itemsType: "headlight", selected: false },
-    { itemsType: "automotive rims", selected: false },
-  ]);
-
-  const selectedItemsHandler = (text) => {
-    const result = selectedItems.map((object) => {
-      if (object.itemsType === text) {
-        return { itemsType: text, selected: true };
-      }
-      for (const key in object) {
-        return { itemsType: object[key], selected: false };
-      }
-    });
-
-    setSelectedItems(result);
-  };
-
+const FilterProductsRow = ({
+  setLoadingState,
+  selectedItems,
+  selectedItemsHandler,
+}) => {
   return (
     <ul className="md:w-[max-content] lg:w-auto whitespace-nowrap">
       {selectedItems.map(({ itemsType, selected }) => (
@@ -48,27 +36,13 @@ const FilterProductsRow = ({ setLoadingState }) => {
   );
 };
 
-const FilterProductsList = ({ setLoadingState }) => {
-  const [selectedItems, setSelectedItems] = useState([
-    { itemsType: "car audio systems", selected: true },
-    { itemsType: "headlight", selected: false },
-    { itemsType: "automotive rims", selected: false },
-  ]);
-
+const FilterProductsList = ({
+  loadingState,
+  setLoadingState,
+  selectedItems,
+  selectedItemsHandler,
+}) => {
   const [listState, setListState] = useState(false);
-
-  const selectedItemsHandler = (text) => {
-    const result = selectedItems.map((object) => {
-      if (object.itemsType === text) {
-        return { itemsType: text, selected: true };
-      }
-      for (const key in object) {
-        return { itemsType: object[key], selected: false };
-      }
-    });
-    setListState(false);
-    return setSelectedItems(result);
-  };
 
   return (
     <div className="relative w-full">
@@ -103,10 +77,11 @@ const FilterProductsList = ({ setLoadingState }) => {
                     ? "text-red-600"
                     : "text-black/25 hover:text-red-600 active:text-red-600"
                 }`}
-                onClick={() =>
+                onClick={() => (
                   !selected &&
-                  (selectedItemsHandler(itemsType), setLoadingState(true))
-                }
+                    (selectedItemsHandler(itemsType), setLoadingState(true)),
+                  !loadingState && setListState(false)
+                )}
               >
                 {itemsType}
               </li>
@@ -121,21 +96,31 @@ const FilterProductsList = ({ setLoadingState }) => {
 const FeaturedProducts = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [loadingState, setLoadingState] = useState(false);
+  const [selectedItems, setSelectedItems] = useState([
+    { itemsType: "Car Audio Systems", selected: false },
+    { itemsType: "Headlights", selected: false },
+    { itemsType: "Automotive Rims", selected: true },
+  ]);
 
-  const products = Array.from({ length: 12 }, (li, idx) => (li = idx));
+  const { loadingState, setLoadingState } = useLoading();
+
+  const slides = useGetProducts(
+    selectedItems.find((object) => object.selected).itemsType
+  );
 
   const isMobile = useMediaQuery("(max-width : 640px)");
 
-  useEffect(() => {
-    let timer;
-    if (loadingState) {
-      timer = setTimeout(() => {
-        setLoadingState(false);
-      }, 1000);
-    }
-    return () => clearTimeout(timer);
-  }, [loadingState]);
+  const selectedItemsHandler = (text) => {
+    const result = selectedItems.map((object) => {
+      if (object.itemsType === text) {
+        return { itemsType: text, selected: true };
+      }
+      for (const key in object) {
+        return { itemsType: object[key], selected: false };
+      }
+    });
+    setSelectedItems(result);
+  };
 
   return (
     <motion.section
@@ -152,9 +137,18 @@ const FeaturedProducts = () => {
           </h1>
 
           {isMobile ? (
-            <FilterProductsList setLoadingState={setLoadingState} />
+            <FilterProductsList
+              setLoadingState={setLoadingState}
+              selectedItems={selectedItems}
+              selectedItemsHandler={selectedItemsHandler}
+            />
           ) : (
-            <FilterProductsRow setLoadingState={setLoadingState} />
+            <FilterProductsRow
+              loadingState={loadingState}
+              setLoadingState={setLoadingState}
+              selectedItems={selectedItems}
+              selectedItemsHandler={selectedItemsHandler}
+            />
           )}
           <div className="featured-products-pagination ml-auto hidden md:flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 !w-auto"></div>
         </div>
@@ -178,18 +172,10 @@ const FeaturedProducts = () => {
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true, el: ".featured-products-pagination" }}
         >
-          {products.map((product, index) => (
-            <SwiperSlide key={product}>
-              <Product index={index} currentSlide={currentSlide} />
-              {loadingState && (
-                <div className="absolute top-0 bg-white z-10 w-full h-[104%] rounded-xl flex justify-center items-center border border-black/10">
-                  <FontAwesomeIcon
-                    icon="fa-solid fa-gear"
-                    size="3x"
-                    className="animate-spin text-black/50"
-                  />
-                </div>
-              )}
+          {slides?.map((product) => (
+            <SwiperSlide key={product?.id}>
+              <Product currentSlide={currentSlide} details={product} />
+              {loadingState && <LoadingProduct />}
             </SwiperSlide>
           ))}
         </Swiper>

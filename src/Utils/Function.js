@@ -17,6 +17,7 @@ export function waiting(time) {
 }
 
 export const productDetails = {
+  id: "0",
   categorie: [
     "automotive rims",
     "car audio systems",

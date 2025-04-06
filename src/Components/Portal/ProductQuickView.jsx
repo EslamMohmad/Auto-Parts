@@ -178,8 +178,8 @@ const ProductQuickView = () => {
             <button className="absolute top-1/2 -translate-y-1/2 z-[2] cursor-pointer w-[50px] h-[50px] leading-[50px] text-center rounded-full shadow-bottom-left bg-white hover:bg-black hover:text-white hover:shadow-none quickView-prev-btn-swiper hidden md:block left-3 opacity-0 group-hover:left-5 group-hover:opacity-100 transition-all">
               <FontAwesomeIcon icon="fa-solid fa-chevron-left" />
             </button>
-            {productQuickView?.imgs.map((img) => (
-              <SwiperSlide key={img}>
+            {productQuickView?.imgs.map((img, idx) => (
+              <SwiperSlide key={idx}>
                 <img src={img} className="h-full md:h-auto mx-auto" />
               </SwiperSlide>
             ))}

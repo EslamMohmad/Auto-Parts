@@ -1,20 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Product from "../../ReuseableComponents/Product";
 import { Autoplay } from "swiper/modules";
-import { useEffect, useState } from "react";
-import { ref, child, get } from "firebase/database";
-import { database } from "../../Firebase/Firebase";
+import { useState } from "react";
+import useGetProducts from "../../Hooks/useGetProducts";
 
 const ProductsSlider = ({ type }) => {
-  const [slides, setSlides] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    if (!slides.length) {
-      const myRef = child(ref(database), `Auto-Parts/${type}`);
-      get(myRef).then((res) => setSlides(res.val()));
-    }
-  }, [slides.length]);
+  const slides = useGetProducts(type);
 
   return (
     <div className="w-full lg:w-[calc(100%_-_50%)] lg:mx-6">
