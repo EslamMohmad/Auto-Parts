@@ -2,11 +2,27 @@
   "Auto-Parts": {
     "Accessories": [
       {
-        "id": "1",
+        "SKU": "car-charger-usb-c-usb-a-12v-24v",
         "categorie": ["accessories"],
         "heading": "Car charger with USB-C and USB-A ports - Aluminum - 12V 24V - 5V-3.1A - Silver",
-        "text": "This car charger features USB-C and USB-A ports with a powerful 5V-3.1A output, making it perfect for charging your devices while on the go.",
-        "SKU": "car-charger-usb-c-usb-a-12v-24v",
+        "id": "1",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(4).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$180.00",
+          "before": "$200.00"
+        },
+        "rating": 4,
+        "sale": "0",
+        "size": {
+          "price": "$180.00",
+          "stock": 0,
+          "value": ""
+        },
         "tags": [
           "car accessories",
           "usb-c",
@@ -16,25 +32,30 @@
           "12V",
           "24V"
         ],
-        "rating": 4,
-        "price": {
-          "before": "$200.00",
-          "after": "$180.00"
-        },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20charger%20with%20USB-C%20and%20USB-A%20ports%20-%20Aluminum%20-%2012V%20%2024V%20-%205V-3.1A%20-%20Silver%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "This car charger features USB-C and USB-A ports with a powerful 5V-3.1A output, making it perfect for charging your devices while on the go."
       },
       {
-        "id": "2",
+        "SKU": "peugeot-steering-wheel-cover",
         "categorie": ["accessories"],
         "heading": "Car Steering Wheel Covers for Peugeot",
-        "text": "Enhance the interior of your Peugeot with these premium steering wheel covers that provide both comfort and style.",
-        "SKU": "peugeot-steering-wheel-cover",
+        "id": "2",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(4).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$45.00",
+          "before": "$50.00"
+        },
+        "rating": 5,
+        "sale": "6",
+        "size": {
+          "price": "$45.00",
+          "stock": 42,
+          "value": ""
+        },
         "tags": [
           "car accessories",
           "peugeot",
@@ -42,25 +63,30 @@
           "premium",
           "interior"
         ],
-        "rating": 5,
-        "price": {
-          "before": "$50.00",
-          "after": "$45.00"
-        },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FCar%20Steering%20Wheel%20Covers%20for%20Peugeot%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "Enhance the interior of your Peugeot with these premium steering wheel covers that provide both comfort and style."
       },
       {
-        "id": "3",
+        "SKU": "exide-extreme-battery-euro-din",
         "categorie": ["accessories"],
         "heading": "Exide Extreme Battery Passenger Euro (din)",
-        "text": "Get long-lasting power with the Exide Extreme Battery for your vehicle, perfect for European passenger cars.",
-        "SKU": "exide-extreme-battery-euro-din",
+        "id": "3",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(4).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$100.00",
+          "before": "$120.00"
+        },
+        "rating": 4,
+        "sale": "0",
+        "size": {
+          "price": "$100.00",
+          "stock": 45,
+          "value": ""
+        },
         "tags": [
           "car battery",
           "exide",
@@ -68,194 +94,114 @@
           "din",
           "passenger vehicles"
         ],
-        "rating": 4,
-        "price": {
-          "before": "$120.00",
-          "after": "$100.00"
-        },
-        "sale": "-17%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FExide%20Extreme%20Battery%20Passenger%20Euro%20(din)%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "Get long-lasting power with the Exide Extreme Battery for your vehicle, perfect for European passenger cars."
       },
       {
-        "id": "4",
+        "SKU": "mophie-aluminum-charger-dual-usb-c-40w",
         "categorie": ["accessories"],
         "heading": "Mophie Aluminum Charger With Dual USB - C PD Ports 40w",
-        "text": "Mophie’s Aluminum charger with two USB-C PD ports allows for fast charging with 40W power output, ideal for your modern devices.",
-        "SKU": "mophie-aluminum-charger-dual-usb-c-40w",
-        "tags": ["mophie", "aluminum charger", "usb-c", "fast charging", "40w"],
-        "rating": 4,
-        "price": {
-          "before": "$60.00",
-          "after": "$55.00"
-        },
-        "sale": "-8%",
+        "id": "4",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FMophie%20Aluminum%20Charger%20With%20Dual%20USB%20-%20C%20PD%20Ports%2040w%2Fimg%20(4).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$55.00",
+          "before": "$60.00"
+        },
+        "rating": 4,
+        "sale": "0",
+        "size": {
+          "price": "$55.00",
+          "stock": 29,
+          "value": ""
+        },
+        "tags": ["mophie", "aluminum charger", "usb-c", "fast charging", "40w"],
+        "text": "Mophie’s Aluminum charger with two USB-C PD ports allows for fast charging with 40W power output, ideal for your modern devices."
       },
       {
-        "id": "5",
+        "SKU": "pennzoil-platinum-synthetic-oil-0w-20-5-quart",
         "categorie": ["accessories"],
         "heading": "Pennzoil Platinum Full Synthetic Motor Oil (SAE, SN) 0W-20, 5 Quart - Pack of 2",
-        "text": "Pennzoil Platinum Full Synthetic Motor Oil provides superior performance for modern engines, with a 0W-20 viscosity and 5-quart bottles.",
-        "SKU": "pennzoil-platinum-synthetic-0w-20-5qt",
-        "tags": [
-          "motor oil",
-          "pennzoil",
-          "synthetic oil",
-          "0W-20",
-          "5 quart",
-          "car maintenance"
-        ],
-        "rating": 4,
-        "price": {
-          "before": "$40.00",
-          "after": "$35.00"
-        },
-        "sale": "-12%",
+        "id": "5",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPennzoil%20Platinum%20Full%20Synthetic%20Motor%20Oil%20(SAE%2C%20SN)%200W-20%2C%205%20Quart%20-%20Pack%20of%202%2Fimg%20(4).jpg?alt=media"
-        ]
-      },
-      {
-        "id": "6",
-        "categorie": ["accessories"],
-        "heading": "PXN V9 Race Steering Wheel with 3 Pedals and Gear Shifter",
-        "text": "The PXN V9 Race Steering Wheel provides an immersive racing experience, complete with 3 pedals and a gear shifter for a realistic feel.",
-        "SKU": "pxn-v9-race-steering-wheel",
-        "tags": [
-          "racing",
-          "steering wheel",
-          "pxn",
-          "gear shifter",
-          "pedals",
-          "simulation"
         ],
+        "price": {
+          "after": "$36.00",
+          "before": "$40.00"
+        },
         "rating": 5,
-        "price": {
-          "before": "$250.00",
-          "after": "$225.00"
+        "sale": "0",
+        "size": {
+          "price": "$36.00",
+          "stock": 37,
+          "value": "5 Quart - Pack of 2"
         },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FPXN%20V9%20Race%20Steering%20Wheel%20with%203%20Pedals%20and%20Gear%20Shifter%2Fimg%20(4).jpg?alt=media"
-        ]
-      },
-      {
-        "id": "7",
-        "categorie": ["accessories"],
-        "heading": "Rand McNally DASH500 DashCam 500 Dashboard Camera",
-        "text": "Capture every moment on the road with the Rand McNally DASH500 Dashboard Camera, featuring high-definition video recording.",
-        "SKU": "rand-mcnally-dashcam-dash500",
         "tags": [
-          "dashcam",
-          "car accessories",
-          "rand mcnally",
-          "dashboard camera",
-          "HD video"
+          "motor oil",
+          "pennzoil",
+          "full synthetic",
+          "SAE 0W-20",
+          "engine oil"
         ],
-        "rating": 4,
-        "price": {
-          "before": "$120.00",
-          "after": "$110.00"
-        },
-        "sale": "-8%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRand%20McNally%20DASH500%20DashCam%20500%20Dashboard%20Camera%2Fimg%20(4).jpg?alt=media"
-        ]
-      },
-      {
-        "id": "8",
-        "categorie": ["accessories"],
-        "heading": "Rear Facing Car Seats",
-        "text": "Keep your little ones safe and comfortable with rear-facing car seats designed for maximum protection and support.",
-        "SKU": "rear-facing-car-seats",
-        "tags": ["car seats", "safety", "baby accessories", "rear-facing"],
-        "rating": 5,
-        "price": {
-          "before": "$150.00",
-          "after": "$130.00"
-        },
-        "sale": "-13%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FRear%20Facing%20Car%20Seats%2Fimg%20(4).jpg?alt=media"
-        ]
-      },
-      {
-        "id": "9",
-        "categorie": ["accessories"],
-        "heading": "Tiers batteries oil brake pads oil filter wiper jounieh sahel alma near LGU",
-        "text": "Complete car maintenance essentials, including tires, batteries, brake pads, oil filters, and wipers for various vehicle needs.",
-        "SKU": "car-maintenance-essentials",
-        "tags": [
-          "car maintenance",
-          "tires",
-          "batteries",
-          "brake pads",
-          "oil filters",
-          "wipers"
-        ],
-        "rating": 4,
-        "price": {
-          "before": "$100.00",
-          "after": "$90.00"
-        },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAccessories%2FTiers%20bateries%20oil%20brake%20pads%20oil%20filter%20wiper%20jounieh%20sahel%20alma%20near%20LGU%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "Pennzoil Platinum Full Synthetic Motor Oil provides superior performance for modern engines, with a 0W-20 viscosity and 5-quart pack of 2."
       }
     ],
     "Automotive Rims": [
       {
-        "id": "1",
+        "SKU": "AW-RIM-001",
         "categorie": ["automotive rims"],
         "heading": "Alloy Wheel Rim isolated on white",
-        "text": "High-quality alloy wheel rim, perfect for automotive applications. Offers great performance and aesthetic value.",
-        "SKU": "AW-RIM-001",
-        "tags": ["alloy wheel", "automotive rim", "car parts", "white rim"],
-        "rating": 4,
-        "price": {
-          "before": "$250.00",
-          "after": "$225.00"
-        },
-        "sale": "-10%",
+        "id": "1",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$225.00",
+          "before": "$250.00"
+        },
+        "rating": 4,
+        "sale": "8",
+        "size": {
+          "price": "$225.00",
+          "stock": 29,
+          "value": ["14", "16", "20", "22", "18"]
+        },
+        "tags": ["alloy wheel", "automotive rim", "car parts", "white rim"],
+        "text": "High-quality alloy wheel rim, perfect for automotive applications. Offers great performance and aesthetic value."
       },
       {
-        "id": "2",
+        "SKU": "GEAR-761RM-2012",
         "categorie": ["automotive rims"],
         "heading": "Gear 761RM 20x12 6x1356x5.5",
-        "text": "Gear 761RM alloy wheels, size 20x12 with a bolt pattern of 6x135 and offset of 5.5. Built for strength and performance.",
-        "SKU": "GEAR-761RM-2012",
+        "id": "2",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FGear%20761RM%2020x12%206x1356x5.5%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FGear%20761RM%2020x12%206x1356x5.5%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FGear%20761RM%2020x12%206x1356x5.5%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FGear%20761RM%2020x12%206x1356x5.5%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FGear%20761RM%2020x12%206x1356x5.5%2Fimg%20(5).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$270.00",
+          "before": "$300.00"
+        },
+        "rating": 5,
+        "sale": "0",
+        "size": {
+          "price": "$270.00",
+          "stock": 0,
+          "value": ["16", "14", "18", "20", "22"]
+        },
         "tags": [
           "Gear wheels",
           "20x12 rim",
@@ -263,25 +209,31 @@
           "automotive rims",
           "off-road wheels"
         ],
-        "rating": 5,
-        "price": {
-          "before": "$300.00",
-          "after": "$270.00"
-        },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "Gear 761RM alloy wheels, size 20x12 with a bolt pattern of 6x135 and offset of 5.5. Built for strength and performance."
       },
       {
-        "id": "3",
+        "SKU": "HD-FLYCUTTER-188",
         "categorie": ["automotive rims"],
         "heading": "HD Wheels Fly Cutter 18x8 +35 5x114.3mm 73.1mm Gloss Red&BKMachined Face",
-        "text": "HD Wheels Fly Cutter 18x8 with a +35 offset. Gloss Red and Black Machined Face finish for a sleek, aggressive look.",
-        "SKU": "HD-FLYCUTTER-188",
+        "id": "3",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FHD%20Wheels%20Fly%20Cutter%2018x8%20%2B35%205x114.3mm%2073.1mm%20Gloss%20Red%26BKMachined%20Face%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FHD%20Wheels%20Fly%20Cutter%2018x8%20%2B35%205x114.3mm%2073.1mm%20Gloss%20Red%26BKMachined%20Face%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FHD%20Wheels%20Fly%20Cutter%2018x8%20%2B35%205x114.3mm%2073.1mm%20Gloss%20Red%26BKMachined%20Face%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FHD%20Wheels%20Fly%20Cutter%2018x8%20%2B35%205x114.3mm%2073.1mm%20Gloss%20Red%26BKMachined%20Face%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FHD%20Wheels%20Fly%20Cutter%2018x8%20%2B35%205x114.3mm%2073.1mm%20Gloss%20Red%26BKMachined%20Face%2Fimg%20(5).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$200.00",
+          "before": "$220.00"
+        },
+        "rating": 4,
+        "sale": "0",
+        "size": {
+          "price": "$200.00",
+          "stock": 9,
+          "value": ["14", "18", "16", "20", "22"]
+        },
         "tags": [
           "HD wheels",
           "18x8 rim",
@@ -289,25 +241,30 @@
           "machined face",
           "5x114.3mm"
         ],
-        "rating": 4,
-        "price": {
-          "before": "$220.00",
-          "after": "$200.00"
-        },
-        "sale": "-9%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "HD Wheels Fly Cutter 18x8 with a +35 offset. Gloss Red and Black Machined Face finish for a sleek, aggressive look."
       },
       {
-        "id": "4",
+        "SKU": "RACELINE-RYNO-4WHEELS",
         "categorie": ["automotive rims"],
         "heading": "Raceline Ryno Alloy Wheel Machined Set of 4 Wheels",
-        "text": "Raceline Ryno alloy wheels, set of 4 machined finish wheels. Ideal for off-road use and performance.",
-        "SKU": "RACELINE-RYNO-4WHEELS",
+        "id": "4",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FRaceline%20Ryno%20Alloy%20Wheel%20Machined%20Set%20of%204%20Wheels%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FRaceline%20Ryno%20Alloy%20Wheel%20Machined%20Set%20of%204%20Wheels%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FRaceline%20Ryno%20Alloy%20Wheel%20Machined%20Set%20of%204%20Wheels%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FRaceline%20Ryno%20Alloy%20Wheel%20Machined%20Set%20of%204%20Wheels%2Fimg%20(4).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$810.00",
+          "before": "$900.00"
+        },
+        "rating": 5,
+        "sale": "11",
+        "size": {
+          "price": "$810.00",
+          "stock": 28,
+          "value": ["14", "18", "20", "16", "22"]
+        },
         "tags": [
           "Raceline",
           "alloy wheels",
@@ -315,25 +272,30 @@
           "machined finish",
           "off-road wheels"
         ],
-        "rating": 5,
-        "price": {
-          "before": "$900.00",
-          "after": "$810.00"
-        },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "Raceline Ryno alloy wheels, set of 4 machined finish wheels. Ideal for off-road use and performance."
       },
       {
-        "id": "5",
+        "SKU": "KMC-XD811-2010",
         "categorie": ["automotive rims"],
         "heading": "XD Series by KMC Wheels XD811 20X10 6X1355.5 M-BLK WAcc -24MM AUTO Rim",
-        "text": "XD Series by KMC wheels, model XD811 20x10, with M-BLK WAcc finish. Perfect for off-road and heavy-duty use.",
-        "SKU": "KMC-XD811-2010",
+        "id": "5",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FXD%20Series%20by%20KMC%20Wheels%20XD811%2020X10%206X1355.5%20M-BLK%20WAcc%20-24MM%20AUTO%20Rim%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FXD%20Series%20by%20KMC%20Wheels%20XD811%2020X10%206X1355.5%20M-BLK%20WAcc%20-24MM%20AUTO%20Rim%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FXD%20Series%20by%20KMC%20Wheels%20XD811%2020X10%206X1355.5%20M-BLK%20WAcc%20-24MM%20AUTO%20Rim%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FXD%20Series%20by%20KMC%20Wheels%20XD811%2020X10%206X1355.5%20M-BLK%20WAcc%20-24MM%20AUTO%20Rim%2Fimg%20(4).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$315.00",
+          "before": "$350.00"
+        },
+        "rating": 4,
+        "sale": "0",
+        "size": {
+          "price": "$315.00",
+          "stock": 1,
+          "value": ["14", "22", "18", "20", "16"]
+        },
         "tags": [
           "KMC wheels",
           "XD811",
@@ -341,176 +303,216 @@
           "off-road wheels",
           "heavy-duty rims"
         ],
-        "rating": 4,
-        "price": {
-          "before": "$350.00",
-          "after": "$315.00"
-        },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FAutomotive%20Rims%2FAlloy%20Wheel%20Rim%20isolated%20on%20white%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "XD Series by KMC wheels, model XD811 20x10, with M-BLK WAcc finish. Perfect for off-road and heavy-duty use."
       }
     ],
     "Brakes Systems": [
       {
-        "id": "1",
+        "SKU": "beringer-stc-002-pilatus",
         "categorie": ["Brakes Systems"],
         "heading": "Beringer STC-002.1 – 12 Aircraft Wheel & Brake Kit for Pilatus",
-        "text": "The Beringer STC-002.1 is a premium 12-wheel and brake kit designed for Pilatus aircraft. It delivers outstanding braking performance and durability in high-stress aviation environments.",
-        "SKU": "beringer-stc-002-pilatus",
-        "tags": ["aircraft", "pilatus", "brake kit", "aviation"],
-        "rating": 5,
-        "price": {
-          "before": "$5000.00",
-          "after": "$4500.00"
-        },
-        "sale": "-10%",
+        "id": "1",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(4).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FBeringer%20STC-002.1%20%E2%80%93%2012%20Aircraft%20Wheel%20%26%20Brake%20Kit%20for%20Pilatus%2Fimg%20(5).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$4500.00",
+          "before": "$5000.00"
+        },
+        "rating": 5,
+        "sale": "0",
+        "size": {
+          "price": "$4500.00",
+          "stock": 48,
+          "value": ""
+        },
+        "tags": ["aircraft", "pilatus", "brake kit", "aviation"],
+        "text": "The Beringer STC-002.1 is a premium 12-wheel and brake kit designed for Pilatus aircraft. It delivers outstanding braking performance and durability in high-stress aviation environments."
       },
       {
-        "id": "2",
+        "SKU": "grenier-chevrolet-buick-gmc",
         "categorie": ["Brakes Systems"],
         "heading": "Grenier Chevrolet Buick GMC",
-        "text": "Grenier offers high-performance automotive brake systems for Chevrolet, Buick, and GMC vehicles, ensuring enhanced safety and control under various driving conditions.",
-        "SKU": "grenier-chevrolet-buick-gmc",
-        "tags": ["chevrolet", "buick", "gmc", "brakes", "automotive"],
-        "rating": 4,
-        "price": {
-          "before": "$250.00",
-          "after": "$220.00"
-        },
-        "sale": "-12%",
+        "id": "2",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(2).jpg?alt=media&token=72589187-d9cc-461d-b07e-328c4a767211",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(3).jpg?alt=media&token=72589187-d9cc-461d-b07e-328c4a767211",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FGrenier%20Chevrolet%20Buick%20GMC%2Fimg%20(4).jpg?alt=media&token=72589187-d9cc-461d-b07e-328c4a767211"
-        ]
+        ],
+        "price": {
+          "after": "$220.00",
+          "before": "$250.00"
+        },
+        "rating": 4,
+        "sale": "0",
+        "size": {
+          "price": "$220.00",
+          "stock": 0,
+          "value": ""
+        },
+        "tags": ["chevrolet", "buick", "gmc", "brakes", "automotive"],
+        "text": "Grenier offers high-performance automotive brake systems for Chevrolet, Buick, and GMC vehicles, ensuring enhanced safety and control under various driving conditions."
       },
       {
-        "id": "3",
+        "SKU": "orbis-brakes-performance",
         "categorie": ["Brakes Systems"],
         "heading": "Orbis Brakes Higher-Performance Automotive Brakes",
-        "text": "Orbis Brakes offers high-performance brake systems for sports cars and luxury vehicles, providing superior stopping power and heat dissipation for enhanced performance.",
-        "SKU": "orbis-brakes-performance",
-        "tags": ["sports cars", "luxury vehicles", "brakes", "performance"],
-        "rating": 4.5,
-        "price": {
-          "before": "$800.00",
-          "after": "$700.00"
-        },
-        "sale": "-13%",
+        "id": "3",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(1).jpg?alt=media",
-          "ihttps://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(2).jpg?alt=media",
-          "ihttps://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FOrbis%20Brakes%20Higher-Performance%20Automotive%20Brakes%2Fimg%20(4).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$700.00",
+          "before": "$800.00"
+        },
+        "rating": 4.5,
+        "sale": "0",
+        "size": {
+          "price": "$700.00",
+          "stock": 37,
+          "value": ""
+        },
+        "tags": ["sports cars", "luxury vehicles", "brakes", "performance"],
+        "text": "Orbis Brakes offers high-performance brake systems for sports cars and luxury vehicles, providing superior stopping power and heat dissipation for enhanced performance."
       },
       {
-        "id": "4",
+        "SKU": "suspension-avant-suv",
         "categorie": ["Brakes Systems"],
         "heading": "Suspension Avant SUV",
-        "text": "Suspension Avant provides innovative suspension and brake systems for SUVs, ensuring a smooth ride and superior braking under all conditions.",
-        "SKU": "suspension-avant-suv",
-        "tags": ["suv", "suspension", "brakes", "automotive"],
-        "rating": 4,
-        "price": {
-          "before": "$1200.00",
-          "after": "$1100.00"
-        },
-        "sale": "-8%",
+        "id": "4",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(1).jpeg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FSuspension%20Avant%20SUV%2Fimg%20(4).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$1100.00",
+          "before": "$1200.00"
+        },
+        "rating": 4,
+        "sale": "0",
+        "size": {
+          "price": "$1100.00",
+          "stock": 0,
+          "value": ""
+        },
+        "tags": ["suv", "suspension", "brakes", "automotive"],
+        "text": "Suspension Avant provides innovative suspension and brake systems for SUVs, ensuring a smooth ride and superior braking under all conditions."
       },
       {
-        "id": "5",
+        "SKU": "performance-windows-automobiles",
         "categorie": ["Brakes Systems"],
         "heading": "These performances pour into the windows of automobiles",
-        "text": "A cutting-edge performance brake system designed to offer maximum safety and performance across a wide range of automotive applications.",
-        "SKU": "performance-windows-automobiles",
-        "tags": ["performance", "brakes", "automotive", "safety"],
-        "rating": 4.7,
-        "price": {
-          "before": "$350.00",
-          "after": "$300.00"
-        },
-        "sale": "-14%",
+        "id": "5",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(4).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FBrakes%20Systems%2FThese%20performances%20pour%20into%20the%20windows%20of%20automobiles%2Fimg%20(5).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$300.00",
+          "before": "$350.00"
+        },
+        "rating": 4.7,
+        "sale": "10",
+        "size": {
+          "price": "$300.00",
+          "stock": 0,
+          "value": ""
+        },
+        "tags": ["performance", "brakes", "automotive", "safety"],
+        "text": "A cutting-edge performance brake system designed to offer maximum safety and performance across a wide range of automotive applications."
       }
     ],
     "Car Audio Systems": [
       {
-        "id": "1",
+        "SKU": "focal-r690c-320w",
         "categorie": ["Car Audio Systems"],
         "heading": "FOCAL AUDITOR R-690C CAR 6X9 COAXIAL 320W MAX 3-WAY SPEAKERS BUILT IN TWEETERS",
-        "text": "Enjoy high-quality sound with the FOCAL AUDITOR R-690C 6x9” 3-way coaxial car speakers. With built-in tweeters and 320W max power, they deliver clear highs, powerful bass, and immersive audio for your car.",
-        "SKU": "focal-r690c-320w",
-        "tags": ["focal", "car speakers", "coaxial", "3-way", "tweeters"],
-        "rating": 4.6,
-        "price": {
-          "before": "$180.00",
-          "after": "$155.00"
-        },
-        "sale": "-14%",
+        "id": "1",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(4).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FFOCAL%20AUDITOR%20R-690C%20CAR%206X9%20COAXIAL%20320W%20MAX%203-WAY%20SPEAKERS%20BUILT%20IN%20TWEETERS%2Fimg%20(5).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$155.00",
+          "before": "$180.00"
+        },
+        "rating": 4.6,
+        "sale": "0",
+        "size": {
+          "price": "$155.00",
+          "stock": 45,
+          "value": ""
+        },
+        "tags": ["focal", "car speakers", "coaxial", "3-way", "tweeters"],
+        "text": "Enjoy high-quality sound with the FOCAL AUDITOR R-690C 6x9” 3-way coaxial car speakers. With built-in tweeters and 320W max power, they deliver clear highs, powerful bass, and immersive audio for your car."
       },
       {
-        "id": "2",
+        "SKU": "infinity-kappa-62ix",
         "categorie": ["Car Audio Systems"],
         "heading": "Infinity Kappa 62ix 6.5 2-Way Car Audio Multi-Element Speaker",
-        "text": "The Infinity Kappa 62ix delivers crystal-clear sound with its 6.5-inch 2-way design. Featuring edge-driven textile dome tweeters and premium materials, it ensures detailed audio and rich bass response.",
-        "SKU": "infinity-kappa-62ix",
-        "tags": ["infinity", "kappa", "car audio", "2-way", "multi-element"],
-        "rating": 4.8,
-        "price": {
-          "before": "$210.00",
-          "after": "$185.00"
-        },
-        "sale": "-12%",
+        "id": "2",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(4).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FCar%20Audio%20Systems%2FInfinity%20Kappa%2062ix%206.5%202-Way%20Car%20Audio%20Multi-Element%20Speaker%2Fimg%20(5).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$185.00",
+          "before": "$210.00"
+        },
+        "rating": 4.8,
+        "sale": "0",
+        "size": {
+          "price": "$185.00",
+          "stock": 25,
+          "value": ""
+        },
+        "tags": ["infinity", "kappa", "car audio", "2-way", "multi-element"],
+        "text": "The Infinity Kappa 62ix delivers crystal-clear sound with its 6.5-inch 2-way design. Featuring edge-driven textile dome tweeters and premium materials, it ensures detailed audio and rich bass response."
       }
     ],
     "Headlights": [
       {
-        "id": "1",
+        "SKU": "ford-f150-xb-led",
         "categorie": ["Headlights"],
         "heading": "Ford F-150 (15-17) XB Hybrid LED Headlights",
-        "text": "Upgrade your Ford F-150 (15-17) with these advanced XB Hybrid LED headlights, designed for superior illumination, energy efficiency, and a sleek modern look.",
-        "SKU": "ford-f150-xb-led",
+        "id": "1",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(4).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$550.00",
+          "before": "$600.00"
+        },
+        "rating": 4.7,
+        "sale": "0",
+        "size": {
+          "price": "$550.00",
+          "stock": 0,
+          "value": ""
+        },
         "tags": [
           "ford",
           "f-150",
@@ -518,25 +520,30 @@
           "hybrid",
           "automotive lighting"
         ],
-        "rating": 4.7,
-        "price": {
-          "before": "$600.00",
-          "after": "$550.00"
-        },
-        "sale": "-8%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFord%20F-150%20(15-17)%20XB%20Hybrid%20LED%20Headlights%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "Upgrade your Ford F-150 (15-17) with these advanced XB Hybrid LED headlights, designed for superior illumination, energy efficiency, and a sleek modern look."
       },
       {
-        "id": "2",
+        "SKU": "opel-astra-h-daylight",
         "categorie": ["Headlights"],
         "heading": "Front light Opel Astra H 03.04-10 Daylight black",
-        "text": "Enhance the front end of your Opel Astra H (03.04-10) with these stylish Daylight black headlights, offering a high-quality, modern design with exceptional visibility.",
-        "SKU": "opel-astra-h-daylight",
+        "id": "2",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(4).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$320.00",
+          "before": "$350.00"
+        },
+        "rating": 4.5,
+        "sale": "4",
+        "size": {
+          "price": "$320.00",
+          "stock": 38,
+          "value": ""
+        },
         "tags": [
           "opel",
           "astra h",
@@ -544,34 +551,15 @@
           "headlights",
           "automotive lighting"
         ],
-        "rating": 4.5,
-        "price": {
-          "before": "$350.00",
-          "after": "$320.00"
-        },
-        "sale": "-9%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FHeadlights%2FFront%20light%20Opel%20Astra%20H%2003.04-10%20Daylight%20black%2Fimg%20(4).jpg?alt=media"
-        ]
+        "text": "Enhance the front end of your Opel Astra H (03.04-10) with these stylish Daylight black headlights, offering a high-quality, modern design with exceptional visibility."
       }
     ],
     "Tires & Wheels": [
       {
-        "id": "1",
+        "SKU": "goodyear-eagle-ls2-23545r18",
         "categorie": ["Tires & Wheels"],
         "heading": "Goodyear Eagle LS-2-23545R18 94V SL VSB",
-        "text": "The Goodyear Eagle LS-2 is a high-performance tire designed for all-season driving. With a size of 235/45R18 and a 94V rating, it offers excellent handling, durability, and comfort in both dry and wet conditions.",
-        "SKU": "goodyear-eagle-ls2-23545r18",
-        "tags": ["goodyear", "eagle ls-2", "all-season", "tires", "235/45R18"],
-        "rating": 4.5,
-        "price": {
-          "before": "$180.00",
-          "after": "$160.00"
-        },
-        "sale": "-11%",
+        "id": "1",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(2).jpg?alt=media",
@@ -579,14 +567,44 @@
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(4).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(5).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FGoodyear%20Eagle%20LS-2-23545R18%2094V%20SL%20VSB%2Fimg%20(6).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$160.00",
+          "before": "$180.00"
+        },
+        "rating": 4.5,
+        "sale": "0",
+        "size": {
+          "price": "$160.00",
+          "stock": 7,
+          "value": ["14", "20", "18", "22", "16"]
+        },
+        "tags": ["goodyear", "eagle ls-2", "all-season", "tires", "235/45R18"],
+        "text": "The Goodyear Eagle LS-2 is a high-performance tire designed for all-season driving. With a size of 235/45R18 and a 94V rating, it offers excellent handling, durability, and comfort in both dry and wet conditions."
       },
       {
-        "id": "2",
+        "SKU": "michelin-pilot-sport-4-23555zr18xl",
         "categorie": ["Tires & Wheels"],
         "heading": "Michelin Pilot Sport All Season 4 Performance Tire 23555ZR18XL 104Y",
-        "text": "The Michelin Pilot Sport All Season 4 offers superior handling and traction for performance vehicles, with excellent wet and dry grip. The 235/55ZR18XL size and 104Y rating provide a perfect balance of performance and durability.",
-        "SKU": "michelin-pilot-sport-4-23555zr18xl",
+        "id": "2",
+        "imgs": [
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(1).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(2).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(3).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(4).jpg?alt=media",
+          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(5).jpg?alt=media"
+        ],
+        "price": {
+          "after": "$225.00",
+          "before": "$250.00"
+        },
+        "rating": 4.8,
+        "sale": "9",
+        "size": {
+          "price": "$225.00",
+          "stock": 5,
+          "value": ["18", "22", "16", "14", "20"]
+        },
         "tags": [
           "michelin",
           "pilot sport 4",
@@ -594,39 +612,32 @@
           "all-season",
           "235/55ZR18"
         ],
-        "rating": 4.8,
-        "price": {
-          "before": "$250.00",
-          "after": "$225.00"
-        },
-        "sale": "-10%",
-        "imgs": [
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(1).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(2).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(3).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(4).jpg?alt=media",
-          "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMODZ%C2%AE%20Ambush%20Red%20and%20Black%2012%20Golf%20Cart%20Wheels%2Fimg%20(5).jpg?alt=media"
-        ]
+        "text": "The Michelin Pilot Sport All Season 4 offers superior handling and traction for performance vehicles, with excellent wet and dry grip. The 235/55ZR18XL size and 104Y rating provide a perfect balance of performance and durability."
       },
       {
-        "id": "3",
+        "SKU": "modz-ambush-red-black-12",
         "categorie": ["Tires & Wheels"],
         "heading": "MODZ® Ambush Red and Black 12 Golf Cart Wheels",
-        "text": "The MODZ® Ambush Red and Black wheels are designed for golf carts, offering a sleek, modern look and superior performance. These 12-inch wheels are perfect for adding style and durability to your golf cart.",
-        "SKU": "modz-ambush-red-black-12",
-        "tags": ["modz", "golf cart", "wheels", "12-inch", "red and black"],
-        "rating": 4.3,
-        "price": {
-          "before": "$300.00",
-          "after": "$270.00"
-        },
-        "sale": "-10%",
+        "id": "3",
         "imgs": [
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(1).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(2).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(3).jpg?alt=media",
           "https://firebasestorage.googleapis.com/v0/b/ecoshop-79a80.appspot.com/o/Auto-Parts%2FProducts%2FTires%20%26%20Wheels%2FMichelin%20Pilot%20Sport%20All%20Season%204%20Performance%20Tire%2023555ZR18XL%20104Y%2Fimg%20(4).jpg?alt=media"
-        ]
+        ],
+        "price": {
+          "after": "$270.00",
+          "before": "$300.00"
+        },
+        "rating": 4.3,
+        "sale": "0",
+        "size": {
+          "price": "$270.00",
+          "stock": 0,
+          "value": ["14", "16", "20", "18", "22"]
+        },
+        "tags": ["modz", "golf cart", "wheels", "12-inch", "red and black"],
+        "text": "The MODZ® Ambush Red and Black wheels are designed for golf carts, offering a sleek, modern look and superior performance. These 12-inch wheels are perfect for adding style and durability to your golf cart."
       }
     ]
   },

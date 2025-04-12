@@ -8,8 +8,8 @@ const CartSlice = createSlice({
   reducers: {
     addProductToCart: (state, { payload }) => {
       const modifyObject = {
-        id: state.products.length,
         ...payload,
+        id: state.products.length,
       };
 
       if (!state.products.length) {
@@ -17,7 +17,21 @@ const CartSlice = createSlice({
         result.push(modifyObject);
         state.products = result;
       } else {
-        state.products = [...state.products, modifyObject];
+        const existProduct = state.products.findIndex(
+          (product) => product?.heading === payload?.heading
+        );
+
+        if (existProduct !== -1) {
+          state.products = state.products.map((product) => {
+            if (product?.heading === payload?.heading) {
+              return {
+                ...product,
+                amount: +product?.amount + +payload?.amount,
+                id: state.products.length,
+              };
+            } else return product;
+          });
+        } else state.products = [...state.products, modifyObject];
       }
     },
     removeProductFromCart: (state, { payload: id }) => {

@@ -45,7 +45,9 @@ const PortalSlice = createSlice({
       );
     },
     toggleProductCompare: (state, { payload }) => {},
-    toggleProductAddToCard: (state, { payload }) => {},
+    toggleProductAddToCard: (state, { payload }) => {
+      setTrueTargetState(["overlayState", "cartMenuState"], state, payload);
+    },
     toggleLoadingState: (state, { payload }) => {
       state.loadingState = payload;
     },

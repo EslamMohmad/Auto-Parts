@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { productDetails } from "../../Utils/Function";
 import Rating from "../../ReuseableComponents/Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -14,7 +13,7 @@ import {
 import Process_Button from "../../ReuseableComponents/Process_Button";
 import { addProductToCart } from "../../Store/CartSlice";
 
-const ProductSize = ({ size, setSize }) => {
+const ProductSize = ({ size, setSize, details }) => {
   const defaultSelectRef = useRef();
 
   useEffect(() => {
@@ -80,11 +79,19 @@ const ProductSize = ({ size, setSize }) => {
             exit={{ height: 0, opacity: 0 }}
             className="flex justify-between items-center"
           >
-            <p className="text-green-700 font-extralight text-sm">
-              <FontAwesomeIcon icon="fa-regular fa-circle-check" size="xl" />
-              <span className="ml-3">{size.stock} in stock</span>
+            <p
+              className={`${
+                !details?.stock ? "text-red-600" : "text-green-700"
+              } font-extralight text-sm`}
+            >
+              {details?.stock ? (
+                <FontAwesomeIcon icon="fa-regular fa-circle-check" size="xl" />
+              ) : (
+                <FontAwesomeIcon icon="fa-regular fa-circle-xmark" size="xl" />
+              )}
+              <span className="ml-3">{details?.stock} in stock</span>
             </p>
-            <h1 className="text-2xl font-bold">{size.price}</h1>
+            <h1 className="text-2xl font-bold">{details?.price}</h1>
           </motion.div>
         )}
       </AnimatePresence>
@@ -134,7 +141,7 @@ const ProductQuickView = () => {
   const addProductToCartHandler = () => {
     const productInfo = {
       ...productQuickView,
-      size,
+      size: productQuickView?.size.value ? size : { ...productQuickView?.size },
       amount: productAmountRef.current?.textContent,
     };
     action(addProductToCart(productInfo));
@@ -201,12 +208,18 @@ const ProductQuickView = () => {
             <p className="text-[11px] text-black/60 text-center">
               {productQuickView?.text}
             </p>
-            <ProductSize size={size} setSize={setSize} />
+            {productQuickView?.size.value && (
+              <ProductSize
+                size={size}
+                setSize={setSize}
+                details={productQuickView?.size}
+              />
+            )}
             <div className="flex gap-5 flex-wrap">
               <ProductAmount ref={productAmountRef} />
               <Process_Button
                 className={`whitespace-nowrap border py-3 px-10 rounded-3xl uppercase text-sm grow text-center ${
-                  size.value
+                  size.value || !productQuickView?.size.value
                     ? `cursor-pointer hover:bg-red-500 ${
                         loadingState.state &&
                         loadingState.method === "add to cart"
@@ -215,10 +228,10 @@ const ProductQuickView = () => {
                       } active:bg-red-500 hover:text-white active:text-white transition-colors hover:border-transparent active:border-transparent`
                     : "cursor-not-allowed"
                 }`}
-                disabled={!size.value}
+                disabled={!size.value || productQuickView?.size.value}
                 methodname="add to cart"
                 afterloading={[toggleCartMenu(true)]}
-                clickable={size.value}
+                clickable={size.value || !productQuickView?.size.value}
                 outermethod={addProductToCartHandler}
               >
                 add to cart
@@ -226,7 +239,7 @@ const ProductQuickView = () => {
             </div>
             <Process_Button
               className={`py-3.5 px-10 rounded-3xl uppercase text-[12px] bg-black text-white text-center ${
-                size.value
+                size.value || !productQuickView?.size.value
                   ? `cursor-pointer hover:bg-red-500 hover:text-white ${
                       loadingState.state && loadingState.method === "buy it now"
                         ? "bg-red-500 border-transparent"
@@ -234,9 +247,9 @@ const ProductQuickView = () => {
                     } active:bg-red-500 active:text-white transition-colors`
                   : "cursor-not-allowed"
               }`}
-              disabled={!size.value}
+              disabled={!size.value || productQuickView?.size.value}
               methodname="buy it now"
-              clickable={size.value}
+              clickable={size.value || !productQuickView?.size.value}
             >
               buy it now
             </Process_Button>

@@ -6,31 +6,36 @@ import cart from "../../Assets/Portal/Cart_Menu/icon-cart.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button_Title from "../../ReuseableComponents/Button_Title.jsx";
 import { removeProductFromCart } from "../../Store/CartSlice.js";
+import Process_Button from "../../ReuseableComponents/Process_Button.jsx";
+import { Link } from "react-router-dom";
 
 const RowProduct = ({ details }) => {
-  const { id, img, heading, amount, price } = details;
-
-  const action = useDispatch();
+  const { id, imgs, heading, amount, size, categorie } = details;
 
   return (
     <div className="flex justify-between items-center border border-black/15 rounded-md p-1 pr-2.5 hover:shadow-bottom transition-shadow relative">
-      <img src={img} className="w-[30%]" />
+      <img src={imgs[0]} className="w-[30%]" />
       <div className="relative max-w-[115px]">
-        <h1 className="text-sm overflow-hidden text-ellipsis whitespace-nowrap hover:text-red-500 active:text-red-500 transition-colors cursor-pointer select-none">
+        <Link
+          to={decodeURIComponent(`shop/${categorie[0]}/${heading}`)}
+          className="text-sm overflow-hidden block text-ellipsis whitespace-nowrap hover:text-red-500 active:text-red-500 transition-colors cursor-pointer select-none"
+        >
           {heading}
-        </h1>
+        </Link>
         <p className="text-[13px] my-1">
           <span className="text-gray-400 mr-2">{amount} </span> x
-          <span className="ml-2">{price}</span>
+          <span className="ml-2">{size?.price}</span>
         </p>
       </div>
-      <button
+      <Process_Button
+        clickable={true}
+        afterloading={[removeProductFromCart(id)]}
+        delay={200}
         className="relative group cursor-pointer w-[30px] h-[30px] leading-[30px] text-center hover:bg-red-500 hover:text-white active:bg-red-500 active:text-white transition-colors rounded-full"
-        onClick={() => action(removeProductFromCart(id))}
       >
         <FontAwesomeIcon icon="fa-regular fa-trash-can" size="sm" />
         <Button_Title title="delete" />
-      </button>
+      </Process_Button>
     </div>
   );
 };
@@ -81,21 +86,12 @@ const CartMenu = () => {
           ) : (
             <>
               <div className="flex flex-col gap-3 grow overflow-auto p-1 [&::-webkit-scrollbar]:!w-1.5 pr-3 border-t border-b py-5 border-black/10 rounded-md ">
-                {products.map((product, index) => {
-                  const details = {
-                    id: product.id,
-                    img: product.imgs[0],
-                    heading: product.heading,
-                    amount: product.amount,
-                    price: product.size.price,
-                  };
-                  return (
-                    <RowProduct
-                      key={product.amount + "000" + index}
-                      details={details}
-                    />
-                  );
-                })}
+                {products.map((product, index) => (
+                  <RowProduct
+                    key={product?.amount + "000" + index}
+                    details={product}
+                  />
+                ))}
               </div>
               <div className="bg-gray-200 p-4 mt-auto -mx-4">
                 <div className="uppercase flex justify-between items-center text-[13px] my-2">

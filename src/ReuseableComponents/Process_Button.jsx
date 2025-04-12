@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleLoadingState } from "../Store/PortalSlice";
 
-import lightBars from "../Assets/HomeProducts/light bars.svg";
-import darkBars from "../Assets/HomeProducts/dark bars.svg";
+import lightBars from "../Assets/Home/ProductsBanner/light bars.svg";
+import darkBars from "../Assets/Home/ProductsBanner/dark bars.svg";
 
 const Process_Button = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,11 +12,6 @@ const Process_Button = (props) => {
   const action = useDispatch();
 
   const delay = 1000;
-
-  const barsColors = {
-    light: lightBars,
-    dark: darkBars,
-  };
 
   const filteredObject = () => {
     const result = {};
@@ -27,7 +22,8 @@ const Process_Button = (props) => {
         key !== "clickable" &&
         key !== "afterloading" &&
         key !== "outermethod" &&
-        key !== "color"
+        key !== "color" &&
+        key !== "delay"
     );
     filter.map((key) => (result[key] = props[key]));
     return result;
@@ -44,7 +40,7 @@ const Process_Button = (props) => {
           props.outermethod && props.outermethod(),
           action(toggleLoadingState({ state: false, method: "" }))
         ),
-        delay
+        props.delay || delay
       );
     }
 

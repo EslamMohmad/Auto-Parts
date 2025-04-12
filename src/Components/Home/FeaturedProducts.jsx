@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Product from "../../ReuseableComponents/Product";
 import useMediaQuery from "../../Hooks/useMediaQuery";
@@ -102,9 +102,7 @@ const FeaturedProducts = () => {
     { itemsType: "Automotive Rims", selected: true },
   ]);
 
-  const { loadingState, setLoadingState } = useLoading();
-
-  const slides = useGetProducts(
+  const { products, loadingState, setLoadingState } = useGetProducts(
     selectedItems.find((object) => object.selected).itemsType
   );
 
@@ -121,6 +119,10 @@ const FeaturedProducts = () => {
     });
     setSelectedItems(result);
   };
+
+  useEffect(() => {
+    !products.length && !loadingState && setLoadingState(true);
+  }, [loadingState]);
 
   return (
     <motion.section
@@ -153,7 +155,7 @@ const FeaturedProducts = () => {
           <div className="featured-products-pagination ml-auto hidden md:flex gap-2 items-center [&>span]:cursor-pointer [&>span.swiper-pagination-bullet-active]:!bg-red-500 !w-auto"></div>
         </div>
         <Swiper
-          spaceBetween={20}
+          spaceBetween={24}
           slidesPerView={5}
           breakpoints={{
             1350: { slidesPerView: 5 },
@@ -162,7 +164,7 @@ const FeaturedProducts = () => {
             450: { slidesPerView: 2, pagination: false },
             0: { slidesPerView: 1 },
           }}
-          className="!py-8 !px-5 !-mx-5"
+          className="!py-8 !px-6 !-mx-6 "
           style={{ zIndex: 0 }}
           onActiveIndexChange={(e) => setCurrentSlide(e.activeIndex)}
           {...(!loadingState && {
@@ -172,10 +174,14 @@ const FeaturedProducts = () => {
           modules={[Autoplay, Pagination]}
           pagination={{ clickable: true, el: ".featured-products-pagination" }}
         >
-          {slides?.map((product) => (
+          {products?.map((product) => (
             <SwiperSlide key={product?.id}>
-              <Product currentSlide={currentSlide} details={product} />
-              {loadingState && <LoadingProduct />}
+              <Product
+                currentSlide={currentSlide}
+                details={product}
+                component="featured products"
+              />
+              <LoadingProduct state={loadingState} />
             </SwiperSlide>
           ))}
         </Swiper>

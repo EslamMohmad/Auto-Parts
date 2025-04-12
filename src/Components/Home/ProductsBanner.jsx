@@ -1,5 +1,5 @@
-import bannerOne from "../../Assets/HomeProducts/productsBanner (1).jpg";
-import bannerTwo from "../../Assets/HomeProducts/productsBanner (2).jpg";
+import bannerOne from "../../Assets/Home/ProductsBanner/productsBanner (1).jpg";
+import bannerTwo from "../../Assets/Home/ProductsBanner/productsBanner (2).jpg";
 import Shop_Now_Button from "../../ReuseableComponents/Shop_Now_Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProductsSlider from "./ProductsSlider";

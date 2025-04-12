@@ -23,6 +23,7 @@ import {
   faPlus,
   faMinus,
   faGear,
+  faCheck,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faUser,
@@ -30,6 +31,7 @@ import {
   faEnvelope,
   faClock,
   faCircleCheck,
+  faCircleXmark,
   faTrashCan,
 } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -75,5 +77,7 @@ export const globalIcons = () => {
     faCircleCheck,
     faTrashCan,
     faGear,
+    faCheck,
+    faCircleXmark,
   ]);
 };
