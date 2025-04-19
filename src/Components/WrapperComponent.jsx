@@ -7,6 +7,7 @@ import usePrevState from "../Hooks/usePrevState";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeOverlay } from "../Store/PortalSlice";
+import useScrollTop from "../Hooks/useScrollTop";
 
 const WrapperComponent = () => {
   const { overlayState } = useSelector(({ PortalSlice }) => PortalSlice);
@@ -16,6 +17,8 @@ const WrapperComponent = () => {
   const prevPathname = usePrevState(pathname);
 
   const action = useDispatch();
+
+  useScrollTop(pathname);
 
   useEffect(() => {
     if (overlayState && pathname !== prevPathname) {

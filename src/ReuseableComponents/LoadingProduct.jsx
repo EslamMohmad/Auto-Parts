@@ -7,7 +7,8 @@ const LoadingProduct = ({ state }) => {
       {state && (
         <motion.div
           animate={{ opacity: 1 }}
-          className="absolute top-0 bg-white z-10 w-full h-[104%] rounded-xl flex justify-center items-center border border-black/10"
+          exit={{ opacity: 0 }}
+          className="absolute top-0 bg-white z-10 w-full min-h-[50px] h-[-webkit-fill-available] rounded-xl flex justify-center items-center border border-black/10"
         >
           <FontAwesomeIcon
             icon="fa-solid fa-gear"

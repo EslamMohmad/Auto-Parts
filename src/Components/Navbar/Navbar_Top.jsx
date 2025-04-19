@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import Navbar_Top_Mobile_Search from "./Navbar_Top_Mobile_Search";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 import Navbar_Top_Auth from "./Navbar_Top_Auth";
+import Logo from "../../ReuseableComponents/Logo";
 
 const Navbar_Top = ({ fixedNavbar }) => {
   const { cartMenuState, newsLetterPopupState, mainMenuState, authState } =
@@ -40,7 +41,7 @@ const Navbar_Top = ({ fixedNavbar }) => {
       <Navbar_Top_Menu />
       <Navbar_Top_Mobile_Search />
       <Link to="" className="mx-auto sm:mr-auto lg:mr-0 sm:mx-0">
-        <img src={logo} className="sm:min-w-[150px] w-[170px]" />
+        <Logo />
       </Link>
       <ul
         className={`gap-10 ${

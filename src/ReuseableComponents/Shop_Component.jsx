@@ -6,12 +6,6 @@ const Shop_Component = () => {
 
   const navigationHandler = pathname.replace("/Auto-Parts/", "").split("/");
 
-  // const handleLink = (index) => {
-  //   return navigationHandler.length -1 !== index
-  //   ?
-  //   :
-  // }
-
   return (
     <section>
       <div className="relative h-[75vh]">

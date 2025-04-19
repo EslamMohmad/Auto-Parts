@@ -12,9 +12,8 @@ import Rating from "./Rating";
 import Button_Title from "./Button_Title";
 import Process_Button from "./Process_Button";
 import { addProductToQuickView } from "../Store/ProductsSlice";
-import { productDetails } from "../Utils/Function";
 import { addProductToCart } from "../Store/CartSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Button = ({
   icon,
@@ -77,17 +76,22 @@ const Product = ({ details, currentSlide, component = "" }) => {
 
   const isMobile = useMediaQuery("(max-width : 450px)");
 
+  const navToProduct = useNavigate();
+
   const productOptions = [
     {
-      icon: size?.value ? "fa-solid fa-check" : "fa-solid fa-truck-fast",
-      text: size?.value ? "select option" : "add to cart",
+      icon:
+        typeof size?.value !== "string"
+          ? "fa-solid fa-check"
+          : "fa-solid fa-truck-fast",
+      text: typeof size?.value !== "string" ? "select option" : "add to cart",
       method: (prop) =>
-        !size?.value
+        typeof size?.value === "string"
           ? [
               toggleProductAddToCard(prop),
               addProductToCart({ ...details, amount: 1 } || productDetails),
             ]
-          : [],
+          : [() => navToProduct(`/Auto-Parts/shop/${categorie[0]}/${heading}`)],
     },
     {
       icon: "fa-solid fa-chart-simple",
@@ -139,13 +143,13 @@ const Product = ({ details, currentSlide, component = "" }) => {
         } bg-white py-8 relative z-10 transition-all h-full`}
       >
         <Link
-          to={`shop/${categorie[0]}`}
+          to={`/Auto-Parts/shop/${categorie[0]}`}
           className="text-gray-400 hover:text-red-600"
         >
           {categorie[0]}
         </Link>
         <Link
-          to={`shop/${categorie[0]}/${heading}`}
+          to={`/Auto-Parts/shop/${categorie[0]}/${heading}`}
           className="h-[40px] text-ellipsis overflow-hidden whitespace-break-spaces hover:text-red-600"
         >
           {heading}

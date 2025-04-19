@@ -1,16 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from "../../Assets/Home/Navbar/logo.png";
 
 import app_store from "../../Assets/Home/Footer/store (1).png";
 import google_play from "../../Assets/Home/Footer/store (2).png";
 
-import payment_1 from "../../Assets/Footer/payment (1).jpg";
-import payment_2 from "../../Assets/Footer/payment (2).jpg";
-import payment_3 from "../../Assets/Footer/payment (3).jpg";
-import payment_4 from "../../Assets/Footer/payment (4).jpg";
-import payment_5 from "../../Assets/Footer/payment (5).jpg";
 import List from "./List";
 import { motion } from "framer-motion";
+import Logo from "../../ReuseableComponents/Logo";
+import Payment_Imgs from "../../ReuseableComponents/Payment_Imgs";
 
 const Footer = () => {
   const contacts = [
@@ -61,8 +57,6 @@ const Footer = () => {
     "fa-brands fa-vimeo",
   ];
 
-  const payment = [payment_1, payment_2, payment_3, payment_4, payment_5];
-
   return (
     <footer className="bg-gray-200/70">
       <div className="pt-10 max-w-screen-2xl px-[25px] mx-auto">
@@ -74,7 +68,7 @@ const Footer = () => {
             viewport={{ margin: "-100px", once: true }}
             className="flex flex-col gap-5 w-full sm:w-[43%] lg:w-1/4"
           >
-            <img src={logo} className="w-[200px]" />
+            <Logo />
             <p className="text-[12px] text-black/70">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Cupiditate, assumenda? Voluptatum ducimus
@@ -133,16 +127,7 @@ const Footer = () => {
           <h1 className="text-[12px] text-black/60">
             Copyright © 2025 Eslam Mohmad. All Rights Reserved.
           </h1>
-          <ul className="flex gap-2 items-center">
-            {payment.map((li) => (
-              <li key={li}>
-                <img
-                  src={li}
-                  className="w-[45px] hover:scale-110 transition-transform"
-                />
-              </li>
-            ))}
-          </ul>
+          <Payment_Imgs />
         </div>
       </div>
     </footer>

@@ -6,14 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Autoplay, Navigation } from "swiper/modules";
 import { forwardRef, useEffect, useRef, useState } from "react";
 import Button_Title from "../../ReuseableComponents/Button_Title";
-import {
-  toggleCartMenu,
-  toggleProductQuickView,
-} from "../../Store/PortalSlice";
+import { toggleProductQuickView } from "../../Store/PortalSlice";
 import Process_Button from "../../ReuseableComponents/Process_Button";
-import { addProductToCart } from "../../Store/CartSlice";
+import AddToCartButton from "../../ReuseableComponents/AddToCartButton";
+import BuyItNowButton from "../../ReuseableComponents/BuyItNowButton";
 
-const ProductSize = ({ size, setSize, details }) => {
+export const ProductSize = ({ size, setSize, details }) => {
   const defaultSelectRef = useRef();
 
   useEffect(() => {
@@ -99,7 +97,7 @@ const ProductSize = ({ size, setSize, details }) => {
   );
 };
 
-const ProductAmount = forwardRef((_, ref) => {
+export const ProductAmount = forwardRef((_, ref) => {
   let [amount, setAmount] = useState(1);
 
   return (
@@ -137,15 +135,6 @@ const ProductQuickView = () => {
   const productAmountRef = useRef();
 
   const action = useDispatch();
-
-  const addProductToCartHandler = () => {
-    const productInfo = {
-      ...productQuickView,
-      size: productQuickView?.size.value ? size : { ...productQuickView?.size },
-      amount: productAmountRef.current?.textContent,
-    };
-    action(addProductToCart(productInfo));
-  };
 
   return (
     <AnimatePresence>
@@ -217,42 +206,13 @@ const ProductQuickView = () => {
             )}
             <div className="flex gap-5 flex-wrap">
               <ProductAmount ref={productAmountRef} />
-              <Process_Button
-                className={`whitespace-nowrap border py-3 px-10 rounded-3xl uppercase text-sm grow text-center ${
-                  size.value || !productQuickView?.size.value
-                    ? `cursor-pointer hover:bg-red-500 ${
-                        loadingState.state &&
-                        loadingState.method === "add to cart"
-                          ? "bg-red-500 border-transparent"
-                          : ""
-                      } active:bg-red-500 hover:text-white active:text-white transition-colors hover:border-transparent active:border-transparent`
-                    : "cursor-not-allowed"
-                }`}
-                disabled={!size.value || productQuickView?.size.value}
-                methodname="add to cart"
-                afterloading={[toggleCartMenu(true)]}
-                clickable={size.value || !productQuickView?.size.value}
-                outermethod={addProductToCartHandler}
-              >
-                add to cart
-              </Process_Button>
+              <AddToCartButton
+                product={productQuickView}
+                productAmountRef={productAmountRef}
+                size={size}
+              />
             </div>
-            <Process_Button
-              className={`py-3.5 px-10 rounded-3xl uppercase text-[12px] bg-black text-white text-center ${
-                size.value || !productQuickView?.size.value
-                  ? `cursor-pointer hover:bg-red-500 hover:text-white ${
-                      loadingState.state && loadingState.method === "buy it now"
-                        ? "bg-red-500 border-transparent"
-                        : ""
-                    } active:bg-red-500 active:text-white transition-colors`
-                  : "cursor-not-allowed"
-              }`}
-              disabled={!size.value || productQuickView?.size.value}
-              methodname="buy it now"
-              clickable={size.value || !productQuickView?.size.value}
-            >
-              buy it now
-            </Process_Button>
+            <BuyItNowButton size={size} product={productQuickView} />
             <div className="flex flex-col gap-2 text-[12px]">
               <h1 className="text-black/50">
                 <span className="font-bold text-black">SKU : </span>

@@ -1,8 +1,6 @@
-import img_1 from "../Assets/HomeProducts/img (1).jpg";
-import img_2 from "../Assets/HomeProducts/img (2).jpg";
-import img_3 from "../Assets/HomeProducts/img (3).jpg";
-import img_4 from "../Assets/HomeProducts/img (4).jpg";
-import img_5 from "../Assets/HomeProducts/img (5).jpg";
+import testimonial_1 from "../Assets/Home/Testimonial/testimonial (1).jpg";
+import testimonial_2 from "../Assets/Home/Testimonial/testimonial (2).jpg";
+import testimonial_3 from "../Assets/Home/Testimonial/testimonial (3).jpg";
 
 export function setTrueTargetState(trueArray, object, payload) {
   for (let key in object) {
@@ -16,20 +14,29 @@ export function waiting(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-export const productDetails = {
-  id: "0",
-  categorie: [
-    "automotive rims",
-    "car audio systems",
-    "detailing ",
-    "headlight",
-  ],
-  heading: "dorman steel wheel compatible with select honda models",
-  text: "Full of flavour but with palate cleansing acidity, our kiwifruit are rich in fibre and packed with the enzyme actinidin which are brilliant for digestion.",
-  SKU: "woo-belt",
-  tags: ["ducati", "hyundai", "kia", "lamborghini", "toyota", "triumph"],
-  rating: 3,
-  price: { before: "$200.00", after: "$180.00" },
-  sale: "-10%",
-  imgs: [img_1, img_2, img_3, img_4, img_5],
-};
+export const testimonials = [
+  {
+    id: 0,
+    heading: "great price & services",
+    img: testimonial_1,
+    rating: 3,
+    text: "automize rice crackers are a staple in my pantry. They are a healthier alternative to traditional crackers and chips, but still satisfy my craving for something spicy and crunchy. Chilli garlic flavor is my personal favorite - it's so delicious!",
+    info: { name: "jennifer", contry: "california" },
+  },
+  {
+    id: 1,
+    heading: "great price & services",
+    img: testimonial_2,
+    rating: 5,
+    text: "i have been using Automize's personal care products for a while now, and I must say, I am impressed. The quality is top-notch, and the natural ingredients make me feel good about what I'm putting on my skin. Highly recommend!",
+    info: { name: "christopher", contry: "new orleans" },
+  },
+  {
+    id: 2,
+    heading: "great price & services",
+    img: testimonial_3,
+    rating: 4,
+    text: "as a vegetarian, I always miss out on the classic breakfast staple of omelettes. But with Automize Store's Veg Omelette premix, I can finally enjoy a tasty and protein-packed breakfast option. The mix is easy to use and customize with my favorite veggies.",
+    info: { name: "jessica", contry: "chicago" },
+  },
+];

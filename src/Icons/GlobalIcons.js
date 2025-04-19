@@ -24,6 +24,9 @@ import {
   faMinus,
   faGear,
   faCheck,
+  faArrowRightArrowLeft,
+  faQuestion,
+  faShareNodes,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faUser,
@@ -79,5 +82,8 @@ export const globalIcons = () => {
     faGear,
     faCheck,
     faCircleXmark,
+    faArrowRightArrowLeft,
+    faQuestion,
+    faShareNodes,
   ]);
 };

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button_Title from "../../ReuseableComponents/Button_Title.jsx";
 import { removeProductFromCart } from "../../Store/CartSlice.js";
 import Process_Button from "../../ReuseableComponents/Process_Button.jsx";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RowProduct = ({ details }) => {
   const { id, imgs, heading, amount, size, categorie } = details;
@@ -45,6 +45,8 @@ const CartMenu = () => {
   const { products } = useSelector(({ CartSlice }) => CartSlice);
 
   const action = useDispatch();
+
+  const navto = useNavigate();
 
   const totalPrice = () => {
     let count = 0;
@@ -98,10 +100,16 @@ const CartMenu = () => {
                   subtotal{" "}
                   <span className="font-bold">${totalPrice().toFixed(2)}</span>
                 </div>
-                <button className="w-full py-3.5 text-[12px] font-bolder uppercase bg-white border rounded-md cursor-pointer border-black/20 transition-colors hover:bg-black active:bg-black hover:text-white active:text-white">
+                <button
+                  onClick={() => navto("cart")}
+                  className="w-full py-3.5 text-[12px] font-bolder uppercase bg-white border rounded-md cursor-pointer border-black/20 transition-colors hover:bg-black active:bg-black hover:text-white active:text-white"
+                >
                   view cart
                 </button>
-                <button className="w-full py-3.5 text-[12px] font-bolder uppercase bg-black text-white rounded-md cursor-pointer mt-2 transition-colors hover:bg-red-600 active:bg-red-600">
+                <button
+                  onClick={() => navto("checkout")}
+                  className="w-full py-3.5 text-[12px] font-bolder uppercase bg-black text-white rounded-md cursor-pointer mt-2 transition-colors hover:bg-red-600 active:bg-red-600"
+                >
                   checkout
                 </button>
               </div>
