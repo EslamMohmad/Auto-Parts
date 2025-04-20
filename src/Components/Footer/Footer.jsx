@@ -7,13 +7,25 @@ import List from "./List";
 import { motion } from "framer-motion";
 import Logo from "../../ReuseableComponents/Logo";
 import Payment_Imgs from "../../ReuseableComponents/Payment_Imgs";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+
+  const isHome = pathname === "/Auto-Parts" ? true : false;
+
   const contacts = [
     {
       icon: "fa-solid fa-phone",
       text: (
-        <a href="tel:+01002623871">we're available by phone +01002623871</a>
+        <a href="tel:+01002623871">
+          we're available by phone{" "}
+          <span
+            className={`${isHome ? "text-black" : "text-red-500"} font-bold`}
+          >
+            +01002623871
+          </span>
+        </a>
       ),
     },
     {
@@ -58,7 +70,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-200/70">
+    <footer
+      className={`${isHome ? "bg-gray-200/70" : "bg-darkBlue text-red-600"}`}
+    >
       <div className="pt-10 max-w-screen-2xl px-[25px] mx-auto">
         <div className="py-14 flex flex-wrap gap-10 lg:gap-0 justify-between">
           <motion.div
@@ -69,11 +83,19 @@ const Footer = () => {
             className="flex flex-col gap-5 w-full sm:w-[43%] lg:w-1/4"
           >
             <Logo />
-            <p className="text-[12px] text-black/70">
+            <p
+              className={`text-[12px] ${
+                isHome ? "text-black/70" : "text-white"
+              }`}
+            >
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Cupiditate, assumenda? Voluptatum ducimus
             </p>
-            <ul className="flex flex-col gap-3 text-black/90">
+            <ul
+              className={`flex flex-col gap-3 ${
+                isHome ? "text-black/90" : "text-white"
+              }`}
+            >
               {contacts.map(({ icon, text }) => (
                 <li key={icon} className="group whitespace-nowrap">
                   <FontAwesomeIcon
@@ -81,7 +103,11 @@ const Footer = () => {
                     size="xl"
                     className="group-hover:animate-vibration"
                   />
-                  <span className="ml-5 text-[13px] text-black/70 ">
+                  <span
+                    className={`ml-5 text-[13px] ${
+                      isHome ? "text-black/70 " : "text-white"
+                    }`}
+                  >
                     {text}
                   </span>
                 </li>
@@ -89,10 +115,16 @@ const Footer = () => {
             </ul>
           </motion.div>
           {Object.keys(lists).map((parent, index) => (
-            <List lists={lists} parent={parent} key={parent} index={index} />
+            <List
+              lists={lists}
+              parent={parent}
+              key={parent}
+              index={index}
+              isHome={isHome}
+            />
           ))}
         </div>
-        <div className="bg-white p-6 rounded-xl flex flex-col sm:flex-row justify-between gap-5">
+        <div className="bg-white p-6 rounded-xl flex flex-col sm:flex-row justify-between gap-5 text-black">
           <motion.div
             initial={{ opacity: 0, y: "100px" }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -124,7 +156,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-5 justify-between items-center py-8">
-          <h1 className="text-[12px] text-black/60">
+          <h1
+            className={`text-[12px] ${
+              isHome ? " text-black/60" : "text-white"
+            }`}
+          >
             Copyright © 2025 Eslam Mohmad. All Rights Reserved.
           </h1>
           <Payment_Imgs />

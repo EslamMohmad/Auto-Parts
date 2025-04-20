@@ -13,7 +13,7 @@ const Payment_Imgs = () => {
         <li key={li}>
           <img
             src={li}
-            className="w-[45px] hover:scale-110 transition-transform"
+            className="w-[45px] hover:scale-110 active:scale-110 transition-transform"
           />
         </li>
       ))}

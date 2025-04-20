@@ -1,14 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef, useState } from "react";
 
-const Navbar_Top_Search = () => {
+const Navbar_Top_Search = ({ state }) => {
   const [inputFocus, setInputFocus] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
   const inputRef = useRef();
 
   return (
-    <div className="border rounded-3xl border-gray-300 py-1 w-full lg:w-[400px] min-w-[190px] items-center relative shadow order-2 lg:order-none hidden sm:flex">
+    <div
+      className={`border rounded-3xl ${
+        state ? "border-gray-300" : "border-transparent bg-white"
+      } py-1 w-full lg:w-[400px] min-w-[190px] items-center relative shadow order-2 lg:order-none hidden sm:flex`}
+    >
       <div
         className={`text-gray-400 uppercase absolute left-6 ${
           inputFocus ? "top-2 text-[8px]" : "top-5 text-[10px]"

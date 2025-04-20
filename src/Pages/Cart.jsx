@@ -1,5 +1,12 @@
+import TopBannar from "../Components/Cart/TopBannar";
+
 const Cart = () => {
-  return <div>cart</div>;
+  return (
+    <>
+      <TopBannar />
+      Cart
+    </>
+  );
 };
 
 export default Cart;

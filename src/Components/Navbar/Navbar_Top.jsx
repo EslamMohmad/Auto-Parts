@@ -10,7 +10,7 @@ import useMediaQuery from "../../Hooks/useMediaQuery";
 import Navbar_Top_Auth from "./Navbar_Top_Auth";
 import Logo from "../../ReuseableComponents/Logo";
 
-const Navbar_Top = ({ fixedNavbar }) => {
+const Navbar_Top = ({ fixedNavbar, isHome }) => {
   const { cartMenuState, newsLetterPopupState, mainMenuState, authState } =
     useSelector(({ PortalSlice }) => PortalSlice);
 
@@ -25,7 +25,11 @@ const Navbar_Top = ({ fixedNavbar }) => {
 
   return (
     <section
-      className={`-mx-[25px] sm:mx-auto flex items-center sm:flex-wrap lg:flex-nowrap justify-between gap-5 bg-white ${
+      className={`-mx-[25px] sm:mx-auto flex items-center sm:flex-wrap lg:flex-nowrap justify-between gap-5 ${
+        fixedNavbar &&
+        `${isHome && "bg-white"}` &&
+        `${!isHome && "bg-transparent"}`
+      } ${
         cartMenuState ||
         newsLetterPopupState ||
         authState ||
@@ -59,7 +63,7 @@ const Navbar_Top = ({ fixedNavbar }) => {
           </li>
         ))}
       </ul>
-      {!fixedNavbar && <Navbar_Top_Search />}
+      {!fixedNavbar && <Navbar_Top_Search state={isHome} />}
       <div className="flex gap-5 items-center">
         <Navbar_Top_Auth />
         <div className="flex gap-7">

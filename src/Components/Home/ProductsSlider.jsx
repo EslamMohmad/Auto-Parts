@@ -32,9 +32,13 @@ const ProductsSlider = ({ type }) => {
         onActiveIndexChange={(e) => setCurrentSlide(e.activeIndex)}
         className="!p-6 sm:!px-6 !-m-6"
       >
-        {products.map((product) => (
+        {products.map((product, index) => (
           <SwiperSlide key={product.id}>
-            <Product currentSlide={currentSlide} details={product} />
+            <Product
+              currentSlide={currentSlide}
+              details={product}
+              index={index}
+            />
             <LoadingProduct state={loadingState} />
           </SwiperSlide>
         ))}

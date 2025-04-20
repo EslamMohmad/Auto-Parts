@@ -28,8 +28,8 @@ const WrapperComponent = () => {
 
   return (
     <div className="mb-[63px] sm:mb-0">
+      <Navbar />
       <main className="max-w-screen-2xl px-[25px] mx-auto">
-        <Navbar />
         <Outlet />
         <Portal />
       </main>

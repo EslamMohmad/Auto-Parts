@@ -66,10 +66,10 @@ const Button = ({
   );
 };
 
-const Product = ({ details, currentSlide, component = "" }) => {
+const Product = ({ details, currentSlide, component = "", index }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
-  const { heading, id, rating, sale, price, imgs, categorie, size } =
+  const { heading, rating, sale, price, imgs, categorie, size } =
     details || productDetails;
 
   const [optionsComState, setOptionComState] = useState(false);
@@ -171,7 +171,8 @@ const Product = ({ details, currentSlide, component = "" }) => {
           )}
         </div>
         <AnimatePresence>
-          {(optionsComState || (isMobile && currentSlide === +id - 1)) && (
+          {(optionsComState ||
+            (isMobile && currentSlide - 1 === index - 1)) && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

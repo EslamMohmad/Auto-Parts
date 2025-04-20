@@ -4,8 +4,8 @@ import ProductSlider from "../Components/Shop_Product/ProductSlider";
 import ProductDetails from "../Components/Shop_Product/ProductDetails";
 import Navigattion from "../Components/Shop_Product/Navigattion";
 import MoreInformation from "../Components/Shop_Product/MoreInformation";
-import ProductsComponent from "../ReuseableComponents/ProductsComponent";
 import { useEffect } from "react";
+import RelatedProducts from "../Components/Shop_Product/RelatedProducts";
 
 const Shop_Category_Product = () => {
   const { category, product } = useParams();
@@ -14,11 +14,6 @@ const Shop_Category_Product = () => {
     category,
     true
   );
-
-  const { products: relatedProducts, loadingState: relatedloadingState } =
-    useGetProducts("", true);
-
-  const modifyProducts = Object.values(relatedProducts)?.flat();
 
   const details = products?.filter((object) => object?.heading === product)[0];
 
@@ -38,11 +33,7 @@ const Shop_Category_Product = () => {
         </div>
       </div>
       <MoreInformation />
-      <ProductsComponent
-        heading="related products"
-        loadingState={relatedloadingState}
-        products={modifyProducts}
-      />
+      <RelatedProducts />
     </section>
   );
 };

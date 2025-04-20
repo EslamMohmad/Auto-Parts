@@ -3,8 +3,13 @@ import Navbar_Top from "../Navbar/Navbar_Top";
 import { useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import useMediaQuery from "../../Hooks/useMediaQuery";
+import { useLocation } from "react-router-dom";
 
 const Fixed_Navbar = () => {
+  const { pathname } = useLocation();
+
+  const isHome = pathname === "/Auto-Parts" ? true : false;
+
   const {
     cartMenuState,
     newsLetterPopupState,
@@ -41,6 +46,8 @@ const Fixed_Navbar = () => {
           exit={{ top: "-100%" }}
           transition={{ duration: 1.2 }}
           className={`fixed top-0 w-[100vw] shadow-bottom ${
+            !isHome ? "bg-yellow-300" : "bg-white"
+          } ${
             cartMenuState ||
             newsLetterPopupState ||
             productQuickViewState ||

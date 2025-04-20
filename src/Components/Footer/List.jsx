@@ -3,12 +3,12 @@ import useMediaQuery from "../../Hooks/useMediaQuery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 
-const List = ({ parent, lists, index }) => {
+const List = ({ parent, lists, index, isHome }) => {
   const isMobile = useMediaQuery("(max-width : 640px)");
-  const [state, setState] = useState(isMobile ? !false : true);
+  const [state, setState] = useState(false);
 
   useEffect(() => {
-    if (isMobile) setState(false);
+    isMobile ? setState(false) : setState(true);
   }, [isMobile]);
 
   return (
@@ -43,7 +43,9 @@ const List = ({ parent, lists, index }) => {
             {lists[parent].map((child) => (
               <li
                 key={child}
-                className="text-[13px] text-black/60 hover:text-red-600 active:text-red-600 transition-colors cursor-pointer"
+                className={`text-[13px] ${
+                  isHome ? "text-black/60 " : "text-white "
+                } hover:text-red-600 active:text-red-600 transition-colors cursor-pointer`}
               >
                 {child}
               </li>

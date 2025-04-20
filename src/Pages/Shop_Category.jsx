@@ -1,7 +1,5 @@
-import Shop_Component from "../ReuseableComponents/Shop_Component";
-
 const Shop_Category = () => {
-  return <Shop_Component />;
+  return <div></div>;
 };
 
 export default Shop_Category;

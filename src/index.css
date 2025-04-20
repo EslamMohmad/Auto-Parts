@@ -10,6 +10,7 @@
   --shadow-lightBox: 1px 1px 5px rgba(0, 0, 0, 0.15);
   --shadow-bottom-left: -7px 7px 5px rgba(0, 0, 0, 0.15);
   --color-lightGray: #dddada9e;
+  --color-darkBlue: #091017;
 
   @keyframes vibration {
     16.65% {

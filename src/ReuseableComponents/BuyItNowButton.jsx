@@ -6,7 +6,7 @@ const BuyItNowButton = ({ size, product }) => {
 
   return (
     <Process_Button
-      className={`py-3.5 px-10 rounded-3xl w-full md:w-auto lg:w-full grow lg:grow-0 uppercase text-[12px] bg-black text-white text-center ${
+      className={`py-3.5 px-10 rounded-3xl w-auto sm:w-full grow uppercase text-[12px] bg-black text-white text-center ${
         size.value || !product?.size?.value
           ? `cursor-pointer hover:bg-red-500 hover:text-white ${
               loadingState.state && loadingState.method === "buy it now"

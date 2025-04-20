@@ -21,7 +21,7 @@ const ProductDetails = ({ details, loadingState }) => {
   ];
 
   return (
-    <div className="flex flex-col gap-5 md:px-5 lg:px-10">
+    <div className="flex flex-col gap-5 md:px-4 lg:px-8">
       <LoadingText height={"29px"} width={"100%"} loadingState={loadingState}>
         <h1 className="text-xl font-bold">{details?.heading}</h1>
       </LoadingText>
@@ -54,10 +54,10 @@ const ProductDetails = ({ details, loadingState }) => {
       <ul className="flex gap-6 lg:gap-8 py-5 flex-wrap">
         {options.map((option) => (
           <li key={option.text}>
-            <div className="text-black/60 text-[13px] cursor-pointer hover:text-red-600 transition-colors">
+            <button className="text-black/60 text-[13px] cursor-pointer hover:text-red-600 active:text-red-600 transition-colors">
               <FontAwesomeIcon icon={option.icon} className="mr-3" />
               <span>{option.text}</span>
-            </div>
+            </button>
           </li>
         ))}
       </ul>

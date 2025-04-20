@@ -41,11 +41,12 @@ const ProductsComponent = ({
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true, el: ".featured-products-pagination" }}
       >
-        {products?.map((product) => (
+        {products?.map((product, index) => (
           <SwiperSlide key={product?.heading}>
             <Product
               currentSlide={currentSlide}
               details={product}
+              index={index}
               component="featured products"
             />
             <LoadingProduct state={loadingState} />

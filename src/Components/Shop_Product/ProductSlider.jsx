@@ -9,7 +9,7 @@ const ProductSlider = ({ details, loadingState }) => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   return (
-    <div className="flex flex-col gap-5 h-[69vh] md:h-auto lg:h-[70vh] static md:sticky md:top-[100px]">
+    <div className="flex flex-col gap-5 sm:h-[69vh] md:h-auto lg:h-[70vh] static md:sticky md:top-[100px]">
       <Swiper
         onSlideChange={(e) => setActiveSlide(e.activeIndex)}
         thumbs={{ swiper: thumbsSwiper }}

@@ -52,7 +52,7 @@ const AdditionalInformation = () => {
           <h3 className="w-[150px] font-bold">size</h3>
           <div>
             {size.map((li) => (
-              <span key={li} className="text-sm ml-3 text-black/50">
+              <span key={li} className="text-sm mr-3 text-black/50">
                 {li} inch,
               </span>
             ))}
@@ -114,9 +114,9 @@ const MoreInformation = () => {
     <div className="py-5">
       <ul className="flex gap-2">
         {sectionsState.map((section) => (
-          <li key={section.name}>
+          <li key={section.name} className="w-1/3 md:w-auto">
             <button
-              className={`py-3 px-6 rounded-t-2xl text-[13px] shadow-[inset_0_-5px_10px_lightgray] border relative bg-black/10 border-black/15 cursor-pointer whitespace-normal overflow-hidden text-ellipsis ${
+              className={`text-center py-3 px-0 md:px-5 rounded-t-2xl text-[13px] shadow-[inset_0_-5px_10px_lightgray] border relative bg-black/10 border-black/15 cursor-pointer whitespace-nowrap overflow-hidden text-ellipsis w-full ${
                 section.state &&
                 "bg-white border-b-0 shadow-none z-[1] top-[2px]"
               }`}
