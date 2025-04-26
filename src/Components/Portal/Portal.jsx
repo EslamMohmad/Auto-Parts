@@ -17,6 +17,7 @@ import Fixed_Navbar from "./Fixed_Navbar.jsx";
 import ProductQuickView from "./ProductQuickView.jsx";
 import Scroll_Top from "./Scroll_Top.jsx";
 import Auth from "./Auth.jsx";
+import Right_Filter from "./Right_Filter.jsx";
 
 const Portal = () => {
   const props = useSelector(({ PortalSlice }) => PortalSlice);
@@ -56,6 +57,7 @@ const Portal = () => {
         <SearchMenu />
         <NewsLetters_Popup />
         <ProductQuickView />
+        <Right_Filter />
       </Overlay>
       {isMobile && <Navbar_Mobile_Bottom />}
       {!isMobile && <Scroll_Top />}

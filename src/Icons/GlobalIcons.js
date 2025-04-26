@@ -27,6 +27,8 @@ import {
   faArrowRightArrowLeft,
   faQuestion,
   faShareNodes,
+  faSquare,
+  faSliders,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faUser,
@@ -85,5 +87,7 @@ export const globalIcons = () => {
     faArrowRightArrowLeft,
     faQuestion,
     faShareNodes,
+    faSquare,
+    faSliders,
   ]);
 };

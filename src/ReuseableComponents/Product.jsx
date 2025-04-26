@@ -140,7 +140,7 @@ const Product = ({ details, currentSlide, component = "", index }) => {
       <div
         className={`flex flex-col gap-3 ${"group-hover/options:-translate-y-20 group-hover/options:shadow-top"} ${
           optionsComState && loadingState.state && "-translate-y-20 shadow-top"
-        } bg-white py-8 relative z-10 transition-all h-full`}
+        } bg-white py-8 relative z-[1] transition-all h-full`}
       >
         <Link
           to={`/Auto-Parts/shop/${categorie[0]}`}

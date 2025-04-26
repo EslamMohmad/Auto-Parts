@@ -37,7 +37,7 @@ const Rating = ({ rating }) => {
   };
 
   return (
-    <div className="flex gap-0.5 w-fit">
+    <div className="inline-flex gap-0.5 w-fit">
       {ratingStarsHandler().map((star, idx) => (
         <span key={`${star} ${idx}`}>{star}</span>
       ))}

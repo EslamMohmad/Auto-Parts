@@ -36,11 +36,17 @@ const Brands = () => {
   ];
 
   const banners = [
-    { img: banner1, heading: "michelin tire", text: "premium performace" },
+    {
+      img: banner1,
+      heading: "michelin tire",
+      text: "premium performace",
+      link: "Tires & Wheels",
+    },
     {
       img: banner2,
       heading: "better brakes",
       text: "best sellers brakes system",
+      link: "Brakes Systems",
     },
   ];
 
@@ -73,7 +79,7 @@ const Brands = () => {
         ))}
       </Swiper>
       <div className="flex flex-col lg:flex-row gap-5 py-10">
-        {banners.map(({ img, heading, text }) => (
+        {banners.map(({ img, heading, text, link }) => (
           <div key={img} className="overflow-hidden rounded-2xl relative group">
             <img
               src={img}
@@ -87,7 +93,7 @@ const Brands = () => {
               <p className="text-white text-[10px] sm:text-base capitalize my-3 sm:my-5 font-extralight">
                 {text}
               </p>
-              <Shop_Now_Button />
+              <Shop_Now_Button link={`shop/${link}`} />
             </div>
           </div>
         ))}

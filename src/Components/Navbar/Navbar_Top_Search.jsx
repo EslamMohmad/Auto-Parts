@@ -11,7 +11,7 @@ const Navbar_Top_Search = ({ state }) => {
     <div
       className={`border rounded-3xl ${
         state ? "border-gray-300" : "border-transparent bg-white"
-      } py-1 w-full lg:w-[400px] min-w-[190px] items-center relative shadow order-2 lg:order-none hidden sm:flex`}
+      } py-1 my-3 w-full lg:w-[400px] min-w-[190px] items-center relative shadow order-2 lg:order-none hidden sm:flex`}
     >
       <div
         className={`text-gray-400 uppercase absolute left-6 ${

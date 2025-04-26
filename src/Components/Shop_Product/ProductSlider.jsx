@@ -9,7 +9,7 @@ const ProductSlider = ({ details, loadingState }) => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   return (
-    <div className="flex flex-col gap-5 sm:h-[69vh] md:h-auto lg:h-[70vh] static md:sticky md:top-[100px]">
+    <div className="flex flex-col gap-5 sm:h-[69vh] md:h-auto lg:h-[70vh] static md:sticky md:top-[100px] pb-1">
       <Swiper
         onSlideChange={(e) => setActiveSlide(e.activeIndex)}
         thumbs={{ swiper: thumbsSwiper }}
@@ -41,7 +41,7 @@ const ProductSlider = ({ details, loadingState }) => {
         }}
         spaceBetween={"24"}
         grid={{ rows: 1, fill: "row" }}
-        className="!w-full min-h-[100px]"
+        className="!w-full min-h-[100px] !overflow-y-visible"
       >
         {details?.imgs?.map((img, index) => (
           <SwiperSlide

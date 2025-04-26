@@ -119,7 +119,7 @@ const LastNews = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-2xl w-3/4">
           <h1 className="text-red-600 uppercase">best car servicing</h1>
           <p className="uppercase text-white text-[12px] my-5">
-            experience the best car services un automize
+            experience the best car services un auto parts
           </p>
           <button className="bg-white py-3 px-7 rounded-3xl text-[11px] uppercase outline-none cursor-pointer hover:bg-red-500 active:bg-red-500 hover:text-white active:text-white transition-colors">
             learn more

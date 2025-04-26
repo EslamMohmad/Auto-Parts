@@ -5,8 +5,9 @@ import img_2 from "../../Assets/Home/BannersGrid/bannar (2).jpg";
 import img_3 from "../../Assets/Home/BannersGrid/bannar (3).jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Shop_Now_Button from "../../ReuseableComponents/Shop_Now_Button";
+import { Link } from "react-router-dom";
 
-const BannarContent = ({ imgSrc, heading, text }) => {
+const BannarContent = ({ imgSrc, heading, text, link }) => {
   return (
     <div className="relative row-span-1 group overflow-hidden rounded-2xl">
       <div className="flex flex-col gap-4 uppercase absolute z-[1] top-1/2 left-10 -translate-y-1/2 justify-center items-start w-[max-content]">
@@ -16,13 +17,16 @@ const BannarContent = ({ imgSrc, heading, text }) => {
         <h6 className="relative text-white text-[11px] leading-3 delay-500 transition-all">
           {text}
         </h6>
-        <button className="rounded-2xl text-[11px] uppercase outline-none cursor-pointer text-white hover:text-red-500 active:text-red-500 transition-colors mt-6 group/vibration">
+        <Link
+          to={link}
+          className="rounded-2xl text-[11px] uppercase outline-none cursor-pointer text-white hover:text-red-500 active:text-red-500 transition-colors mt-6 group/vibration"
+        >
           read more
           <FontAwesomeIcon
             className="ml-3 group-hover/vibration:animate-vibration"
             icon="fa-solid fa-arrow-right-long"
           />
-        </button>
+        </Link>
       </div>
       <img
         src={imgSrc}
@@ -49,18 +53,20 @@ const BannersGrid = () => {
             <h6 className="relative text-white text-[11px] leading-11 delay-500 transition-all">
               best sellers brakes system
             </h6>
-            <Shop_Now_Button />
+            <Shop_Now_Button link={"shop/Brakes Systems"} />
           </div>
         </div>
         <BannarContent
           imgSrc={img_2}
           heading="best sellers"
           text={"projector headlights"}
+          link="shop/Headlights"
         />
         <BannarContent
           imgSrc={img_3}
           heading="car wheels"
           text={"sport edition"}
+          link="shop/Tires & Wheels"
         />
       </div>
     </section>

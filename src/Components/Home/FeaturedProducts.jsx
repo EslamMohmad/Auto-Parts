@@ -127,9 +127,9 @@ const FilterListComponent = ({
 
 const FeaturedProducts = () => {
   const [selectedItems, setSelectedItems] = useState([
-    { itemsType: "Car Audio Systems", selected: false },
+    { itemsType: "Accessories", selected: true },
     { itemsType: "Headlights", selected: false },
-    { itemsType: "Automotive Rims", selected: true },
+    { itemsType: "Automotive Rims", selected: false },
   ]);
 
   const { products, loadingState, setLoadingState } = useGetProducts(

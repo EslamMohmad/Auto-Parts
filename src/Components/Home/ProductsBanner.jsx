@@ -119,7 +119,7 @@ const ProductsBanner = () => {
 
   return (
     <section>
-      {productsComInfo.map(({ categories, banner, products }) => (
+      {productsComInfo.map(({ categories, banner }) => (
         <div
           key={categories.heading}
           className="flex flex-col sm:flex-row justify-between flex-wrap lg:flex-nowrap gap-5 py-10"
@@ -136,7 +136,7 @@ const ProductsBanner = () => {
                 {banner.text}
               </h1>
               <div className="mt-[140px]">
-                <Shop_Now_Button />
+                <Shop_Now_Button link={`shop/${categories.heading}`} />
               </div>
             </div>
           </div>

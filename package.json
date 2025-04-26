@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://eslammohmad.github.io/Auto-Parts/",
+  "homepage": "http://eslammohmad.github.io/Auto-Parts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

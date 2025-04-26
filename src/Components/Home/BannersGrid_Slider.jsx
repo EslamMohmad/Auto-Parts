@@ -13,9 +13,17 @@ const BannersGrid_Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    { img: slide_1, text: "car wheels sport edition" },
-    { img: slide_2, text: "brakes system for off road" },
-    { img: slide_3, text: "car headlight 35w/55w" },
+    {
+      img: slide_1,
+      text: "car wheels sport edition",
+      link: "shop/Tires & Wheels",
+    },
+    {
+      img: slide_2,
+      text: "brakes system for off road",
+      link: "shop/Brakes Systems",
+    },
+    { img: slide_3, text: "car headlight 35w/55w", link: "shop/Headlights" },
   ];
 
   const styleCondition = (trueVal, falseVal, index) => {
@@ -28,7 +36,7 @@ const BannersGrid_Slider = () => {
         slidesPerView={1}
         effect="fade"
         pagination={{ clickable: true }}
-        autoplay={true}
+        autoplay={{ pauseOnMouseEnter: true }}
         speed={300}
         modules={[EffectFade, Pagination, Autoplay]}
         fadeEffect={{ crossFade: true }}
@@ -36,7 +44,7 @@ const BannersGrid_Slider = () => {
         style={{ zIndex: "0" }}
         onActiveIndexChange={(e) => setCurrentIndex(e.activeIndex)}
       >
-        {slides.map(({ img, text }, index) => (
+        {slides.map(({ img, text, link }, index) => (
           <SwiperSlide key={img} className="h-full">
             <div className="relative h-full object-cover">
               <img
@@ -70,7 +78,7 @@ const BannersGrid_Slider = () => {
                     index
                   )}`}
                 >
-                  <Shop_Now_Button />
+                  <Shop_Now_Button link={link} />
                 </div>
               </div>
             </div>
