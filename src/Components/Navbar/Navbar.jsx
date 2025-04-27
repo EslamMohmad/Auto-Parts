@@ -3,7 +3,8 @@ import Navbar_Top from "./Navbar_Top";
 const Navbar = () => {
   const { pathname } = useLocation();
 
-  const isHome = pathname === "/Auto-Parts" ? true : false;
+  const isHome =
+    pathname === "/Auto-Parts" || pathname === "/Auto-Parts/" ? true : false;
 
   return (
     <nav
