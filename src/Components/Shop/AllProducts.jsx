@@ -3,12 +3,11 @@ import LoadingProduct from "../../ReuseableComponents/LoadingProduct";
 import Product from "../../ReuseableComponents/Product";
 import LayoutOptions from "./LayoutOptions";
 import Process_Button from "../../ReuseableComponents/Process_Button";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Filtering from "./Filtering";
 import { setProductsAmount } from "../../Store/ProductsSlice";
 import useMediaQuery from "../../Hooks/useMediaQuery";
-import { toggleFilterMenuState } from "../../Store/PortalSlice";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FilterByButton from "./FilterByButton";
 
 const AllProducts = ({ products, loadingState, allProducts }) => {
   const { loadingState: loading } = useSelector(
@@ -16,8 +15,7 @@ const AllProducts = ({ products, loadingState, allProducts }) => {
   );
 
   const lessDesktop = useMediaQuery("(max-width : 1024px)");
-
-  const action = useDispatch();
+  const isMobile = useMediaQuery("(max-width : 640px)");
 
   const columnsStyle = [
     {
@@ -37,19 +35,14 @@ const AllProducts = ({ products, loadingState, allProducts }) => {
           <Filtering />
         </div>
       ) : (
-        <button
-          onClick={() => action(toggleFilterMenuState(true))}
-          className={`uppercase text-xl font-bold cursor-pointer border border-black/30 py-3 px-4 rounded-xl mb-3 hover:bg-black hover:text-white transition-colors`}
-        >
-          <FontAwesomeIcon icon="fa-solid fa-sliders" className="mr-3" />
-          filter by
-        </button>
+        !isMobile && <FilterByButton />
       )}
       <div className="lg:w-3/4">
         <LayoutOptions
           setColumns={setColumns}
           currLength={products.length}
           allProducts={allProducts}
+          isMobile={isMobile}
         />
         <div
           className={`grid ${

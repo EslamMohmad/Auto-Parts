@@ -8,7 +8,8 @@ import { useLocation } from "react-router-dom";
 const Fixed_Navbar = () => {
   const { pathname } = useLocation();
 
-  const isHome = pathname === "/Auto-Parts" ? true : false;
+  const isHome =
+    pathname === "/Auto-Parts" || pathname === "/Auto-Parts/" ? true : false;
 
   const {
     cartMenuState,

@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Rating from "./Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
+import { addKeysToFilter } from "../Store/ProductsSlice";
 
 const FilterComponent = ({ type, list }) => {
   const [listState, setListState] = useState(true);
+
+  const action = useDispatch();
 
   return (
     <div className="font-bold rounded-md border border-black/10">
@@ -24,7 +27,7 @@ const FilterComponent = ({ type, list }) => {
         {listState && (
           <motion.div
             initial={{ height: 0 }}
-            animate={{ height: "auto" }}
+            animate={{ height: "auto", transition: { delay: 0.3 } }}
             exit={{ height: 0 }}
             className="overflow-hidden flex flex-col gap-1 pt-3 text-black/60 font-extralight border-t border-black/10 mx-3"
           >
@@ -38,6 +41,11 @@ const FilterComponent = ({ type, list }) => {
                   id={typeof li.name === "object" ? index : li.name}
                   type="checkbox"
                   className="mr-3 accent-black w-[18px] h-[18px] cursor-pointer"
+                  onChange={({ target }) =>
+                    action(
+                      addKeysToFilter({ type: li.name, state: target.checked })
+                    )
+                  }
                 />
                 <label
                   htmlFor={typeof li.name === "object" ? index : li.name}
@@ -59,6 +67,7 @@ const FilterSection = () => {
   const { categories } = useSelector(({ ProductsSlice }) => ProductsSlice);
 
   const filterTypes = {
+    categories: [...categories],
     brands: [
       { name: "honda", productsAmount: 5 },
       { name: "hyundai", productsAmount: 6 },
@@ -84,10 +93,13 @@ const FilterSection = () => {
 
   return (
     <div className="flex flex-col gap-8 py-8 border-t  border-t-black/20">
-      <FilterComponent type={"categories"} list={categories} />
-      <FilterComponent type={"brands"} list={filterTypes.brands} />
-      <FilterComponent type={"sizes"} list={filterTypes.sizes} />
-      <FilterComponent type={"ratings"} list={filterTypes.ratings} />
+      {Object.keys(filterTypes).map((section) => (
+        <FilterComponent
+          key={section}
+          type={section}
+          list={filterTypes[section]}
+        />
+      ))}
     </div>
   );
 };

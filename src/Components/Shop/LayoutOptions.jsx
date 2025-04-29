@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import useMediaQuery from "../../Hooks/useMediaQuery";
+import FilterByButton from "./FilterByButton";
 
-const TableFilter = ({ props, setGrids }) => {
+const TableGrid = ({ props, setGrids }) => {
   const table = Array.from(
     { length: props.squareNumber },
     (_, index) => index + 1
@@ -65,7 +67,7 @@ const List = ({ list, setList, type }) => {
   );
 };
 
-const FilterButton = () => {
+const SortingButton = () => {
   const [list, setList] = useState({ state: false, type: "default sorting" });
 
   const types = [
@@ -116,7 +118,7 @@ const FilterButton = () => {
   );
 };
 
-const LayoutOptions = ({ setColumns, currLength, allProducts }) => {
+const LayoutOptions = ({ setColumns, currLength, allProducts, isMobile }) => {
   const diffGridsArray = [
     { squareNumber: 4, state: true },
     { squareNumber: 3, state: false },
@@ -133,20 +135,24 @@ const LayoutOptions = ({ setColumns, currLength, allProducts }) => {
 
   return (
     <div className="p-3 bg-black/5 rounded-md flex justify-between items-center">
-      <div className="flex gap-2 items-center">
-        {grids.map((grid) => (
-          <TableFilter
-            key={grid.squareNumber}
-            props={grid}
-            setGrids={setGrids}
-          />
-        ))}
-        <h5 className="hidden sm:block text-[12px] text-black/50 mr-7 ml-3 whitespace-nowrap text-ellipsis overflow-hidden">
-          showing {currLength} of {allProducts} results
-        </h5>
-      </div>
-      <div className="relative">
-        <FilterButton />
+      {isMobile ? (
+        <FilterByButton />
+      ) : (
+        <div className="hidden sm:flex gap-2 items-center">
+          {grids.map((grid) => (
+            <TableGrid
+              key={grid.squareNumber}
+              props={grid}
+              setGrids={setGrids}
+            />
+          ))}
+          <h5 className="hidden sm:block text-[12px] text-black/50 mr-7 ml-3 whitespace-nowrap text-ellipsis overflow-hidden">
+            showing {currLength} of {allProducts} results
+          </h5>
+        </div>
+      )}
+      <div className="relative ml-auto">
+        <SortingButton />
       </div>
     </div>
   );

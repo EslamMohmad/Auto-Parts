@@ -10,6 +10,7 @@ const ProductsSlice = createSlice({
     categories: [],
     productsLength: 10,
     loadingState: false,
+    filterKeys: [],
   },
   reducers: {
     addProductToQuickView: (state, { payload }) => {
@@ -20,6 +21,18 @@ const ProductsSlice = createSlice({
         state.productsLength <= state.shopPageProducts.length
           ? state.productsLength + payload
           : state.shopPageProducts.length;
+    },
+    addKeysToFilter: (state, { payload }) => {
+      if (payload.state) {
+        state.filterKeys = [...state.filterKeys, payload.type];
+      } else
+        state.filterKeys = state.filterKeys.filter(
+          (key) => key !== payload.type
+        );
+
+      // state.shopPageProducts = state.shopPageProducts.filter(
+      //   (product) => state.filterKeys.includes(product.categorie[0])
+      // );
     },
   },
   extraReducers: (builder) => {
@@ -51,7 +64,7 @@ const ProductsSlice = createSlice({
   },
 });
 
-export const { addProductToQuickView, setProductsAmount } =
+export const { addProductToQuickView, setProductsAmount, addKeysToFilter } =
   ProductsSlice.actions;
 
 export default ProductsSlice.reducer;
