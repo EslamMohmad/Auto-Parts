@@ -21,12 +21,12 @@ const Button = ({
   method,
   index,
   setOptionComState,
-  component = "",
+  firstBtnIcon,
 }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const handleFirstButton = () => {
-    if (component === "featured products" && index === 0) {
+    if (firstBtnIcon && index === 0) {
       return text;
     } else {
       return (
@@ -48,7 +48,7 @@ const Button = ({
       methodname={text}
       clickable={true}
       className={`relative leading-[40px] text-center ${
-        component === "featured products" && index === 0
+        firstBtnIcon && index === 0
           ? `grow w-[max-content] bg-black text-white ${
               loadingState.state && loadingState.method === text
                 ? "bg-red-500 text-white"
@@ -66,7 +66,7 @@ const Button = ({
   );
 };
 
-const Product = ({ details, currentSlide, component = "", index }) => {
+const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const { heading, rating, sale, price, imgs, categorie, size } =
@@ -186,7 +186,9 @@ const Product = ({ details, currentSlide, component = "", index }) => {
                   index,
                   setOptionComState,
                 };
-                return <Button key={text} {...props} component={component} />;
+                return (
+                  <Button key={text} {...props} firstBtnIcon={firstBtnIcon} />
+                );
               })}
             </motion.div>
           )}

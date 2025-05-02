@@ -6,8 +6,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { shop_getProducts } from "../Store/APIS";
 
 const Shop = () => {
-  const { shopPageProducts, categories, productsLength, loadingState } =
-    useSelector(({ ProductsSlice }) => ProductsSlice);
+  const {
+    shopPageProducts,
+    categories,
+    productsLength,
+    loadingState,
+    filterKeys,
+  } = useSelector(({ ProductsSlice }) => ProductsSlice);
 
   const { pathname } = useLocation();
 
@@ -15,11 +20,19 @@ const Shop = () => {
 
   const { category } = useParams();
 
-  const currentProducts = shopPageProducts.slice(0, productsLength);
+  const productsFilterHandler = () => {
+    if (!filterKeys.length) return shopPageProducts;
+
+    return shopPageProducts.filter(
+      (product) =>
+        filterKeys.includes(product.categorie[0]) ||
+        filterKeys.includes(product.brands)
+    );
+  };
 
   useEffect(() => {
     action(shop_getProducts(category || ""));
-  }, [shopPageProducts.length, category]);
+  }, [category]);
 
   return (
     <>
@@ -28,9 +41,9 @@ const Shop = () => {
       )}
 
       <AllProducts
-        products={currentProducts}
+        products={productsFilterHandler().slice(0, productsLength)}
         loadingState={loadingState}
-        allProducts={shopPageProducts.length}
+        allProducts={productsFilterHandler().length}
       />
     </>
   );

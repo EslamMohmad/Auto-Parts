@@ -134,7 +134,7 @@ const LayoutOptions = ({ setColumns, currLength, allProducts, isMobile }) => {
   }, [index]);
 
   return (
-    <div className="p-3 bg-black/5 rounded-md flex justify-between items-center">
+    <div className="p-3 bg-black/5 rounded-md flex gap-2 justify-between items-center">
       {isMobile ? (
         <FilterByButton />
       ) : (

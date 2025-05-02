@@ -8,7 +8,7 @@ const FilterByButton = () => {
   return (
     <button
       onClick={() => action(toggleFilterMenuState(true))}
-      className={`uppercase text-xl font-bold cursor-pointer border border-black/30 py-3 px-4 rounded-xl sm:mb-3 hover:bg-black hover:text-white transition-colors w-fit`}
+      className={`uppercase whitespace-nowrap sm:text-xl font-bold cursor-pointer border border-black/30 py-3 px-4 rounded-xl sm:mb-3 hover:bg-black hover:text-white transition-colors w-fit`}
     >
       <FontAwesomeIcon icon="fa-solid fa-sliders" className="mr-3" />
       filter by

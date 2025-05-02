@@ -151,6 +151,7 @@ const FeaturedProducts = () => {
         heading="featured products"
         loadingState={loadingState}
         products={products}
+        firstBtnIcon={true}
         filterListComponent={
           <FilterListComponent
             loadingState={loadingState}

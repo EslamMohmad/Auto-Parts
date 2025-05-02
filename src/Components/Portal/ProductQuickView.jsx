@@ -7,7 +7,6 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { forwardRef, useEffect, useRef, useState } from "react";
 import Button_Title from "../../ReuseableComponents/Button_Title";
 import { toggleProductQuickView } from "../../Store/PortalSlice";
-import Process_Button from "../../ReuseableComponents/Process_Button";
 import AddToCartButton from "../../ReuseableComponents/AddToCartButton";
 import BuyItNowButton from "../../ReuseableComponents/BuyItNowButton";
 
@@ -97,8 +96,8 @@ export const ProductSize = ({ size, setSize, details }) => {
   );
 };
 
-export const ProductAmount = forwardRef((_, ref) => {
-  let [amount, setAmount] = useState(1);
+export const ProductAmount = forwardRef(({ productAmount }, ref) => {
+  let [amount, setAmount] = useState(productAmount || 1);
 
   return (
     <div className="flex items-center bg-gray-200  rounded-3xl p-2 w-[max-content]">

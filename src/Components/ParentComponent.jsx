@@ -1,9 +1,14 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import background from "../Assets/Shop/background.webp";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const ParentComponent = () => {
+  const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
+
   const { pathname } = useLocation();
+
+  const navTo = useNavigate();
 
   const dynamicLinksArray = decodeURIComponent(pathname)
     .replace("/Auto-Parts", "home")
@@ -15,22 +20,25 @@ const ParentComponent = () => {
       case "home":
         result = "..";
         break;
-      case "shop":
-        result = "../shop";
-        break;
-      case "cart":
-        result = "../cart";
+      default:
+        result = `../${link}`;
         break;
     }
     return result;
   };
 
+  useEffect(() => {
+    if (pathname.includes("my-account") && !userData?.email) {
+      navTo("../");
+    }
+  }, [pathname, userData?.email]);
+
   return (
     <>
       <div className="relative h-[400px] left-0 flex justify-center items-center">
         <div className="relative z-[1]">
-          <h3 className="text-4xl font-bold mb-3 text-center">
-            {dynamicLinksArray[dynamicLinksArray.length - 1]}
+          <h3 className="text-4xl font-bold mb-3 text-center uppercase">
+            {dynamicLinksArray[dynamicLinksArray.length - 1].replace("-", " ")}
           </h3>
           <ul className="flex justify-center">
             {dynamicLinksArray.map((li, index) => {
@@ -41,15 +49,17 @@ const ParentComponent = () => {
                     <>
                       <Link
                         to={linksHandler(li)}
-                        className="hover:text-red-500 active:text-red-500 transition-colors"
+                        className="hover:text-red-500 active:text-red-500 transition-colors capitalize"
                       >
-                        {li}
+                        {li.replace("-", " ")}
                       </Link>
                       {slah}
                     </>
                   ) : (
                     <>
-                      <span className="mx-2">{li}</span>
+                      <span className="mx-2 capitalize">
+                        {li.replace("-", " ")}
+                      </span>
                     </>
                   )}
                 </Fragment>

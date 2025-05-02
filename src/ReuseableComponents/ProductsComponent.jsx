@@ -9,6 +9,7 @@ const ProductsComponent = ({
   products,
   filterListComponent,
   loadingState,
+  firstBtnIcon,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -47,7 +48,7 @@ const ProductsComponent = ({
               currentSlide={currentSlide}
               details={product}
               index={index}
-              component="featured products"
+              firstBtnIcon={firstBtnIcon}
             />
             <LoadingProduct state={loadingState} />
           </SwiperSlide>
