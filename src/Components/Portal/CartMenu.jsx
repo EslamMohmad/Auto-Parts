@@ -8,6 +8,7 @@ import Button_Title from "../../ReuseableComponents/Button_Title.jsx";
 import { removeProductFromCart } from "../../Store/CartSlice.js";
 import Process_Button from "../../ReuseableComponents/Process_Button.jsx";
 import { Link, useNavigate } from "react-router-dom";
+import { totalPrice } from "../../Utils/Function.js";
 
 const RowProduct = ({ details }) => {
   const { id, imgs, heading, amount, size, categorie } = details;
@@ -47,15 +48,6 @@ const CartMenu = () => {
   const action = useDispatch();
 
   const navto = useNavigate();
-
-  const totalPrice = () => {
-    let count = 0;
-    products.map(
-      (product) =>
-        (count += +product.amount * +product.size.price.replace(/\$/g, ""))
-    );
-    return count;
-  };
 
   return (
     <AnimatePresence>
@@ -98,7 +90,9 @@ const CartMenu = () => {
               <div className="bg-gray-200 p-4 mt-auto -mx-4">
                 <div className="uppercase flex justify-between items-center text-[13px] my-2">
                   subtotal{" "}
-                  <span className="font-bold">${totalPrice().toFixed(2)}</span>
+                  <span className="font-bold">
+                    ${totalPrice(products).toFixed(2)}
+                  </span>
                 </div>
                 <button
                   onClick={() => navto("cart")}

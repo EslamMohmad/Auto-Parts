@@ -40,3 +40,12 @@ export const testimonials = [
     info: { name: "jessica", contry: "chicago" },
   },
 ];
+
+export const totalPrice = (products) => {
+  let count = 0;
+  products.map(
+    (product) =>
+      (count += +product.amount * +product.size.price.replace(/\$/g, ""))
+  );
+  return count;
+};

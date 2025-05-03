@@ -54,9 +54,9 @@ const ProductsCartTable = () => {
                 <ProductRowTable key={product.heading} product={product} />
               ))
             ) : (
-              <p className="text-center py-3 w-full" key="no date">
-                no products
-              </p>
+              <tr className="text-center py-3 w-full" key="no date">
+                <td>no products</td>
+              </tr>
             )}
           </tbody>
         </table>
@@ -70,6 +70,7 @@ const ProductsCartTable = () => {
           />
           <Process_Button
             clickable={true}
+            methodname="apply coupon"
             className="bg-black text-white hover:bg-red-600 px-7 uppercase font-semibold text-sm rounded-md cursor-pointer transition-colors w-1/2 sm:w-auto sm:min-w-[158px] h-[60px] leading-[60px]"
           >
             apply coupon
@@ -78,6 +79,7 @@ const ProductsCartTable = () => {
         <div className="my-auto">
           <Process_Button
             clickable={true}
+            methodname="update cart"
             className="whitespace-nowrap bg-black/10 hover:bg-black hover:text-white sm:min-w-[158px] h-[60px] leading-[60px] px-7 uppercase font-semibold text-sm rounded-md cursor-pointer transition-colors text-center"
           >
             update cart
