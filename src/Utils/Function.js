@@ -29,7 +29,7 @@ export const testimonials = [
     img: testimonial_2,
     rating: 5,
     text: "i have been using Automize's personal care products for a while now, and I must say, I am impressed. The quality is top-notch, and the natural ingredients make me feel good about what I'm putting on my skin. Highly recommend!",
-    info: { name: "christopher", contry: "new orleans" },
+    info: { name: "jessica", contry: "new orleans" },
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ export const testimonials = [
     img: testimonial_3,
     rating: 4,
     text: "as a vegetarian, I always miss out on the classic breakfast staple of omelettes. But with Automize Store's Veg Omelette premix, I can finally enjoy a tasty and protein-packed breakfast option. The mix is easy to use and customize with my favorite veggies.",
-    info: { name: "jessica", contry: "chicago" },
+    info: { name: "christopher", contry: "chicago" },
   },
 ];
 
@@ -49,3 +49,18 @@ export const totalPrice = (products) => {
   );
   return count;
 };
+
+export const monthsArray = [
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
+];

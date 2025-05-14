@@ -3,10 +3,10 @@ import ProductsCartTable from "../Components/Cart/ProductsCartTable";
 import ProductsComponent from "./../ReuseableComponents/ProductsComponent";
 import { useEffect } from "react";
 import { shop_getProducts } from "../Store/APIS";
-import { useNavigate } from "react-router-dom";
 import Process_Button from "../ReuseableComponents/Process_Button";
-import { totalPrice } from "../Utils/Function";
 import Shipping_Orders from "../ReuseableComponents/Shipping_Orders";
+import useNavToHome from "../Hooks/useNavToHome";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { shopPageProducts, loadingState } = useSelector(
@@ -25,6 +25,8 @@ const Cart = () => {
     }
   }, [shopPageProducts.length]);
 
+  useNavToHome(products);
+
   return (
     <section>
       <div className="flex flex-col lg:flex-row gap-7 py-10">
@@ -33,7 +35,7 @@ const Cart = () => {
           <ProductsComponent
             heading="you may also like"
             products={shopPageProducts.slice(0, 10)}
-            loadingState={loadingState}
+            loadingState={false}
             firstBtnIcon={false}
           />
         </div>

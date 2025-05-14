@@ -6,6 +6,8 @@ import Shop_Category_product from "./Pages/Shop_Category_product";
 import Cart from "./Pages/Cart";
 import Checkout from "./Pages/Checkout";
 import ParentComponent from "./Components/ParentComponent";
+import Account from "./Pages/Account";
+import Orders from "./Pages/Orders";
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
           <Route path="*" element={<ParentComponent />}>
             <Route path="shop/:category?" element={<Shop />} />
             <Route path="cart" element={<Cart />} />
+            <Route path="orders" element={<Orders />} />
             <Route path="checkout" element={<Checkout />} />
+            <Route path="my-account/*" element={<Account />} />
           </Route>
           <Route
             path="shop/:category/:product"

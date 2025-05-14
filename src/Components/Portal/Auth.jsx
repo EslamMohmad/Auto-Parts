@@ -1,14 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { forwardRef, use, useRef, useState } from "react";
+import { forwardRef, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
-import { auth } from "../../Firebase/Firebase";
+
 import useEmptyInput from "../../Hooks/useEmptyInput";
-import { getUserdata } from "../../Store/AuthSlice";
-import { toggleAuthState } from "../../Store/PortalSlice";
+import { auth_loginAccount, auth_registerAccount } from "../../Store/APIS";
 
 const Login = forwardRef(({ state }, ref) => {
   const email = useRef();
@@ -19,16 +14,13 @@ const Login = forwardRef(({ state }, ref) => {
   const loginHandler = (e) => {
     e.preventDefault();
     const { login_password, login_email } = e.target;
-    const details = [login_email.value, login_password.value];
-    signInWithEmailAndPassword(auth, ...details)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        action(getUserdata({ email: user.email }));
-        action(toggleAuthState(false));
+
+    action(
+      auth_loginAccount({
+        email: login_email.value,
+        password: login_password.value,
       })
-      .catch((error) => {
-        alert(error.message);
-      });
+    );
 
     [email, password].forEach((element) => {
       element.current.value = "";
@@ -109,20 +101,14 @@ const Register = forwardRef(({ state }, ref) => {
 
   const createNewUser = (e) => {
     e.preventDefault();
-    const { register_password, register_email } = e.target;
+    const { register_email, register_password } = e.target;
 
-    const details = [register_email.value, register_password.value];
-
-    createUserWithEmailAndPassword(auth, ...details)
-      .then((userCredential) => {
-        const user = userCredential.user;
-
-        action(getUserdata({ email: user.email }));
-        action(toggleAuthState(false));
+    action(
+      auth_registerAccount({
+        email: register_email.value,
+        password: register_password.value,
       })
-      .catch((error) => {
-        alert("email already in use");
-      });
+    );
 
     [email, password].forEach((element) => {
       element.current.value = "";
@@ -248,8 +234,16 @@ const Auth = () => {
                 </button>
               ))}
             </div>
-            <Login ref={loginForm} state={currentForm === "login"} />
-            <Register state={currentForm !== "login"} ref={registerForm} />
+            <Login
+              ref={loginForm}
+              state={currentForm === "login"}
+              authState={authState}
+            />
+            <Register
+              state={currentForm !== "login"}
+              ref={registerForm}
+              authState={authState}
+            />
           </div>
         </motion.div>
       )}

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { totalPrice } from "../Utils/Function";
 import { setShippingType } from "../Store/CartSlice";
 
-const Shipping_Input = ({ shipping, shippingType }) => {
+const Shipping_Input = ({ shipping, shippingType, form }) => {
   const action = useDispatch();
 
   return (
@@ -14,6 +14,7 @@ const Shipping_Input = ({ shipping, shippingType }) => {
         name="shipping-options"
         checked={shipping.type === shippingType.filter((e) => e.state)[0].type}
         onChange={() => action(setShippingType({ ...shipping }))}
+        form={form}
       />
       <label
         className="capitalize text-black/60 text-[13px]"
@@ -25,7 +26,7 @@ const Shipping_Input = ({ shipping, shippingType }) => {
   );
 };
 
-const Shipping_Orders = () => {
+const Shipping_Orders = ({ form }) => {
   const { products, shippingType } = useSelector(({ CartSlice }) => CartSlice);
 
   return (
@@ -37,6 +38,7 @@ const Shipping_Orders = () => {
             key={shipping.type}
             shipping={shipping}
             shippingType={shippingType}
+            form={form}
           />
         ))}
 

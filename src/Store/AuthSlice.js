@@ -1,26 +1,48 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {
+  auth_loginAccount,
+  auth_logoutAccount,
+  auth_registerAccount,
+} from "./APIS";
 
 const AuthSlice = createSlice({
   name: "AuthSlice",
   initialState: {
     userData: {},
+    accountOptionsState: false,
   },
   reducers: {
-    getUserdata: (state, { payload }) => {
-      if (payload?.email) {
-        const displayName = payload?.email.slice(
-          -payload?.email.length,
-          payload?.email.indexOf("@")
-        );
-        state.userData = {
-          displayName,
-          email: payload?.email,
-        };
-      } else state.userData = {};
+    getUserData: (state, { payload }) => {
+      state.userData = accountDetailsHandler(payload);
     },
+    toggleAccountOptions: (state, { payload }) => {
+      state.accountOptionsState = payload;
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(auth_loginAccount.fulfilled, (state, { payload }) => {
+      state.userData = accountDetailsHandler(payload);
+    });
+    builder.addCase(auth_registerAccount.fulfilled, (state, { payload }) => {
+      state.userData = accountDetailsHandler(payload);
+    });
+    builder.addCase(auth_logoutAccount.fulfilled, (state, { payload }) => {
+      state.userData = {};
+      state.accountOptionsState = false;
+    });
   },
 });
 
-export const { getUserdata } = AuthSlice.actions;
+export const { getUserData, toggleAccountOptions } = AuthSlice.actions;
 
 export default AuthSlice.reducer;
+
+function accountDetailsHandler(payload) {
+  if (payload) {
+    const displayName = payload?.slice(-payload?.length, payload?.indexOf("@"));
+    return {
+      displayName,
+      email: payload,
+    };
+  } else return {};
+}

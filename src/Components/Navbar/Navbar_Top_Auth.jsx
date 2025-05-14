@@ -1,27 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleAuthState } from "../../Store/PortalSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { signOut } from "firebase/auth";
+import { getUserData, toggleAccountOptions } from "../../Store/AuthSlice";
+import { useNavigate } from "react-router-dom";
+import { auth_logoutAccount } from "../../Store/APIS";
 import { auth } from "../../Firebase/Firebase";
-import { getUserdata } from "../../Store/AuthSlice";
-import { useLocation, useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
 
 const Navbar_Top_Auth = () => {
-  const [accountOptsState, setAccountOptsState] = useState(false);
-
-  const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
+  const { userData, accountOptionsState } = useSelector(
+    ({ AuthSlice }) => AuthSlice
+  );
 
   const action = useDispatch();
 
   const navTo = useNavigate();
-
-  const signoutUser = () => {
-    signOut(auth)
-      .then(() => (setAccountOptsState(false), action(getUserdata({}))))
-      .catch((error) => console.error(error.message));
-  };
 
   const accountOptions = [
     { name: "my account", method: () => navTo("my-account") },
@@ -32,16 +27,23 @@ const Navbar_Top_Auth = () => {
     { name: "my cart", method: () => navTo("my-account/my-cart") },
     { name: "checkout", method: () => navTo("my-account/checkout") },
     { name: "wishlist", method: () => navTo("my-account/wishlist") },
-    { name: "logout", method: () => signoutUser() },
+    { name: "logout", method: () => action(auth_logoutAccount()) },
   ];
 
   useEffect(() => {
-    if (accountOptsState) {
+    if (accountOptionsState) {
       document.body.addEventListener("click", function () {
-        setAccountOptsState(false);
+        action(toggleAccountOptions(false));
       });
     }
-  }, [accountOptsState]);
+  }, [accountOptionsState]);
+
+  useEffect(() => {
+    !userData?.email &&
+      onAuthStateChanged(auth, (user) => {
+        action(getUserData(user?.email));
+      });
+  }, [auth.currentUser]);
 
   return (
     <button
@@ -49,7 +51,7 @@ const Navbar_Top_Auth = () => {
       onClick={(e) => (
         e.stopPropagation(),
         userData?.email
-          ? setAccountOptsState(!accountOptsState)
+          ? action(toggleAccountOptions(!accountOptionsState))
           : action(toggleAuthState(true))
       )}
     >
@@ -67,7 +69,7 @@ const Navbar_Top_Auth = () => {
         </div>
       )}
       <AnimatePresence>
-        {accountOptsState && (
+        {accountOptionsState && (
           <motion.ul
             initial={{ opacity: 0, top: "200%" }}
             animate={{ opacity: 1, top: "160%" }}
@@ -79,7 +81,9 @@ const Navbar_Top_Auth = () => {
               <li
                 key={option.name}
                 className="text-black/70 text-[13px] px-4 py-3 pl-0 text-left whitespace-nowrap not-last-of-type:border-b hover:text-red-500 border-b-black/10"
-                onClick={() => (option.method(), setAccountOptsState(false))}
+                onClick={() => (
+                  option.method(), action(toggleAccountOptions(false))
+                )}
               >
                 {option.name}
               </li>

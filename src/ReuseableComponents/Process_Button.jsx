@@ -48,7 +48,7 @@ const Process_Button = (props) => {
   }, [isLoading]);
 
   return (
-    <motion.div
+    <motion.button
       {...filteredObject()}
       onClick={
         props.clickable
@@ -66,20 +66,14 @@ const Process_Button = (props) => {
     >
       {isLoading ? (
         props.color === "dark" ? (
-          <img
-            src={darkBars}
-            className="relative w-[15px] mx-auto -translate-y-1/2 top-1/2 pt-4"
-          />
+          <img src={darkBars} className="relative w-[15px] mx-auto" />
         ) : (
-          <img
-            src={lightBars}
-            className="relative w-[15px] mx-auto -translate-y-1/2 top-1/2"
-          />
+          <img src={lightBars} className="relative w-[15px] mx-auto" />
         )
       ) : (
         props.children
       )}
-    </motion.div>
+    </motion.button>
   );
 };
 

@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import { ProductAmount } from "../Portal/ProductQuickView";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Process_Button from "../../ReuseableComponents/Process_Button";
+import { setCouponCode } from "../../Store/CartSlice";
 
 const ProductRowTable = ({ product }) => {
   const productAmountRef = useRef();
@@ -27,6 +28,8 @@ const ProductRowTable = ({ product }) => {
 
 const ProductsCartTable = () => {
   const { products } = useSelector(({ CartSlice }) => CartSlice);
+
+  const [coupon, setCoupon] = useState("");
 
   return (
     <>
@@ -67,10 +70,12 @@ const ProductsCartTable = () => {
             type="text"
             placeholder="coupon code"
             className="border-dashed border border-black/30 focus:border-black transition-all outline-none py-4.5 px-7   rounded-md w-1/2 sm:w-auto"
+            onChange={(e) => setCoupon(e.target.value)}
           />
           <Process_Button
             clickable={true}
             methodname="apply coupon"
+            afterloading={[setCouponCode(coupon)]}
             className="bg-black text-white hover:bg-red-600 px-7 uppercase font-semibold text-sm rounded-md cursor-pointer transition-colors w-1/2 sm:w-auto sm:min-w-[158px] h-[60px] leading-[60px]"
           >
             apply coupon

@@ -28,7 +28,7 @@ const AddToCartButton = ({ size, product, productAmountRef }) => {
             } active:bg-red-500 hover:text-white active:text-white transition-colors hover:border-transparent active:border-transparent`
           : "cursor-not-allowed"
       }`}
-      disabled={!size.value || product?.size?.value}
+      disabled={!size.value && product?.size?.value}
       methodname="add to cart"
       afterloading={[toggleCartMenu(true)]}
       clickable={size.value || !product?.size?.value}

@@ -49,7 +49,11 @@ const ProductDetails = ({ details, loadingState }) => {
           size={size}
         />
         <AddToWishlist />
-        <BuyItNowButton product={details} size={size} />
+        <BuyItNowButton
+          product={details}
+          productAmountRef={productAmountRef}
+          size={size}
+        />
       </div>
       <ul className="flex gap-6 lg:gap-8 py-5 flex-wrap">
         {options.map((option) => (

@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
 import Process_Button from "./Process_Button";
 import { useNavigate } from "react-router-dom";
+import { addProductToCart } from "../Store/CartSlice";
 
-const BuyItNowButton = ({ size, product }) => {
+const BuyItNowButton = ({ size, product, productAmountRef }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const navTo = useNavigate();
@@ -18,10 +19,17 @@ const BuyItNowButton = ({ size, product }) => {
             } active:bg-red-500 active:text-white transition-colors`
           : "cursor-not-allowed"
       }`}
-      disabled={!size.value || product?.size?.value}
+      disabled={!size.value && product?.size?.value}
       methodname="buy it now"
       clickable={size.value || !product?.size?.value}
-      outermethod={() => navTo("../checkout")}
+      outermethod={() => navTo("/Auto-Parts/checkout")}
+      afterloading={[
+        addProductToCart({
+          ...product,
+          // size: product?.size.value ? size : { ...product?.size },
+          amount: productAmountRef.current?.textContent,
+        }),
+      ]}
     >
       buy it now
     </Process_Button>

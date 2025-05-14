@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Checkout_Form_Input = ({
   label,
   inputType,
@@ -5,7 +7,10 @@ const Checkout_Form_Input = ({
   name,
   required,
   style = null,
+  value = "",
 }) => {
+  const [state, setState] = useState(value);
+
   return (
     <>
       <label
@@ -15,6 +20,10 @@ const Checkout_Form_Input = ({
         {label} <span>* </span>
       </label>
       <input
+        {...(value
+          ? { defaultValue: state }
+          : { onChange: (e) => setState(e.target.value) })}
+        form="billing-opration"
         name={name}
         id={name}
         type={inputType}

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setTrueTargetState } from "../Utils/Function";
+import { auth_loginAccount, auth_registerAccount } from "./APIS";
 
 const PortalSlice = createSlice({
   name: "PortalSlice",
@@ -58,6 +59,14 @@ const PortalSlice = createSlice({
     toggleAuthState: (state, { payload }) => {
       setTrueTargetState(["overlayState", "authState"], state, payload);
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(auth_loginAccount.fulfilled, (state) => {
+      setTrueTargetState(["overlayState", "authState"], state, false);
+    });
+    builder.addCase(auth_registerAccount.fulfilled, (state) => {
+      setTrueTargetState(["overlayState", "authState"], state, false);
+    });
   },
 });
 

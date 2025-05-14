@@ -14,7 +14,7 @@ const ProductsSlice = createSlice({
     filteredProducts: [],
     categories: [],
     productsLength: 10,
-    loadingState: false,
+    loadingState: true,
     filterKeys: [],
   },
   reducers: {
@@ -36,14 +36,17 @@ const ProductsSlice = createSlice({
         );
       }
     },
+    imgsLoading: (state, { payload }) => {
+      state.loadingState = payload;
+    },
   },
   extraReducers: (builder) => {
     //get shop products
     builder.addCase(shop_getProducts.pending, (state) => {
-      state.loadingState = true;
+      // state.loadingState = true;
     }),
       builder.addCase(shop_getProducts.fulfilled, (state, { payload }) => {
-        state.loadingState = false;
+        // state.loadingState = false;
         state.shopPageProducts = Object.values(payload).flat();
       });
 
@@ -75,7 +78,11 @@ const ProductsSlice = createSlice({
   },
 });
 
-export const { addProductToQuickView, setProductsAmount, addKeysToFilter } =
-  ProductsSlice.actions;
+export const {
+  addProductToQuickView,
+  setProductsAmount,
+  addKeysToFilter,
+  imgsLoading,
+} = ProductsSlice.actions;
 
 export default ProductsSlice.reducer;

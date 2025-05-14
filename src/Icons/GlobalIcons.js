@@ -29,6 +29,9 @@ import {
   faShareNodes,
   faSquare,
   faSliders,
+  faBasketShopping,
+  faGears,
+  faRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faUser,
@@ -89,5 +92,8 @@ export const globalIcons = () => {
     faShareNodes,
     faSquare,
     faSliders,
+    faBasketShopping,
+    faGears,
+    faRightFromBracket,
   ]);
 };

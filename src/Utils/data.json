@@ -1172,18 +1172,5 @@
         "rating": 3
       }
     ]
-  },
-  "Auto-Parts-users": {
-    "eslam@gmail.com": {
-      "wishlist": [],
-      "orders": [],
-      "compare": [],
-      "account details": {
-        "name": "",
-        "displayname": "",
-        "email address": "",
-        "avater": ""
-      }
-    }
   }
 }

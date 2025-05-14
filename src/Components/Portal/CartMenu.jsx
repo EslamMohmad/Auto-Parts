@@ -72,7 +72,12 @@ const CartMenu = () => {
                   Your cart is currently empty. Let us help you find the perfect
                   item!
                 </p>
-                <button className="uppercase py-4 px-10 rounded-4xl bg-gray-200 text-[11px] font-bold cursor-pointer hover:bg-red-500 active:bg-red-500 transition-colors hover:text-white active:text-white">
+                <button
+                  onClick={(e) =>
+                    action(toggleCartMenu(false), e.stopPropagation())
+                  }
+                  className="uppercase py-4 px-10 rounded-4xl bg-gray-200 text-[11px] font-bold cursor-pointer hover:bg-red-500 active:bg-red-500 transition-colors hover:text-white active:text-white"
+                >
                   continue shopping
                 </button>
               </div>

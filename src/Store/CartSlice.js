@@ -1,12 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { checkout_createOrder } from "./APIS";
 
 const CartSlice = createSlice({
   name: "CartSlice",
   initialState: {
+    loadingState: false,
+    couponCode: "",
     products: [],
+    currentOrders: {},
     shippingType: [
       { type: "flat rate", price: 70, state: true },
       { type: "local pickup", price: 30, state: false },
+    ],
+    paymentType: [
+      { type: "direct bank transfer", state: true },
+      { type: "check payments", state: false },
+      { type: "cash on delivery", state: false },
     ],
   },
   reducers: {
@@ -48,10 +57,35 @@ const CartSlice = createSlice({
           : { ...shipping, state: false }
       );
     },
+    setPaymentType: (state, { payload }) => {
+      state.paymentType = state.paymentType.map((payment) =>
+        payment.type === payload.type
+          ? { ...payment, state: true }
+          : { ...payment, state: false }
+      );
+    },
+    setCouponCode: (state, { payload }) => {
+      state.couponCode = payload;
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(checkout_createOrder.pending, (state) => {
+      state.loadingState = true;
+    }),
+      builder.addCase(checkout_createOrder.fulfilled, (state, payload) => {
+        state.loadingState = false;
+        state.currentOrders = payload.meta.arg;
+        state.products = [];
+      });
   },
 });
 
-export const { addProductToCart, removeProductFromCart, setShippingType } =
-  CartSlice.actions;
+export const {
+  addProductToCart,
+  removeProductFromCart,
+  setShippingType,
+  setPaymentType,
+  setCouponCode,
+} = CartSlice.actions;
 
 export default CartSlice.reducer;

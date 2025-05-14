@@ -1,11 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Checkout_Form_Input from "../../ReuseableComponents/Checkout_Form_Input";
-import { checkout_createOrder } from "../../Store/APIS";
 
 const Billing_Details = () => {
-  const { products, shippingType } = useSelector(({ CartSlice }) => CartSlice);
-
-  const action = useDispatch();
+  const { couponCode } = useSelector(({ CartSlice }) => CartSlice);
 
   const formInputs = [
     {
@@ -85,6 +82,17 @@ const Billing_Details = () => {
       ),
     },
     {
+      name: "coupon code",
+      element: (
+        <Checkout_Form_Input
+          name="coupon_code"
+          inputType="text"
+          label="coupon code (optional)"
+          value={couponCode}
+        />
+      ),
+    },
+    {
       name: "email address",
       element: (
         <Checkout_Form_Input
@@ -97,75 +105,12 @@ const Billing_Details = () => {
     },
   ];
 
-  const billingOrderHandler = (e) => {
-    e.preventDefault();
-
-    const {
-      first_name,
-      last_name,
-      company_name,
-      street_address,
-      postcode,
-      town,
-      phone,
-      email_address,
-      order_notes,
-      direct_bank_transfer,
-      check_payments,
-      cash_on_delivery,
-    } = e.target;
-
-    const paymentMethod = [
-      direct_bank_transfer,
-      check_payments,
-      cash_on_delivery,
-    ].filter((e) => e.checked)[0].labels[0].textContent;
-
-    const total =
-      "$" +
-        (
-          products
-            .map(
-              (product) => product.size.price.replace("$", "") * product.amount
-            )
-            ?.reduce((prev, curr) => prev + curr) +
-          shippingType.filter((shipping) => shipping.state)[0].price
-        )?.toFixed(2) || 0;
-
-    const customer = {
-      name: email_address.value.slice(
-        -email_address.value.length,
-        email_address.value.indexOf("@")
-      ),
-      details: {
-        first_name: first_name.value,
-        last_name: last_name.value,
-        company_name: company_name.value,
-        street_address: street_address.value,
-        postcode: postcode.value,
-        town: town.value,
-        phone: phone.value,
-        email_address: email_address.value,
-        order_notes: order_notes.value,
-        products,
-        payment_method: paymentMethod,
-        subtotal: total,
-      },
-    };
-
-    action(checkout_createOrder(customer));
-  };
-
   return (
     <div>
       <h1 className="text-xl font-bold text-center uppercase py-6 border-b-2">
         biling details
       </h1>
-      <form
-        className="flex flex-col"
-        onSubmit={billingOrderHandler}
-        id="billing-opration"
-      >
+      <div className="flex flex-col">
         {formInputs.map((input) => (
           <div key={input.name}>{input.element}</div>
         ))}
@@ -183,7 +128,7 @@ const Billing_Details = () => {
             className="w-full py-4   px-4 border border-black/10 rounded-md focus:border-black hover:border-black transition-colors outline-none text-sm placeholder:text-black/30 capitalize h-[200px]"
           ></textarea>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

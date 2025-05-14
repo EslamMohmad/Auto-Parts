@@ -1,6 +1,11 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { child, get, ref, set } from "firebase/database";
-import { database } from "../Firebase/Firebase";
+import { auth, database } from "../Firebase/Firebase";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 
 export const shop_getProducts = createAsyncThunk(
   "ProductsSlice/shop_getProducts",
@@ -42,17 +47,64 @@ export const shop_getProductDetails = createAsyncThunk(
 );
 
 export const checkout_createOrder = createAsyncThunk(
-  "OrderSlice/checkout_createOrder",
+  "CartSlice/checkout_createOrder",
   async (payload, api) => {
     const { rejectWithValue } = api;
-    console.log(payload);
     try {
-      const myRef = ref(database, `Auto-Parts-Customers/${payload.name}`);
-      set(myRef, payload.details)
-        .then(() => console.log("done"))
-        .catch((error) => console.error(error));
+      const myRef = ref(database, `Auto-Parts-Orders/${payload.name}`);
+      set(myRef, payload.details).catch((error) => alert(error));
     } catch (error) {
       return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const auth_loginAccount = createAsyncThunk(
+  "AuthSlice/auth_loginAccount",
+  async (payload, api) => {
+    const { rejectWithValue } = api;
+    try {
+      const response = signInWithEmailAndPassword(
+        auth,
+        payload.email,
+        payload.password
+      );
+      return (await response).user.email;
+    } catch (error) {
+      rejectWithValue(error.message);
+      alert("user is not exist => " + error.message);
+    }
+  }
+);
+
+export const auth_registerAccount = createAsyncThunk(
+  "AuthSlice/auth_registerAccount",
+  async (payload, api) => {
+    const { rejectWithValue } = api;
+    try {
+      const response = createUserWithEmailAndPassword(
+        auth,
+        payload.email,
+        payload.password
+      );
+
+      return (await response).user.email;
+    } catch (error) {
+      rejectWithValue(error.message);
+      alert(error.message);
+    }
+  }
+);
+
+export const auth_logoutAccount = createAsyncThunk(
+  "AuthSlice/auth_logoutAccount",
+  async (_, api) => {
+    const { rejectWithValue } = api;
+    try {
+      const response = signOut(auth);
+      return await response;
+    } catch (error) {
+      rejectWithValue(error.message);
     }
   }
 );

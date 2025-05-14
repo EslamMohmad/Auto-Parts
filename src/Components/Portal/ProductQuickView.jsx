@@ -211,7 +211,11 @@ const ProductQuickView = () => {
                 size={size}
               />
             </div>
-            <BuyItNowButton size={size} product={productQuickView} />
+            <BuyItNowButton
+              product={productQuickView}
+              productAmountRef={productAmountRef}
+              size={size}
+            />
             <div className="flex flex-col gap-2 text-[12px]">
               <h1 className="text-black/50">
                 <span className="font-bold text-black">SKU : </span>
