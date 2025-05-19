@@ -10,6 +10,7 @@ const PortalSlice = createSlice({
     mainMenuState: false,
     searchMenuState: false,
     newsLetterPopupState: false,
+    userOptionsMenuState: false,
     filterMenuState: false,
     productQuickViewState: false,
     producCompareState: false,
@@ -46,6 +47,13 @@ const PortalSlice = createSlice({
         payload
       );
     },
+    toggleUserOptionsMenu: (state, { payload }) => {
+      setTrueTargetState(
+        ["overlayState", "userOptionsMenuState"],
+        state,
+        payload
+      );
+    },
     toggleFilterMenuState: (state, { payload }) => {
       setTrueTargetState(["overlayState", "filterMenuState"], state, payload);
     },
@@ -75,6 +83,7 @@ export const {
   toggleMainMenu,
   toggleCartMenu,
   toggleSearchMenu,
+  toggleUserOptionsMenu,
   toggleNewsLetterPopup,
   toggleProductQuickView,
   toggleFilterMenuState,

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../../Assets/Home/Navbar/logo.png";
 import Navbar_Top_Search from "./Navbar_Top_Search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar_Top_Menu from "./Navbar_Top_Menu";
@@ -11,8 +10,13 @@ import Navbar_Top_Auth from "./Navbar_Top_Auth";
 import Logo from "../../ReuseableComponents/Logo";
 
 const Navbar_Top = ({ fixedNavbar, isHome }) => {
-  const { cartMenuState, newsLetterPopupState, mainMenuState, authState } =
-    useSelector(({ PortalSlice }) => PortalSlice);
+  const {
+    cartMenuState,
+    newsLetterPopupState,
+    mainMenuState,
+    authState,
+    userOptionsMenuState,
+  } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const isTablet = useMediaQuery("(min-width: 640px) and (max-width: 1024px)");
 
@@ -33,12 +37,13 @@ const Navbar_Top = ({ fixedNavbar, isHome }) => {
         cartMenuState ||
         newsLetterPopupState ||
         authState ||
+        userOptionsMenuState ||
         (isTablet && mainMenuState)
           ? "sm:z-auto"
           : "z-20 relative"
       } ${
         fixedNavbar
-          ? "px-[49px] sm:px-[24px] py-[20px] sm:py-[12px]"
+          ? "px-[49px] sm:px-[24px] py-4 sm:py-[12px]"
           : "py-4 px-[15px] sm:pt-[40px] sm:pb-0 sm:px-0 lg:pb-[40px]  "
       }`}
     >

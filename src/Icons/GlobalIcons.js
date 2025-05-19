@@ -32,6 +32,7 @@ import {
   faBasketShopping,
   faGears,
   faRightFromBracket,
+  faUserGear,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faUser,
@@ -95,5 +96,6 @@ export const globalIcons = () => {
     faBasketShopping,
     faGears,
     faRightFromBracket,
+    faUserGear,
   ]);
 };

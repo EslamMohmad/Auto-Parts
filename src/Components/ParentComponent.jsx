@@ -32,17 +32,21 @@ const ParentComponent = () => {
   };
 
   useEffect(() => {
-    if (pathname.includes("my-account") && !userData?.email) {
+    if (pathname.includes("my-account") && !userData?.email_address) {
       navTo("../");
     }
-  }, [pathname, userData?.email]);
+  }, [pathname, userData?.email_address]);
 
   useEffect(() => {
-    // navto home page after ordering
-    if ((prevRoute?.includes("orders") || !prevRoute) && !products.length) {
+    if (
+      (!products.length &&
+        !prevRoute &&
+        pathname?.includes("Auto-Parts/checkout")) ||
+      (!products.length && prevRoute?.includes("Auto-Parts/orders"))
+    ) {
       navTo("../");
     }
-  }, [pathname]);
+  }, [products.length, prevRoute]);
 
   return (
     <>

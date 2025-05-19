@@ -6,14 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Orders = () => {
   const { currentOrders } = useSelector(({ CartSlice }) => CartSlice);
 
-  const {
-    order_date,
-    order_number,
-    subtotal,
-    payment_method,
-    products,
-    shipping,
-  } = currentOrders?.details;
+  const { order_number, subtotal, payment_method, orders, shipping } =
+    currentOrders?.details;
 
   return (
     <section>
@@ -29,10 +23,20 @@ const Orders = () => {
           thank you, your order has been recevied
         </h1>
         <OrdersTypes
-          details={{ order_date, order_number, subtotal, payment_method }}
+          details={{
+            order_date: Object.keys(orders)[0],
+            order_number,
+            subtotal,
+            payment_method,
+          }}
         />
         <OrdersTable
-          details={{ subtotal, payment_method, products, shipping }}
+          details={{
+            subtotal,
+            payment_method,
+            products: Object.values(orders)[0],
+            shipping,
+          }}
         />
       </div>
     </section>

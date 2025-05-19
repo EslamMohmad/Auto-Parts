@@ -50,9 +50,15 @@ export const checkout_createOrder = createAsyncThunk(
   "CartSlice/checkout_createOrder",
   async (payload, api) => {
     const { rejectWithValue } = api;
+    const userUID = auth?.currentUser?.uid;
+
     try {
-      const myRef = ref(database, `Auto-Parts-Orders/${payload.name}`);
-      set(myRef, payload.details).catch((error) => alert(error));
+      if (userUID) {
+        const myRef = ref(database, `Auto-Parts-Users/${userUID}`);
+        set(myRef, payload.details).catch((error) =>
+          alert(`you must login or create account => ${error}`)
+        );
+      }
     } catch (error) {
       return rejectWithValue(error.message);
     }
@@ -82,13 +88,27 @@ export const auth_registerAccount = createAsyncThunk(
   async (payload, api) => {
     const { rejectWithValue } = api;
     try {
+      const userData = {
+        displayName:
+          payload.displayName || payload.first_name + " " + payload.last_name,
+        first_name: payload.first_name,
+        phone: payload.phone,
+        last_name: payload.last_name,
+        email_address: payload.email_address,
+        // password: payload.password,
+      };
+
       const response = createUserWithEmailAndPassword(
         auth,
-        payload.email,
+        payload.email_address,
         payload.password
       );
 
-      return (await response).user.email;
+      const userUID = (await response).user.uid;
+      const user = ref(database, `Auto-Parts-Users/${userUID}`);
+
+      set(user, userData);
+      return userData;
     } catch (error) {
       rejectWithValue(error.message);
       alert(error.message);

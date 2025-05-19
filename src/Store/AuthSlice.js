@@ -13,7 +13,7 @@ const AuthSlice = createSlice({
   },
   reducers: {
     getUserData: (state, { payload }) => {
-      state.userData = accountDetailsHandler(payload);
+      state.userData = payload;
     },
     toggleAccountOptions: (state, { payload }) => {
       state.accountOptionsState = payload;
@@ -24,7 +24,7 @@ const AuthSlice = createSlice({
       state.userData = accountDetailsHandler(payload);
     });
     builder.addCase(auth_registerAccount.fulfilled, (state, { payload }) => {
-      state.userData = accountDetailsHandler(payload);
+      state.userData = payload;
     });
     builder.addCase(auth_logoutAccount.fulfilled, (state, { payload }) => {
       state.userData = {};
@@ -42,7 +42,7 @@ function accountDetailsHandler(payload) {
     const displayName = payload?.slice(-payload?.length, payload?.indexOf("@"));
     return {
       displayName,
-      email: payload,
+      email_address: payload,
     };
   } else return {};
 }

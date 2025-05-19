@@ -4,10 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { getUserData, toggleAccountOptions } from "../../Store/AuthSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { auth_logoutAccount } from "../../Store/APIS";
-import { auth } from "../../Firebase/Firebase";
+import { auth, database } from "../../Firebase/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { accountOptions } from "./../../Pages/Account";
+import useMediaQuery from "../../Hooks/useMediaQuery";
+import { child, get, ref } from "firebase/database";
 
 const Navbar_Top_Auth = () => {
   const { userData, accountOptionsState } = useSelector(
@@ -16,19 +19,9 @@ const Navbar_Top_Auth = () => {
 
   const action = useDispatch();
 
-  const navTo = useNavigate();
+  const isMobile = useMediaQuery("(max-width : 639px)");
 
-  const accountOptions = [
-    { name: "my account", method: () => navTo("my-account") },
-    {
-      name: "order tracking",
-      method: () => navTo("my-account/order-tracking"),
-    },
-    { name: "my cart", method: () => navTo("my-account/my-cart") },
-    { name: "checkout", method: () => navTo("my-account/checkout") },
-    { name: "wishlist", method: () => navTo("my-account/wishlist") },
-    { name: "logout", method: () => action(auth_logoutAccount()) },
-  ];
+  const { pathname } = useLocation();
 
   useEffect(() => {
     if (accountOptionsState) {
@@ -39,28 +32,44 @@ const Navbar_Top_Auth = () => {
   }, [accountOptionsState]);
 
   useEffect(() => {
-    !userData?.email &&
+    auth.currentUser &&
+      userData?.email_address &&
       onAuthStateChanged(auth, (user) => {
-        action(getUserData(user?.email));
+        const userRef = child(ref(database), `Auto-Parts-Users/${user?.uid}`);
+        get(userRef).then(
+          (result) => result.val() && action(getUserData(result.val() || {}))
+        );
       });
-  }, [auth.currentUser]);
+  }, [auth.currentUser, userData?.email_address]);
+
+  useEffect(() => {
+    pathname.includes("checkout") &&
+      !auth.currentUser &&
+      action(toggleAuthState(true));
+  }, [pathname, auth.currentUser]);
 
   return (
     <button
-      className="relative items-center gap-2 hidden sm:flex group cursor-pointer"
+      className={`relative items-center gap-2 hidden sm:flex group ${
+        !pathname.includes("my-account") && "cursor-pointer"
+      } `}
       onClick={(e) => (
         e.stopPropagation(),
-        userData?.email
-          ? action(toggleAccountOptions(!accountOptionsState))
+        userData?.email_address
+          ? !pathname.includes("my-account") &&
+            action(toggleAccountOptions(!accountOptionsState))
           : action(toggleAuthState(true))
       )}
     >
       <FontAwesomeIcon
         icon="fa-regular fa-user"
-        className="group-hover:text-red-600 active:text-red-600 duration-300 transition-colors cursor-pointer text-[25px]"
-        {...(userData?.email ? null : { title: "sign up" })}
+        className={`${
+          !pathname.includes("my-account") &&
+          "group-hover:text-red-600 active:text-red-600 duration-300 transition-colors cursor-pointer"
+        } text-[25px]`}
+        {...(userData?.email_address ? null : { title: "sign up" })}
       />
-      {userData?.email && (
+      {userData?.email_address && (
         <div>
           <h1 className="font-bold leading-5">account</h1>
           <p className="text-[10px] font-light capitalize text-ellipsis overflow-hidden whitespace-nowrap w-[65px]">
@@ -69,27 +78,37 @@ const Navbar_Top_Auth = () => {
         </div>
       )}
       <AnimatePresence>
-        {accountOptionsState && (
-          <motion.ul
-            initial={{ opacity: 0, top: "200%" }}
-            animate={{ opacity: 1, top: "160%" }}
-            exit={{ opacity: 0, top: "200%" }}
-            className="absolute bg-white px-5 rounded-md border border-black/10"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {accountOptions.map((option) => (
+        {!isMobile &&
+          !pathname.includes("my-account") &&
+          accountOptionsState && (
+            <motion.ul
+              initial={{ opacity: 0, top: "200%" }}
+              animate={{ opacity: 1, top: "160%" }}
+              exit={{ opacity: 0, top: "200%" }}
+              className="absolute bg-white px-5 rounded-md border border-black/10 flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {accountOptions.map(({ text, path }) => (
+                <Link
+                  to={path}
+                  key={path}
+                  className="text-black/70 text-[13px] px-4 py-3 pl-0 text-left whitespace-nowrap not-last-of-type:border-b hover:text-red-500 border-b-black/10"
+                  onClick={() => action(toggleAccountOptions(false))}
+                >
+                  {text}
+                </Link>
+              ))}
               <li
-                key={option.name}
                 className="text-black/70 text-[13px] px-4 py-3 pl-0 text-left whitespace-nowrap not-last-of-type:border-b hover:text-red-500 border-b-black/10"
                 onClick={() => (
-                  option.method(), action(toggleAccountOptions(false))
+                  action(auth_logoutAccount()),
+                  action(toggleAccountOptions(false))
                 )}
               >
-                {option.name}
+                log out
               </li>
-            ))}
-          </motion.ul>
-        )}
+            </motion.ul>
+          )}
       </AnimatePresence>
     </button>
   );

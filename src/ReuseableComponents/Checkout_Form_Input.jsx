@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Checkout_Form_Input = ({
   label,
@@ -9,7 +9,9 @@ const Checkout_Form_Input = ({
   style = null,
   value = "",
 }) => {
-  const [state, setState] = useState(value);
+  const [inputValue, setInputValue] = useState("");
+
+  const inputRef = useRef();
 
   return (
     <>
@@ -20,9 +22,11 @@ const Checkout_Form_Input = ({
         {label} <span>* </span>
       </label>
       <input
-        {...(value
-          ? { defaultValue: state }
-          : { onChange: (e) => setState(e.target.value) })}
+        ref={inputRef}
+        value={value || inputValue}
+        onChange={({ target }) =>
+          value ? (inputRef.current.value = value) : setInputValue(target.value)
+        }
         form="billing-opration"
         name={name}
         id={name}

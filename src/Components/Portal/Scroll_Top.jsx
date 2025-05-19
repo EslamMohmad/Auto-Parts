@@ -63,7 +63,7 @@ const Scroll_Top = () => {
           initial={{ opacity: 0, y: "-10px" }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: "-10px" }}
-          className="fixed bottom-5 right-5 bg-white w-[50px] h-[50px] leading-[50px] text-center z-3 text-red-500 rounded-full group cursor-pointer "
+          className="fixed bottom-9 right-5 bg-white w-[50px] h-[50px] leading-[50px] text-center z-3 text-red-500 rounded-full group cursor-pointer "
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <Circle />

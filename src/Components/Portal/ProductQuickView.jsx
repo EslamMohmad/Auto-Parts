@@ -97,7 +97,7 @@ export const ProductSize = ({ size, setSize, details }) => {
 };
 
 export const ProductAmount = forwardRef(({ productAmount }, ref) => {
-  let [amount, setAmount] = useState(productAmount || 1);
+  let [amount, setAmount] = useState(+productAmount || 1);
 
   return (
     <div className="flex items-center bg-gray-200  rounded-3xl p-2 w-[max-content]">

@@ -1,74 +1,59 @@
-import { child, get, ref } from "firebase/database";
-import { useEffect } from "react";
-import { database } from "../Firebase/Firebase";
+import { useLocation } from "react-router-dom";
+import useMediaQuery from "../Hooks/useMediaQuery";
+
+import AccountOptions from "../Components/Account/AccountOptions";
+
+import Dashboard from "./../Components/Account/Dashboard";
+import Wishlist from "./../Components/Account/Wishlist";
+import AccountDetails from "./../Components/Account/AccountDetails";
+import Orders from "./../Components/Account/Orders";
 import { useSelector } from "react-redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+
+export const accountOptions = [
+  {
+    icon: "fa-regular fa-user",
+    path: "my-account",
+    text: "dashboard",
+  },
+  {
+    icon: "fa-regular fa-heart",
+    path: "my-account/wishlist",
+    text: "wishlist",
+  },
+  {
+    icon: "fa-solid fa-basket-shopping",
+    path: "my-account/orders",
+    text: "orders",
+  },
+
+  {
+    icon: "fa-solid fa-user-gear",
+    path: "my-account/account-details",
+    text: "account details",
+  },
+];
 
 const Account = () => {
+  const lessDesktop = useMediaQuery("(max-width : 1024px)");
+
+  const route = useLocation().pathname.replace("/Auto-Parts/", "");
+
   const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
 
-  const accountOptions = [
-    {
-      icon: "fa-regular fa-heart",
-      option: "wishlist",
-      path: "../my-account/wishlist",
-      component: <></>,
-    },
-    {
-      icon: "fa-solid fa-basket-shopping",
-      option: "orders",
-      path: "../my-account/orders",
-      component: <></>,
-    },
-    {
-      icon: "fa-solid fa-gear",
-      option: "dashboard",
-      path: "../my-account",
-      component: <></>,
-    },
-    {
-      icon: "fa-regular fa-user",
-      option: "account Details",
-      path: "../my-account/account-Details",
-      component: <></>,
-    },
-  ];
-
-  useEffect(() => {
-    const myRef = child(
-      ref(database),
-      `Auto-Parts-Users/${userData?.displayName}`
-    );
-    get(myRef).then((res) => console.log(res.val()));
-  }, [userData.displayName]);
+  const accountComponents = {
+    "my-account": <Dashboard details={userData} />,
+    "my-account/wishlist": <Wishlist details={userData?.wishlist || {}} />,
+    "my-account/orders": <Orders details={userData?.orders} />,
+    "my-account/account-details": <AccountDetails details={userData} />,
+  };
 
   return (
     <section>
       <div className="my-10 flex gap-10">
-        <div className="w-[35%] border border-black/10 rounded-3xl overflow-hidden">
-          <h1 className="p-6 px-7 text-xl uppercase">my account</h1>
-          <div className="bg-black/5 rounded-t-3xl rounded-b-none flex flex-col">
-            {accountOptions.map((account) => (
-              <Link
-                to={account.path}
-                key={account.option}
-                className="py-6 mx-7 text-black/60 text-sm not-last:border-b border-black/15 hover:text-black transition-colors"
-              >
-                <FontAwesomeIcon icon={account.icon} size="md" />
-                <span className="ml-4 capitalize">{account.option}</span>
-              </Link>
-            ))}
-            <div className="cursor-pointer py-6 mx-7 text-black/60 text-sm not-last:border-b border-black/15 hover:text-black transition-colors">
-              <FontAwesomeIcon
-                icon="fa-solid fa-right-from-bracket"
-                size="md"
-              />
-              <span className="ml-4 capitalize">log out</span>
-            </div>
-          </div>
-        </div>
-        <div className="grow"></div>
+        {!lessDesktop && (
+          <AccountOptions accountOptions={accountOptions} route={route} />
+        )}
+        <div className="md:grow">{accountComponents[route]}</div>
       </div>
     </section>
   );

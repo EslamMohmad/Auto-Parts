@@ -1,9 +1,31 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { forwardRef, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import useEmptyInput from "../../Hooks/useEmptyInput";
 import { auth_loginAccount, auth_registerAccount } from "../../Store/APIS";
+import { auth } from "../../Firebase/Firebase";
+import { useLocation } from "react-router-dom";
+import { toggleAuthState } from "../../Store/PortalSlice";
+
+const Input = ({ label, type, id, required, ref }) => {
+  return (
+    <div>
+      <label htmlFor={`register_${id}`} className="text-[11px] text-black/60">
+        {label}
+        <span className="text-red-400"> *</span>
+      </label>
+      <input
+        ref={ref}
+        id={`register_${id}`}
+        type={type}
+        placeholder={label}
+        className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
+        {...(required ? { required } : null)}
+      />
+    </div>
+  );
+};
 
 const Login = forwardRef(({ state }, ref) => {
   const email = useRef();
@@ -94,87 +116,84 @@ const Login = forwardRef(({ state }, ref) => {
 });
 
 const Register = forwardRef(({ state }, ref) => {
+  const firstname = useRef();
+  const lastname = useRef();
+  const phone = useRef();
   const email = useRef();
   const password = useRef();
+
+  const inputs = [
+    {
+      id: "firstname",
+      label: "first name",
+      type: "text",
+      ref: firstname,
+    },
+    {
+      id: "lastname",
+      label: "last name",
+      type: "text",
+      ref: lastname,
+    },
+    {
+      id: "phone",
+      label: "phone",
+      type: "text",
+      ref: phone,
+    },
+    { id: "email", label: "email", type: "email", ref: email },
+    {
+      id: "password",
+      label: "password",
+      type: "password",
+      ref: password,
+    },
+  ];
 
   const action = useDispatch();
 
   const createNewUser = (e) => {
     e.preventDefault();
-    const { register_email, register_password } = e.target;
+    const {
+      register_firstname,
+      register_lastname,
+      register_phone,
+      register_email,
+      register_password,
+    } = e.target;
 
     action(
       auth_registerAccount({
-        email: register_email.value,
+        displayName: register_firstname.value + " " + register_lastname.value,
+        first_name: register_firstname.value,
+        last_name: register_lastname.value,
+        phone: register_phone.value,
+        email_address: register_email.value,
         password: register_password.value,
       })
     );
 
-    [email, password].forEach((element) => {
+    [firstname, lastname, phone, email, password].forEach((element) => {
       element.current.value = "";
     });
   };
 
-  useEmptyInput(state, [email, password]);
+  useEmptyInput(state, [firstname, lastname, phone, email, password]);
 
   return (
     <div
       className={`absolute ${
         state ? "top-[100px]" : "top-full"
-      } transition-all bg-white w-full left-0 p-6 pt-0 duration-500`}
+      } transition-all bg-white w-full left-0 px-6 my-4 duration-500 overflow-auto h-[370px]`}
       ref={ref}
     >
       <form className="flex flex-col gap-2" onSubmit={createNewUser}>
         <p className="text-sm font-bold my-7 mb-3 text-black/70">
           create your account
         </p>
-        {/* <div>
-          <label
-            htmlFor="register_username"
-            className="text-[11px] text-black/60"
-          >
-            username
-            <span className="text-red-400"> *</span>
-          </label>
-          <input
-            id="register_username"
-            type="username"
-            placeholder="username"
-            className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
-          />
-        </div> */}
-        <div>
-          <label htmlFor="register_email" className="text-[11px] text-black/60">
-            email
-            <span className="text-red-400"> *</span>
-          </label>
-          <input
-            ref={email}
-            required
-            id="register_email"
-            type="email"
-            placeholder="email"
-            className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
-          />
-        </div>
-        <div>
-          <label
-            htmlFor="register_password"
-            className="text-[11px] text-black/60"
-          >
-            password
-            <span className="text-red-400"> *</span>
-          </label>
-          <input
-            ref={password}
-            required
-            id="register_password"
-            type="password"
-            placeholder="password"
-            className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
-          />
-        </div>
-
+        {inputs.map((props) => (
+          <Input key={props.id} {...props} />
+        ))}
         <p className="text-[11px] text-black/50">
           Your personal data will be used to support your experience throughout
           this website, to manage access to your account, and for other purposes
@@ -200,10 +219,20 @@ const Auth = () => {
   const registerForm = useRef();
   const loginForm = useRef();
 
+  const { pathname } = useLocation();
+
+  const action = useDispatch();
+
   const forms = {
     login: { position: "0" },
     register: { position: "105px" },
   };
+
+  useEffect(() => {
+    if (pathname.includes("checkout") && !auth.currentUser) {
+      action(toggleAuthState(true));
+    }
+  }, [auth.currentUser, pathname]);
 
   return (
     <AnimatePresence>
@@ -215,7 +244,7 @@ const Auth = () => {
             top: "50%",
           }}
           exit={{ opacity: 0, top: "-50%" }}
-          className="bg-white absolute rounded-2xl  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl w-[400px] shadow-box overflow-hidden"
+          className="bg-white absolute rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl w-[90%] sm:w-[400px] shadow-box overflow-hidden"
           onClick={(e) => e.stopPropagation()}
         >
           <div className={`flex flex-col p-6`}>

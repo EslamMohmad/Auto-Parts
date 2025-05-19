@@ -4,6 +4,10 @@ import Checkout_Form_Input from "../../ReuseableComponents/Checkout_Form_Input";
 const Billing_Details = () => {
   const { couponCode } = useSelector(({ CartSlice }) => CartSlice);
 
+  const {
+    userData: { first_name, last_name, phone, email_address },
+  } = useSelector(({ AuthSlice }) => AuthSlice);
+
   const formInputs = [
     {
       name: "first name",
@@ -13,6 +17,7 @@ const Billing_Details = () => {
           inputType="text"
           label="first name"
           required
+          value={first_name}
         />
       ),
     },
@@ -24,6 +29,7 @@ const Billing_Details = () => {
           inputType="text"
           label="last name"
           required
+          value={last_name}
         />
       ),
     },
@@ -78,6 +84,7 @@ const Billing_Details = () => {
           inputType="text"
           label="phone"
           required
+          value={phone}
         />
       ),
     },
@@ -100,6 +107,7 @@ const Billing_Details = () => {
           inputType="email"
           label="email address"
           required
+          value={email_address}
         />
       ),
     },

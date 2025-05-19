@@ -18,6 +18,7 @@ const Fixed_Navbar = () => {
     productQuickViewState,
     authState,
     filterMenuState,
+    userOptionsMenuState,
   } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const [scrollDownState, setScrollDownState] = useState(false);
@@ -55,6 +56,7 @@ const Fixed_Navbar = () => {
             productQuickViewState ||
             authState ||
             filterMenuState ||
+            userOptionsMenuState ||
             (isTablet && mainMenuState)
               ? "z-10"
               : "z-20"

@@ -58,7 +58,7 @@ const AllProducts = ({ products, loadingState, allProducts }) => {
         </div>
         {products.length < allProducts && (
           <Process_Button
-            className={`relative h-[40px] leading-[40px] px-6 w-fit rounded-sm text-[12px] cursor-pointer mx-auto ${
+            className={`relative block h-[40px] leading-[40px] px-6 w-fit rounded-sm text-[12px] cursor-pointer mx-auto ${
               loading.state && loading.method === "load more items"
                 ? "bg-red-500 border-transparent"
                 : "bg-black/15 hover:bg-red-600 hover:text-white"

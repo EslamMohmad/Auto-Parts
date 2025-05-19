@@ -18,6 +18,8 @@ import ProductQuickView from "./ProductQuickView.jsx";
 import Scroll_Top from "./Scroll_Top.jsx";
 import Auth from "./Auth.jsx";
 import Left_Filter from "./Left_Filter.jsx";
+import { useLocation } from "react-router-dom";
+import UserMenu from "./UserMenu.jsx";
 
 const Portal = () => {
   const props = useSelector(({ PortalSlice }) => PortalSlice);
@@ -26,6 +28,8 @@ const Portal = () => {
   const isMobile = useMediaQuery("(max-width : 639px)");
 
   const action = useDispatch();
+
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const allFalseValue = Object.values(props).every((value) => !value);
@@ -61,6 +65,7 @@ const Portal = () => {
       </Overlay>
       {isMobile && <Navbar_Mobile_Bottom />}
       {!isMobile && <Scroll_Top />}
+      {pathname.includes("my-account") && lessDesktop && <UserMenu />}
     </>,
     document.getElementById("portal")
   );

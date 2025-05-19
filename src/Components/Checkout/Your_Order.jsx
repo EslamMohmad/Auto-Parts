@@ -51,6 +51,7 @@ const Your_Order = ({ validForm }) => {
         email_address.value.indexOf("@")
       ),
       details: {
+        displayName: first_name.value + " " + last_name.value,
         first_name: first_name.value,
         last_name: last_name.value,
         company_name: company_name.value,
@@ -60,10 +61,12 @@ const Your_Order = ({ validForm }) => {
         phone: phone.value,
         email_address: email_address.value,
         order_notes: order_notes.value,
-        order_date: `${
-          monthsArray[orderDate.getMonth()]
-        } ${orderDate.getDate()},${orderDate.getFullYear()} ${orderDate.getHours()}:${orderDate.getMinutes()}`,
-        products,
+        orders: {
+          [`${
+            monthsArray[orderDate.getMonth()]
+          } ${orderDate.getDate()},${orderDate.getFullYear()} ${orderDate.getHours()}:${orderDate.getMinutes()}`]:
+            products,
+        },
         payment_method: paymentType.find((payment) => payment.state).type,
         subtotal: total,
         coupon_code: couponCode || coupon_code.value,
@@ -73,6 +76,7 @@ const Your_Order = ({ validForm }) => {
     };
 
     action(checkout_createOrder(customer));
+    navTo("../orders");
   };
 
   return (
@@ -138,9 +142,7 @@ const Your_Order = ({ validForm }) => {
           ref={formRef}
           type="submit"
           clickable={validForm}
-          outermethod={() => (
-            billingOrderHandler(formRef.current), navTo("../orders")
-          )}
+          outermethod={() => billingOrderHandler(formRef.current)}
           className="bg-black text-white h-[60px] leading-[60px] w-full uppercase rounded-md hover:bg-red-500 active:bg-red-500 mt-4 text-sm font-semibold cursor-pointer text-center relative"
         >
           place order
