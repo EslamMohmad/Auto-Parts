@@ -8,7 +8,7 @@ import { auth } from "../../Firebase/Firebase";
 import { useLocation } from "react-router-dom";
 import { toggleAuthState } from "../../Store/PortalSlice";
 
-const Input = ({ label, type, id, required, ref }) => {
+const Input = ({ label, type, id, formType, required, ref }) => {
   return (
     <div>
       <label htmlFor={`register_${id}`} className="text-[11px] text-black/60">
@@ -17,7 +17,7 @@ const Input = ({ label, type, id, required, ref }) => {
       </label>
       <input
         ref={ref}
-        id={`register_${id}`}
+        id={`${formType}_${id}`}
         type={type}
         placeholder={label}
         className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
@@ -32,6 +32,21 @@ const Login = forwardRef(({ state }, ref) => {
   const password = useRef();
 
   const action = useDispatch();
+
+  const inputs = [
+    {
+      id: "email",
+      label: "email address",
+      type: "email",
+      ref: email,
+    },
+    {
+      id: "password",
+      label: "password",
+      type: "password",
+      ref: password,
+    },
+  ];
 
   const loginHandler = (e) => {
     e.preventDefault();
@@ -57,34 +72,10 @@ const Login = forwardRef(({ state }, ref) => {
         <p className="text-sm font-bold my-7 mb-3 text-black/70">
           insert your account information
         </p>
-        <div>
-          <label htmlFor="login_email" className="text-[11px] text-black/60">
-            email address
-            <span className="text-red-400"> *</span>
-          </label>
-          <input
-            ref={email}
-            required
-            id="login_email"
-            type="email"
-            placeholder="enter your email"
-            className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
-          />
-        </div>
-        <div>
-          <label htmlFor="login_password" className="text-[11px] text-black/60">
-            password
-            <span className="text-red-400"> *</span>
-          </label>
-          <input
-            ref={password}
-            required
-            id="login_password"
-            type="password"
-            placeholder="password"
-            className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
-          />
-        </div>
+        {inputs.map((props) => (
+          <Input key={props.id} {...props} formType="login" required />
+        ))}
+
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
             <input
@@ -192,7 +183,7 @@ const Register = forwardRef(({ state }, ref) => {
           create your account
         </p>
         {inputs.map((props) => (
-          <Input key={props.id} {...props} />
+          <Input key={props.id} {...props} formType="register" required />
         ))}
         <p className="text-[11px] text-black/50">
           Your personal data will be used to support your experience throughout

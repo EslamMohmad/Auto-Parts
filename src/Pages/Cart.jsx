@@ -9,9 +9,11 @@ import useNavToHome from "../Hooks/useNavToHome";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { shopPageProducts, loadingState } = useSelector(
+  const { shopPageProducts } = useSelector(
     ({ ProductsSlice }) => ProductsSlice
   );
+
+  const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const { products } = useSelector(({ CartSlice }) => CartSlice);
 
@@ -49,7 +51,11 @@ const Cart = () => {
               clickable={true}
               outermethod={() => navTo("../checkout")}
               methodname="process to checkout"
-              className="bg-black text-white h-[60px] leading-[60px] w-full uppercase rounded-md hover:bg-red-500 active:bg-red-500 mt-4 text-sm font-semibold cursor-pointer text-center"
+              className={`bg-black text-white h-[60px] leading-[60px] w-full uppercase rounded-md hover:bg-red-500 active:bg-red-500 mt-4 text-sm font-semibold cursor-pointer text-center ${
+                loadingState.method === "process to checkout"
+                  ? "bg-red-600"
+                  : "bg-black hover:red-600"
+              }`}
             >
               process to checkout
             </Process_Button>

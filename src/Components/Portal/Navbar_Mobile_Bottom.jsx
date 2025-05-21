@@ -17,15 +17,17 @@ const Navbar_Mobile_Bottom = () => {
       name: "wishlist",
       icon: "fa-regular fa-heart",
       method: () =>
-        userData?.email
+        userData?.email_address
           ? navTo("my-account/wishlist")
           : action(toggleAuthState(true)),
     },
     {
-      name: "account",
+      name: userData?.email_address ? userData?.displayName : "account",
       icon: "fa-regular fa-user",
       method: () =>
-        userData?.email ? navTo("my-account") : action(toggleAuthState(true)),
+        userData?.email_address
+          ? navTo("my-account")
+          : action(toggleAuthState(true)),
     },
   ];
 
@@ -45,7 +47,9 @@ const Navbar_Mobile_Bottom = () => {
                 icon={icon}
                 className="group-hover:text-red-500"
               />
-              <span className="text-[10px] text-gray-600 mt-2">{name}</span>
+              <span className="text-[10px] text-gray-600 mt-2 overflow-hidden text-ellipsis whitespace-nowrap w-[70px] text-center">
+                {name}
+              </span>
             </div>
           </li>
         ))}

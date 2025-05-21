@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const LoadingText = ({ children, width, height, loadingState }) => {
   return !loadingState ? (
     children
@@ -11,4 +13,4 @@ const LoadingText = ({ children, width, height, loadingState }) => {
   );
 };
 
-export default LoadingText;
+export default memo(LoadingText);

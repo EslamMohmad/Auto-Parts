@@ -3,7 +3,7 @@ import Process_Button from "./Process_Button";
 import { toggleCartMenu } from "../Store/PortalSlice";
 import { addProductToCart } from "../Store/CartSlice";
 
-const AddToCartButton = ({ size, product, productAmountRef }) => {
+const AddToCartButton = ({ size, product, amount }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const action = useDispatch();
@@ -12,7 +12,7 @@ const AddToCartButton = ({ size, product, productAmountRef }) => {
     const productInfo = {
       ...product,
       size: product?.size.value ? size : { ...product?.size },
-      amount: productAmountRef.current?.textContent,
+      amount: amount,
     };
     action(addProductToCart(productInfo));
   };

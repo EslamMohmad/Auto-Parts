@@ -8,12 +8,9 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeOverlay } from "../Store/PortalSlice";
 import useScrollTop from "../Hooks/useScrollTop";
-import { auth } from "./../Firebase/Firebase";
 
 const WrapperComponent = () => {
-  const { overlayState, cartMenuState, newsLetterPopupState } = useSelector(
-    ({ PortalSlice }) => PortalSlice
-  );
+  const { overlayState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const { pathname } = useLocation();
 
@@ -24,16 +21,10 @@ const WrapperComponent = () => {
   useScrollTop(pathname);
 
   useEffect(() => {
-    if (
-      (!overlayState && pathname === prevPathname) ||
-      (pathname.includes("checkout") &&
-        (!auth.currentUser || !cartMenuState)) ||
-      newsLetterPopupState
-    )
-      return;
-
-    action(closeOverlay());
-  }, [pathname, auth.currentUser]);
+    if (overlayState && pathname !== prevPathname) {
+      action(closeOverlay());
+    }
+  }, [pathname]);
 
   return (
     <div className="mb-[63px] sm:mb-0">

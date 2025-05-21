@@ -1,11 +1,15 @@
-import { useSelector } from "react-redux";
-import { ProductAmount } from "../Portal/ProductQuickView";
-import { useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import Process_Button from "../../ReuseableComponents/Process_Button";
-import { setCouponCode } from "../../Store/CartSlice";
+import { setCouponCode, updateProductAmount } from "../../Store/CartSlice";
+import ProductAmount from "../../ReuseableComponents/ProductAmount";
 
-const ProductRowTable = ({ product }) => {
-  const productAmountRef = useRef();
+const ProductRowTable = ({ product, updateCartHanlder }) => {
+  const [amount, setAmount] = useState(product.amount || 1);
+
+  useEffect(() => {
+    updateCartHanlder(product, amount);
+  }, [amount]);
 
   return (
     <tr className="border-b border-b-black/10">
@@ -17,19 +21,46 @@ const ProductRowTable = ({ product }) => {
       </th>
       <td className="text-center">{product.price.after}</td>
       <td className="text-center">
-        <ProductAmount ref={productAmountRef} productAmount={product.amount} />
+        <ProductAmount setAmount={setAmount} amount={amount} />
       </td>
       <td className="text-center">
-        ${+product.size.price.replace("$", "") * product?.amount}.00
+        ${+product.size.price.replace("$", "") * amount || product?.amount}.00
       </td>
     </tr>
   );
 };
 
 const ProductsCartTable = () => {
-  const { products } = useSelector(({ CartSlice }) => CartSlice);
+  const { products, couponCode } = useSelector(({ CartSlice }) => CartSlice);
+  const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const [coupon, setCoupon] = useState("");
+
+  const [updateProduct, setUpdateProduct] = useState([]);
+
+  const action = useDispatch();
+
+  const updateCartHanlder = (product, amount) => {
+    const productExist = updateProduct.find((e) => e.id === product.id);
+
+    if (!productExist) {
+      setUpdateProduct([...updateProduct, { ...product, amount }]);
+    } else {
+      setUpdateProduct(() =>
+        updateProduct.map((e) => (e.id === product.id ? { ...e, amount } : e))
+      );
+    }
+  };
+
+  const changesState = () => {
+    return !updateProduct
+      .map((e, i) => e?.amount === products[i].amount)
+      .every((state) => state);
+  };
+
+  useEffect(() => {
+    couponCode && setCoupon("");
+  }, [couponCode]);
 
   return (
     <>
@@ -54,7 +85,11 @@ const ProductsCartTable = () => {
           <tbody>
             {products.length ? (
               products?.map((product) => (
-                <ProductRowTable key={product.heading} product={product} />
+                <ProductRowTable
+                  key={product.heading}
+                  product={product}
+                  updateCartHanlder={updateCartHanlder}
+                />
               ))
             ) : (
               <tr className="text-center py-3 w-full" key="no date">
@@ -67,25 +102,38 @@ const ProductsCartTable = () => {
       <div className="flex flex-wrap gap-5 justify-between my-10">
         <div className="w-full sm:w-fit flex  sm:items-center gap-2">
           <input
+            value={coupon}
             type="text"
             placeholder="coupon code"
             className="border-dashed border border-black/30 focus:border-black transition-all outline-none py-4.5 px-7   rounded-md w-1/2 sm:w-auto"
             onChange={(e) => setCoupon(e.target.value)}
           />
           <Process_Button
-            clickable={true}
+            clickable={coupon}
             methodname="apply coupon"
-            afterloading={[setCouponCode(coupon)]}
-            className="bg-black text-white hover:bg-red-600 px-7 uppercase font-semibold text-sm rounded-md cursor-pointer transition-colors w-1/2 sm:w-auto sm:min-w-[158px] h-[60px] leading-[60px]"
+            afterloading={[coupon && setCouponCode(coupon)]}
+            className={` hover:bg-red-600 px-7 uppercase font-semibold text-sm rounded-md cursor-pointer transition-colors w-1/2 sm:w-auto sm:min-w-[158px] h-[60px] leading-[60px] text-white  ${
+              loadingState.method === "apply coupon"
+                ? "bg-red-600"
+                : "bg-black hover:red-600"
+            }`}
           >
             apply coupon
           </Process_Button>
         </div>
         <div className="my-auto">
           <Process_Button
-            clickable={true}
+            clickable={changesState()}
             methodname="update cart"
-            className="whitespace-nowrap bg-black/10 hover:bg-black hover:text-white sm:min-w-[158px] h-[60px] leading-[60px] px-7 uppercase font-semibold text-sm rounded-md cursor-pointer transition-colors text-center"
+            afterloading={[
+              () =>
+                changesState() && action(updateProductAmount(updateProduct)),
+            ]}
+            className={`whitespace-nowrap sm:min-w-[158px] h-[60px] leading-[60px] px-7 uppercase font-semibold text-sm rounded-md cursor-pointer transition-colors text-center ${
+              loadingState.method === "update cart"
+                ? "bg-black text-white"
+                : "bg-black/10 hover:bg-black hover:text-white "
+            }`}
           >
             update cart
           </Process_Button>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useMediaQuery from "./../Hooks/useMediaQuery";
 import {
+  loginMessage,
   toggleProductAddToCard,
   toggleProductCompare,
   toggleProductQuickView,
@@ -130,6 +131,7 @@ const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
       />
       <Process_Button
         clickable={true}
+        afterloading={[loginMessage(true)]}
         outermethod={() => setOptionComState(false)}
         color="dark"
         className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors cursor-pointer group"

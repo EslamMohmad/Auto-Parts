@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { child, get, ref, set } from "firebase/database";
+import { child, ref, set, get, update, push } from "firebase/database";
 import { auth, database } from "../Firebase/Firebase";
 import {
   createUserWithEmailAndPassword,
@@ -53,9 +53,57 @@ export const checkout_createOrder = createAsyncThunk(
     const userUID = auth?.currentUser?.uid;
 
     try {
-      if (userUID) {
-        const myRef = ref(database, `Auto-Parts-Users/${userUID}`);
-        set(myRef, payload.details).catch((error) =>
+      const myRef = ref(database, `Auto-Parts-Users/${userUID}`);
+      const userExist = (await get(myRef)).exists();
+      if (userExist) {
+        const orders_products = ref(
+          database,
+          `Auto-Parts-Users/${userUID}/orders/${
+            Object.keys(payload?.details?.orders)[0]
+          }/products`
+        );
+        const orders_details = ref(
+          database,
+          `Auto-Parts-Users/${userUID}/orders/${
+            Object.keys(payload?.details?.orders)[0]
+          }/details`
+        );
+
+        const {
+          company_name,
+          coupon_code,
+          order_notes,
+          order_number,
+          payment_method,
+          postcode,
+          shipping,
+          street_address,
+          subtotal,
+          town,
+        } = payload?.details;
+
+        const details = {
+          company_name,
+          coupon_code,
+          order_notes,
+          order_number,
+          payment_method,
+          postcode,
+          shipping,
+          street_address,
+          subtotal,
+          town,
+        };
+
+        set(orders_products, Object.values(payload?.details?.orders)[0]).catch(
+          (error) => alert(`something wrong with your data => ${error}`)
+        );
+
+        set(orders_details, details).catch((error) =>
+          alert(`something wrong with your data => ${error}`)
+        );
+      } else {
+        return set(myRef, payload.details).catch((error) =>
           alert(`you must login or create account => ${error}`)
         );
       }
@@ -75,10 +123,16 @@ export const auth_loginAccount = createAsyncThunk(
         payload.email,
         payload.password
       );
-      return (await response).user.email;
+
+      const userUID = (await response).user.uid;
+      const userRef = child(ref(database), `Auto-Parts-Users/${userUID}`);
+
+      return (await get(userRef)).val();
     } catch (error) {
       rejectWithValue(error.message);
-      alert("user is not exist => " + error.message);
+      alert(
+        "user is not exist, you must create new an account => " + error.message
+      );
     }
   }
 );

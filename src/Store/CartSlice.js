@@ -4,7 +4,7 @@ import { checkout_createOrder } from "./APIS";
 const CartSlice = createSlice({
   name: "CartSlice",
   initialState: {
-    loadingState: false,
+    loadingState: { state: false, method: "" },
     couponCode: "",
     products: [],
     currentOrders: {},
@@ -50,6 +50,12 @@ const CartSlice = createSlice({
     removeProductFromCart: (state, { payload: id }) => {
       state.products = state.products.filter((product) => product.id !== id);
     },
+    updateProductAmount: (state, { payload }) => {
+      state.products = state.products.map((product, index) => ({
+        ...product,
+        amount: payload[index]?.amount,
+      }));
+    },
     setShippingType: (state, { payload }) => {
       state.shippingType = state.shippingType.map((shipping) =>
         shipping.type === payload.type
@@ -69,12 +75,12 @@ const CartSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(checkout_createOrder.pending, (state) => {
-      state.loadingState = true;
+    builder.addCase(checkout_createOrder.pending, (state, payload) => {
+      state.loadingState.state = true;
+      state.currentOrders = payload.meta.arg.details;
     }),
       builder.addCase(checkout_createOrder.fulfilled, (state, payload) => {
-        state.loadingState = false;
-        state.currentOrders = payload.meta.arg;
+        state.loadingState.state = false;
         state.products = [];
       });
   },
@@ -83,6 +89,7 @@ const CartSlice = createSlice({
 export const {
   addProductToCart,
   removeProductFromCart,
+  updateProductAmount,
   setShippingType,
   setPaymentType,
   setCouponCode,

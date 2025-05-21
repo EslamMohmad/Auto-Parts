@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import LoadingText from "../../ReuseableComponents/LoadingText";
-import { ProductAmount, ProductSize } from "../Portal/ProductQuickView";
 import AddToWishlist from "../../ReuseableComponents/AddToWishlist";
 import BuyItNowButton from "../../ReuseableComponents/BuyItNowButton";
 import ProductMap from "../../ReuseableComponents/ProductMap";
@@ -8,11 +7,13 @@ import Rating from "../../ReuseableComponents/Rating";
 import AddToCartButton from "../../ReuseableComponents/AddToCartButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Payment_Imgs from "../../ReuseableComponents/Payment_Imgs";
+import ProductSize from "./../../ReuseableComponents/ProductSize";
+import ProductAmount from "../../ReuseableComponents/ProductAmount";
 
 const ProductDetails = ({ details, loadingState }) => {
   const [size, setSize] = useState({ value: "", price: "", stock: "" });
 
-  const productAmountRef = useRef();
+  const [amount, setAmount] = useState(1);
 
   const options = [
     { icon: "fa-solid fa-arrow-right-arrow-left", text: "compare" },
@@ -42,18 +43,10 @@ const ProductDetails = ({ details, loadingState }) => {
         <ProductSize details={details?.size} setSize={setSize} size={size} />
       )}
       <div className="flex gap-2 flex-wrap">
-        <ProductAmount ref={productAmountRef} />
-        <AddToCartButton
-          product={details}
-          productAmountRef={productAmountRef}
-          size={size}
-        />
+        <ProductAmount amount={amount} setAmount={setAmount} />
+        <AddToCartButton product={details} amount={amount} size={size} />
         <AddToWishlist />
-        <BuyItNowButton
-          product={details}
-          productAmountRef={productAmountRef}
-          size={size}
-        />
+        <BuyItNowButton product={details} amount={amount} size={size} />
       </div>
       <ul className="flex gap-6 lg:gap-8 py-5 flex-wrap">
         {options.map((option) => (

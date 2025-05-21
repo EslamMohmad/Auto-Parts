@@ -2,17 +2,13 @@ import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import background from "../Assets/Shop/background.webp";
 import { Fragment, useEffect } from "react";
 import { useSelector } from "react-redux";
-import usePrevState from "../Hooks/usePrevState";
 
 const ParentComponent = () => {
   const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
-  const { products } = useSelector(({ CartSlice }) => CartSlice);
 
   const { pathname } = useLocation();
 
   const navTo = useNavigate();
-
-  const prevRoute = usePrevState(pathname);
 
   const dynamicLinksArray = decodeURIComponent(pathname)
     .replace("/Auto-Parts", "home")
@@ -36,17 +32,6 @@ const ParentComponent = () => {
       navTo("../");
     }
   }, [pathname, userData?.email_address]);
-
-  useEffect(() => {
-    if (
-      (!products.length &&
-        !prevRoute &&
-        pathname?.includes("Auto-Parts/checkout")) ||
-      (!products.length && prevRoute?.includes("Auto-Parts/orders"))
-    ) {
-      navTo("../");
-    }
-  }, [products.length, prevRoute]);
 
   return (
     <>

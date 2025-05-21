@@ -43,7 +43,7 @@ export const testimonials = [
 
 export const totalPrice = (products) => {
   let count = 0;
-  products.map(
+  products?.map(
     (product) =>
       (count += +product.amount * +product.size.price.replace(/\$/g, ""))
   );

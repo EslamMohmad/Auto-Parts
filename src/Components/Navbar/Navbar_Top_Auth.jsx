@@ -33,7 +33,7 @@ const Navbar_Top_Auth = () => {
 
   useEffect(() => {
     auth.currentUser &&
-      userData?.email_address &&
+      !userData?.email_address &&
       onAuthStateChanged(auth, (user) => {
         const userRef = child(ref(database), `Auto-Parts-Users/${user?.uid}`);
         get(userRef).then(

@@ -16,6 +16,7 @@ const PortalSlice = createSlice({
     producCompareState: false,
     productAddToCardState: false,
     authState: false,
+    loginMessageState: false,
     loadingState: { state: false, method: "" },
   },
   reducers: {
@@ -67,6 +68,9 @@ const PortalSlice = createSlice({
     toggleAuthState: (state, { payload }) => {
       setTrueTargetState(["overlayState", "authState"], state, payload);
     },
+    loginMessage: (state, { payload }) => {
+      state.loginMessageState = payload;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(auth_loginAccount.fulfilled, (state) => {
@@ -91,6 +95,7 @@ export const {
   toggleProductAddToCard,
   toggleLoadingState,
   toggleAuthState,
+  loginMessage,
 } = PortalSlice.actions;
 
 export default PortalSlice.reducer;

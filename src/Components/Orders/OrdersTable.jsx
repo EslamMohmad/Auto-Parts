@@ -1,13 +1,13 @@
 import { totalPrice } from "../../Utils/Function";
 
 const OrdersTable = ({ details }) => {
-  const { products, payment_method, subtotal: total, shipping } = details;
-
   const ordersDetails = {
-    subtotal: "$" + totalPrice(products).toFixed(2),
-    shipping: `$${shipping.price.toFixed(2)} via ${shipping.type}`,
-    "payment method": payment_method,
-    total,
+    subtotal: "$" + totalPrice(details?.products).toFixed(2),
+    shipping: `$${details?.shipping?.price.toFixed(2)} via ${
+      details?.shipping?.type
+    }`,
+    "payment method": details?.payment_method,
+    total: details?.subtotal,
   };
 
   return (
@@ -24,10 +24,10 @@ const OrdersTable = ({ details }) => {
           </tr>
         </thead>
         <tbody className="text-black/50">
-          {products.map((product) => (
-            <tr key={product.id}>
-              <td className="px-6 py-5">{product.heading}</td>
-              <td className="px-6 py-5 text-right">{product.size.price}</td>
+          {details?.products?.map((product) => (
+            <tr key={product?.id}>
+              <td className="px-6 py-5">{product?.heading}</td>
+              <td className="px-6 py-5 text-right">{product?.size?.price}</td>
             </tr>
           ))}
         </tbody>

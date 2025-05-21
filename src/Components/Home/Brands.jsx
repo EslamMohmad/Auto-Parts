@@ -70,9 +70,9 @@ const Brands = () => {
         {brands.map((brand) => (
           <SwiperSlide
             key={brand}
-            className="border border-gray-300 p-6 !h-[140px] group shadow-lightBox rounded-2xl cursor-pointer"
+            className="border border-gray-300 !h-[140px] group shadow-lightBox rounded-2xl cursor-pointer"
           >
-            <Link to={"shop"}>
+            <Link to={"shop"} className="block h-full">
               <img
                 src={brand}
                 className="w-1/2 h-1/2 mx-auto translate-y-1/2 group-hover:animate-vibration group-active:animate-vibration object-contain"

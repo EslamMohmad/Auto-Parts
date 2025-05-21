@@ -21,7 +21,7 @@ const AuthSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(auth_loginAccount.fulfilled, (state, { payload }) => {
-      state.userData = accountDetailsHandler(payload);
+      state.userData = payload;
     });
     builder.addCase(auth_registerAccount.fulfilled, (state, { payload }) => {
       state.userData = payload;
@@ -36,13 +36,3 @@ const AuthSlice = createSlice({
 export const { getUserData, toggleAccountOptions } = AuthSlice.actions;
 
 export default AuthSlice.reducer;
-
-function accountDetailsHandler(payload) {
-  if (payload) {
-    const displayName = payload?.slice(-payload?.length, payload?.indexOf("@"));
-    return {
-      displayName,
-      email_address: payload,
-    };
-  } else return {};
-}

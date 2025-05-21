@@ -6,6 +6,7 @@ import ProductsSlider from "./ProductsSlider";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const List = ({ categories }) => {
   const isMobile = useMediaQuery("(max-width : 640px)");
@@ -41,20 +42,26 @@ const List = ({ categories }) => {
           >
             <ul className="flex flex-col gap-3 ">
               {categories.categories.map((li) => (
-                <li
+                <Link
+                  to="shop"
                   key={li}
                   className="text-gray-500 text-sm hover:text-red-500 active:text-red-500 select-none transition-colors cursor-pointer"
                 >
                   {li}
-                </li>
+                </Link>
               ))}
             </ul>
-            <button className="text-black/30 text-[12px] mt-8 hover:text-black active:text-black transition-colors cursor-pointer">
-              shop all categories
-              <FontAwesomeIcon
-                icon="fa-solid fa-arrow-right-long"
-                className="ml-3"
-              />
+            <button className="mt-3">
+              <Link
+                to="shop"
+                className="text-black/30 text-[12px] mt-8 hover:text-black active:text-black transition-colors cursor-pointer"
+              >
+                shop all categories
+                <FontAwesomeIcon
+                  icon="fa-solid fa-arrow-right-long"
+                  className="ml-3"
+                />
+              </Link>
             </button>
           </motion.div>
         )}

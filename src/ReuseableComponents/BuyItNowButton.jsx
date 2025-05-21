@@ -3,7 +3,7 @@ import Process_Button from "./Process_Button";
 import { useNavigate } from "react-router-dom";
 import { addProductToCart } from "../Store/CartSlice";
 
-const BuyItNowButton = ({ size, product, productAmountRef }) => {
+const BuyItNowButton = ({ size, product, amount }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const navTo = useNavigate();
@@ -27,7 +27,7 @@ const BuyItNowButton = ({ size, product, productAmountRef }) => {
         addProductToCart({
           ...product,
           // size: product?.size.value ? size : { ...product?.size },
-          amount: productAmountRef.current?.textContent,
+          amount,
         }),
       ]}
     >

@@ -6,6 +6,7 @@ import { checkout_createOrder } from "../../Store/APIS";
 import Process_Button from "../../ReuseableComponents/Process_Button";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { auth } from "../../Firebase/Firebase";
 
 const Your_Order = ({ validForm }) => {
   const { products, shippingType, paymentType, couponCode } = useSelector(
@@ -142,7 +143,9 @@ const Your_Order = ({ validForm }) => {
           ref={formRef}
           type="submit"
           clickable={validForm}
-          outermethod={() => billingOrderHandler(formRef.current)}
+          outermethod={() =>
+            auth?.currentUser && billingOrderHandler(formRef.current)
+          }
           className="bg-black text-white h-[60px] leading-[60px] w-full uppercase rounded-md hover:bg-red-500 active:bg-red-500 mt-4 text-sm font-semibold cursor-pointer text-center relative"
         >
           place order

@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Billing_Details from "../Components/Checkout/Billing_Details";
 import Your_Order from "../Components/Checkout/Your_Order";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Checkout = () => {
+  const { products } = useSelector(({ CartSlice }) => CartSlice);
+
   const [validForm, setValidForm] = useState(false);
 
   const formHandler = (e) => {
@@ -16,6 +20,14 @@ const Checkout = () => {
       )
     );
   };
+
+  const navTo = useNavigate();
+
+  useEffect(() => {
+    if (!products.length) {
+      navTo("../");
+    }
+  }, [products.length]);
 
   return (
     <section>
