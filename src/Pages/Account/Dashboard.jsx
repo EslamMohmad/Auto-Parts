@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-const Dashboard = ({ details }) => {
+const Dashboard = () => {
+  const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
+
   return (
     <article>
       <h1 className="text-xl font-semibold p-3 bg-black/10 rounded-xl">
@@ -9,7 +12,7 @@ const Dashboard = ({ details }) => {
       <div className="my-3 text-sm pl-3">
         <h4>
           <span className="text-black/70">hello </span>
-          {details.displayName}
+          {userData.displayName}
         </h4>
         <p className="mt-3 text-black/60 w-[80%]">
           From your account dashboard you can view your{" "}

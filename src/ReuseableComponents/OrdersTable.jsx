@@ -1,6 +1,6 @@
-import { totalPrice } from "../../Utils/Function";
+import { totalPrice } from "../Utils/Function";
 
-const OrdersTable = ({ details }) => {
+export const OrdersTable = ({ details }) => {
   const ordersDetails = {
     subtotal: "$" + totalPrice(details?.products).toFixed(2),
     shipping: `$${details?.shipping?.price.toFixed(2)} via ${

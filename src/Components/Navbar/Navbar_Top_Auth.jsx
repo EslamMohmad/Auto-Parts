@@ -90,7 +90,9 @@ const Navbar_Top_Auth = () => {
             >
               {accountOptions.map(({ text, path }) => (
                 <Link
-                  to={path}
+                  to={
+                    text === "dashboard" ? "my-account" : `my-account/${path}`
+                  }
                   key={path}
                   className="text-black/70 text-[13px] px-4 py-3 pl-0 text-left whitespace-nowrap not-last-of-type:border-b hover:text-red-500 border-b-black/10"
                   onClick={() => action(toggleAccountOptions(false))}

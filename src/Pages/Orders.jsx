@@ -1,9 +1,8 @@
 import { useSelector } from "react-redux";
-import OrdersTypes from "../Components/Orders/OrdersTypes";
-import OrdersTable from "../Components/Orders/OrdersTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import OrdersTable from "./../ReuseableComponents/OrdersTable";
 
 const Orders = () => {
   const { currentOrders } = useSelector(({ CartSlice }) => CartSlice);

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Navbar_Top_Search from "./Navbar_Top_Search";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar_Top_Menu from "./Navbar_Top_Menu";
 import Navbar_Top_Cart from "./Navbar_Top_Cart";
 import { useSelector } from "react-redux";
@@ -8,6 +7,7 @@ import Navbar_Top_Mobile_Search from "./Navbar_Top_Mobile_Search";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 import Navbar_Top_Auth from "./Navbar_Top_Auth";
 import Logo from "../../ReuseableComponents/Logo";
+import Navbar_Top_Wishlist from "./Navbar_Top_Wishlist";
 
 const Navbar_Top = ({ fixedNavbar, isHome }) => {
   const {
@@ -72,12 +72,7 @@ const Navbar_Top = ({ fixedNavbar, isHome }) => {
       <div className="flex gap-5 items-center">
         <Navbar_Top_Auth />
         <div className="flex gap-7">
-          <div className="relative hover:text-red-600 active:text-red-600 cursor-pointer transition-colors hidden sm:block">
-            <FontAwesomeIcon icon="fa-regular fa-heart" size="xl" />
-            <span className="absolute -right-3 -top-3 text-white bg-red-600 rounded-full w-[17px] h-[17px] leading-[17px] text-[8px] text-center">
-              0
-            </span>
-          </div>
+          <Navbar_Top_Wishlist />
           <Navbar_Top_Cart />
         </div>
       </div>

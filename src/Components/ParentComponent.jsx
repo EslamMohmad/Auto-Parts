@@ -1,37 +1,31 @@
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import background from "../Assets/Shop/background.webp";
-import { Fragment, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { Fragment } from "react";
 
 const ParentComponent = () => {
-  const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
-
   const { pathname } = useLocation();
-
-  const navTo = useNavigate();
 
   const dynamicLinksArray = decodeURIComponent(pathname)
     .replace("/Auto-Parts", "home")
     .split("/");
 
-  const linksHandler = (link) => {
-    let result = "";
-    switch (link) {
-      case "home":
-        result = "..";
-        break;
-      default:
-        result = `../${link}`;
-        break;
-    }
+  const linksHandler = () => {
+    let result = [];
+
+    dynamicLinksArray.map(
+      (link, i) =>
+        i < dynamicLinksArray.length - 1 &&
+        result.push(
+          `${
+            i >= 1
+              ? `${i !== 1 ? dynamicLinksArray[1] + "/" : ""}` + link
+              : ".."
+          }`
+        )
+    );
+
     return result;
   };
-
-  useEffect(() => {
-    if (pathname.includes("my-account") && !userData?.email_address) {
-      navTo("../");
-    }
-  }, [pathname, userData?.email_address]);
 
   return (
     <>
@@ -40,7 +34,7 @@ const ParentComponent = () => {
           <h3 className="text-4xl font-bold mb-3 text-center uppercase">
             {dynamicLinksArray[dynamicLinksArray.length - 1].replace("-", " ")}
           </h3>
-          <ul className="flex justify-center">
+          <ul className="flex justify-center flex-wrap sm:flex-nowrap">
             {dynamicLinksArray.map((li, index) => {
               const slah = <span className="mx-2">/</span>;
               return (
@@ -48,8 +42,8 @@ const ParentComponent = () => {
                   {dynamicLinksArray.length - 1 !== index ? (
                     <>
                       <Link
-                        to={linksHandler(li)}
-                        className="hover:text-red-500 active:text-red-500 transition-colors capitalize"
+                        to={linksHandler()[index]}
+                        className="hover:text-red-500 active:text-red-500 transition-colors capitalize overflow-hidden text-ellipsis whitespace-nowrap min-w-[20px]"
                       >
                         {li.replace("-", " ")}
                       </Link>
@@ -57,7 +51,7 @@ const ParentComponent = () => {
                     </>
                   ) : (
                     <>
-                      <span className="mx-2 capitalize">
+                      <span className="mx-2 capitalize overflow-hidden text-ellipsis whitespace-nowrap min-w-[20px]">
                         {li.replace("-", " ")}
                       </span>
                     </>
