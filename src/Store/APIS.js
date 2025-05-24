@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { child, ref, set, get, update, push } from "firebase/database";
+import { child, ref, set, get } from "firebase/database";
 import { auth, database } from "../Firebase/Firebase";
 import {
   createUserWithEmailAndPassword,
@@ -139,6 +139,24 @@ export const wishlist_addProductToUserWhishlist = createAsyncThunk(
   }
 );
 
+export const wishlist_getProductUserWhishlist = createAsyncThunk(
+  "ProductsSlice/wishlist_getProductUserWhishlist",
+  async (_, api) => {
+    const { rejectWithValue } = api;
+    try {
+      if (auth.currentUser) {
+        const myRef = child(
+          ref(database),
+          `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist`
+        );
+        return (await get(myRef)).val() || {};
+      } else return {};
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
 export const auth_loginAccount = createAsyncThunk(
   "AuthSlice/auth_loginAccount",
   async (payload, api) => {
@@ -156,9 +174,7 @@ export const auth_loginAccount = createAsyncThunk(
       return (await get(userRef)).val();
     } catch (error) {
       rejectWithValue(error.message);
-      alert(
-        "user is not exist, you must create new an account => " + error.message
-      );
+      alert("user is not exist, or password is wrong => " + error.message);
     }
   }
 );

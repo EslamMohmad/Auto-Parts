@@ -4,6 +4,7 @@ import {
   shop_getProductDetails,
   shop_getProducts,
   wishlist_addProductToUserWhishlist,
+  wishlist_getProductUserWhishlist,
 } from "./APIS";
 
 const ProductsSlice = createSlice({
@@ -18,6 +19,7 @@ const ProductsSlice = createSlice({
     loadingState: true,
     filterKeys: [],
     wishlistState: { message: "", productsLength: 0 },
+    wishlistProducts: {},
   },
   reducers: {
     addProductToQuickView: (state, { payload }) => {
@@ -46,6 +48,9 @@ const ProductsSlice = createSlice({
         message: "",
         productsLength: state.wishlistState.productsLength,
       };
+    },
+    emptyWishlistProducts: (state) => {
+      state.wishlistProducts = {};
     },
   },
   extraReducers: (builder) => {
@@ -85,11 +90,17 @@ const ProductsSlice = createSlice({
       );
 
     //set product to user wishlist
+
     builder.addCase(
       wishlist_addProductToUserWhishlist.fulfilled,
-      (state, payload) => {
-        console.log(payload);
-        // state.wishlistMessageState = payload || "please try again";
+      (state, { payload }) => {
+        state.wishlistState = payload;
+      }
+    );
+    builder.addCase(
+      wishlist_getProductUserWhishlist.fulfilled,
+      (state, { payload }) => {
+        state.wishlistProducts = payload;
       }
     );
   },
@@ -101,6 +112,7 @@ export const {
   addKeysToFilter,
   imgsLoading,
   emptyWishList,
+  emptyWishlistProducts,
 } = ProductsSlice.actions;
 
 export default ProductsSlice.reducer;
