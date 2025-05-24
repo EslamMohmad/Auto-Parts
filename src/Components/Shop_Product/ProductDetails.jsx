@@ -1,6 +1,5 @@
 import { useState } from "react";
 import LoadingText from "../../ReuseableComponents/LoadingText";
-import AddToWishlist from "../../ReuseableComponents/AddToWishlist";
 import BuyItNowButton from "../../ReuseableComponents/BuyItNowButton";
 import ProductMap from "../../ReuseableComponents/ProductMap";
 import Rating from "../../ReuseableComponents/Rating";
@@ -9,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Payment_Imgs from "../../ReuseableComponents/Payment_Imgs";
 import ProductSize from "./../../ReuseableComponents/ProductSize";
 import ProductAmount from "../../ReuseableComponents/ProductAmount";
+import AddToWishlist from "../../ReuseableComponents/AddToWishlist";
 
 const ProductDetails = ({ details, loadingState }) => {
   const [size, setSize] = useState({ value: "", price: "", stock: "" });
@@ -45,7 +45,18 @@ const ProductDetails = ({ details, loadingState }) => {
       <div className="flex gap-2 flex-wrap">
         <ProductAmount amount={amount} setAmount={setAmount} />
         <AddToCartButton product={details} amount={amount} size={size} />
-        <AddToWishlist />
+        <AddToWishlist
+          product={details}
+          methodname="wishlist"
+          clickable={true}
+          className={`w-[50px] h-[50px] leading-[50px] rounded-3xl uppercase text-[12px] bg-black/10 text-black cursor-pointer hover:bg-black hover:text-white transition-colors text-center ${`cursor-pointer hover:bg-red-500 hover:text-white ${
+            loadingState.state && loadingState.method === "wishlist"
+              ? "bg-red-500 border-transparent"
+              : ""
+          } active:bg-red-500 active:text-white transition-colors`}`}
+        >
+          <FontAwesomeIcon icon="fa-solid fa-heart" />
+        </AddToWishlist>
         <BuyItNowButton product={details} amount={amount} size={size} />
       </div>
       <ul className="flex gap-6 lg:gap-8 py-5 flex-wrap">

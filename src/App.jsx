@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/Auto-Parts" element={<WrapperComponent />}>
           <Route path="" element={<Home />} />
-          <Route path="/Auto-Parts" element={<ParentComponent />}>
+          <Route path="" element={<ParentComponent />}>
             <Route path="shop/:category?" element={<Shop />} />
             <Route path="cart" element={<Cart />} />
             <Route path="orders" element={<Orders />} />
@@ -37,7 +37,7 @@ function App() {
             path="shop/:category/:product"
             element={<Shop_Category_product />}
           />
-          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </Router>

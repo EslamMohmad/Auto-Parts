@@ -42,12 +42,6 @@ const Navbar_Top_Auth = () => {
       });
   }, [auth.currentUser, userData?.email_address]);
 
-  useEffect(() => {
-    pathname.includes("checkout") &&
-      !auth.currentUser &&
-      action(toggleAuthState(true));
-  }, [pathname, auth.currentUser]);
-
   return (
     <button
       className={`relative items-center gap-2 hidden sm:flex group ${

@@ -2,12 +2,18 @@ import { useEffect, useState } from "react";
 import Billing_Details from "../Components/Checkout/Billing_Details";
 import Your_Order from "../Components/Checkout/Your_Order";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { auth } from "../Firebase/Firebase";
+import { toggleAuthState } from "../Store/PortalSlice";
 
 const Checkout = () => {
   const { products } = useSelector(({ CartSlice }) => CartSlice);
 
   const [validForm, setValidForm] = useState(false);
+
+  const { pathname } = useLocation();
+
+  const action = useDispatch();
 
   const formHandler = (e) => {
     const requiredInputs = [...e.target.form.elements].filter(
@@ -28,6 +34,12 @@ const Checkout = () => {
       navTo("../");
     }
   }, [products.length]);
+
+  useEffect(() => {
+    pathname.includes("checkout") &&
+      !auth.currentUser &&
+      action(toggleAuthState(true));
+  }, [pathname, auth.currentUser]);
 
   return (
     <section>

@@ -19,7 +19,7 @@ const ParentComponent = () => {
           `${
             i >= 1
               ? `${i !== 1 ? dynamicLinksArray[1] + "/" : ""}` + link
-              : ".."
+              : "/Auto-Parts"
           }`
         )
     );

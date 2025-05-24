@@ -22,6 +22,11 @@ const Input = ({ label, type, id, formType, required, ref }) => {
         placeholder={label}
         className="py-4 px-5 w-full mt-2 outline-none border border-black/15 rounded-sm placeholder:uppercase placeholder:text-[10px] text-[12px] focus:border-black hover:border-black transition-all"
         {...(required ? { required } : null)}
+        {...(type === "password"
+          ? { autoComplete: "current-password" }
+          : type === "email"
+          ? { autoComplete: "username" }
+          : null)}
       />
     </div>
   );

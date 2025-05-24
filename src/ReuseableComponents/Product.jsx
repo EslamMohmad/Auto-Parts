@@ -15,6 +15,7 @@ import Process_Button from "./Process_Button";
 import { addProductToQuickView } from "../Store/ProductsSlice";
 import { addProductToCart } from "../Store/CartSlice";
 import { Link, useNavigate } from "react-router-dom";
+import AddToWishlist from "./AddToWishlist";
 
 const Button = ({
   icon,
@@ -129,16 +130,16 @@ const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
           optionsComState ? "opacity-100" : "opacity-0"
         }`}
       />
-      <Process_Button
+      <AddToWishlist
+        product={details}
         clickable={true}
-        afterloading={[loginMessage(true)]}
         outermethod={() => setOptionComState(false)}
         color="dark"
         className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors cursor-pointer group"
       >
         <FontAwesomeIcon icon="fa-solid fa-heart" />
         <Button_Title title="whishlist" />
-      </Process_Button>
+      </AddToWishlist>
       <div
         className={`flex flex-col gap-3 ${"group-hover/options:-translate-y-20 group-hover/options:shadow-top"} ${
           optionsComState && loadingState.state && "-translate-y-20 shadow-top"

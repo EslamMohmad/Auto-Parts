@@ -18,6 +18,7 @@ const Billing_Details = () => {
           label="first name"
           required
           value={first_name}
+          autoComplete="your name"
         />
       ),
     },
@@ -52,6 +53,7 @@ const Billing_Details = () => {
           label="street address"
           required
           placeholder="house number and street number"
+          autoComplete="address"
         />
       ),
     },
@@ -85,6 +87,7 @@ const Billing_Details = () => {
           label="phone"
           required
           value={phone}
+          autoComplete="your phone number"
         />
       ),
     },
@@ -96,6 +99,7 @@ const Billing_Details = () => {
           inputType="text"
           label="coupon code (optional)"
           value={couponCode}
+          autoComplete="coupon for sale"
         />
       ),
     },

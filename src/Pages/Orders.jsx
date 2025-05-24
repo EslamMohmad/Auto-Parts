@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import OrdersTable from "./../ReuseableComponents/OrdersTable";
+import OrdersTypes from "./../Components/Orders/OrdersTypes";
 
 const Orders = () => {
   const { currentOrders } = useSelector(({ CartSlice }) => CartSlice);

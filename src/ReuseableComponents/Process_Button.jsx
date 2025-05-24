@@ -5,6 +5,7 @@ import { toggleLoadingState } from "../Store/PortalSlice";
 
 import lightBars from "../Assets/Home/ProductsBanner/light bars.svg";
 import darkBars from "../Assets/Home/ProductsBanner/dark bars.svg";
+import { filteredObject } from "../Utils/Function";
 
 const Process_Button = (props) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -13,21 +14,15 @@ const Process_Button = (props) => {
 
   const delay = 1000;
 
-  const filteredObject = () => {
-    const result = {};
-    const filter = Object.keys(props).filter(
-      (key) =>
-        key !== "children" &&
-        key !== "methodname" &&
-        key !== "clickable" &&
-        key !== "afterloading" &&
-        key !== "outermethod" &&
-        key !== "color" &&
-        key !== "delay"
-    );
-    filter.map((key) => (result[key] = props[key]));
-    return result;
-  };
+  const filterdKeys = [
+    "children",
+    "methodname",
+    "clickable",
+    "afterloading",
+    "outermethod",
+    "color",
+    "delay",
+  ];
 
   useEffect(() => {
     let timer;
@@ -49,7 +44,7 @@ const Process_Button = (props) => {
 
   return (
     <motion.button
-      {...filteredObject()}
+      {...filteredObject(filterdKeys, props)}
       onClick={
         props.clickable
           ? () => (

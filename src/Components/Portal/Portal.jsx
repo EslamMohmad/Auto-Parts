@@ -20,7 +20,7 @@ import Auth from "./Auth.jsx";
 import Left_Filter from "./Left_Filter.jsx";
 import { useLocation } from "react-router-dom";
 import UserMenu from "./UserMenu.jsx";
-import WarniningMessage from "./WarniningMessage.jsx";
+import WishlistMessage from "./WishlistMessage.jsx";
 
 const Portal = () => {
   const props = useSelector(({ PortalSlice }) => PortalSlice);
@@ -37,6 +37,7 @@ const Portal = () => {
     props?.overlayState &&
       !allFalseValue &&
       !lessDesktop &&
+      !props.authState &&
       action(closeOverlay());
     props?.searchMenuState && !isMobile && action(toggleSearchMenu(false));
   }, [lessDesktop, isMobile, props?.searchMenuState]);
@@ -67,7 +68,7 @@ const Portal = () => {
       {isMobile && <Navbar_Mobile_Bottom />}
       {!isMobile && <Scroll_Top />}
       {pathname.includes("my-account") && lessDesktop && <UserMenu />}
-       <WarniningMessage />
+      <WishlistMessage />
     </>,
     document.getElementById("portal")
   );

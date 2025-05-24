@@ -1,21 +1,21 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Process_Button from "./Process_Button";
-import { useSelector } from "react-redux";
+import { filteredObject } from "../Utils/Function";
+import { loginMessage } from "../Store/PortalSlice";
+import { wishlist_addProductToUserWhishlist } from "../Store/APIS";
+import { auth } from "../Firebase/Firebase";
 
-const AddToWishlist = () => {
-  const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
+const AddToWishlist = (props) => {
+  const filterdKeys = ["children", "afterloading", "product"];
 
   return (
     <Process_Button
-      className={`w-[50px] h-[50px] leading-[50px] rounded-3xl uppercase text-[12px] bg-black/10 text-black cursor-pointer hover:bg-black hover:text-white transition-colors text-center ${`cursor-pointer hover:bg-red-500 hover:text-white ${
-        loadingState.state && loadingState.method === "wishlist"
-          ? "bg-red-500 border-transparent"
-          : ""
-      } active:bg-red-500 active:text-white transition-colors`}`}
-      methodname="wishlist"
-      clickable={true}
+      {...filteredObject(filterdKeys, props)}
+      afterloading={[
+        loginMessage(true),
+        wishlist_addProductToUserWhishlist(props.product),
+      ]}
     >
-      <FontAwesomeIcon icon="fa-solid fa-heart" />
+      {props.children}
     </Process_Button>
   );
 };

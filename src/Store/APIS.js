@@ -113,6 +113,32 @@ export const checkout_createOrder = createAsyncThunk(
   }
 );
 
+export const wishlist_addProductToUserWhishlist = createAsyncThunk(
+  "ProductsSlice/wishlist_addProductToUserWhishlist",
+  async (payload, api) => {
+    const { rejectWithValue } = api;
+    try {
+      if (auth.currentUser) {
+        const myRef = ref(
+          database,
+          `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist/${payload.heading}`
+        );
+        const wishlistLength = ref(
+          database,
+          `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist`
+        );
+        const productsLength = (await get(wishlistLength)).size;
+        const productExist = (await get(myRef)).exists();
+        return productExist
+          ? { message: "this product is aready exist", productsLength }
+          : (set(myRef, payload), { message: payload.heading, productsLength });
+      } else return { message: "you have to login", productsLength };
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
 export const auth_loginAccount = createAsyncThunk(
   "AuthSlice/auth_loginAccount",
   async (payload, api) => {

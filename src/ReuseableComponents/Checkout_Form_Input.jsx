@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 const Checkout_Form_Input = ({
   label,
@@ -8,6 +8,7 @@ const Checkout_Form_Input = ({
   required,
   style = null,
   value = "",
+  autoComplete,
 }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -33,6 +34,7 @@ const Checkout_Form_Input = ({
         type={inputType}
         {...(placeholder ? { placeholder } : null)}
         {...(required ? { required } : null)}
+        {...(autoComplete ? { autoComplete } : null)}
         className={`w-full py-4  px-4 border border-black/10 rounded-md focus:border-black hover:border-black transition-colors outline-none text-sm placeholder:text-black/30 ${style}`}
       />
     </>

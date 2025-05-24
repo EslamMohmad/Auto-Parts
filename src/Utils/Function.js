@@ -64,3 +64,10 @@ export const monthsArray = [
   "november",
   "december",
 ];
+
+export const filteredObject = (filterKeys, props) => {
+  const result = {};
+  const filter = Object.keys(props).filter((key) => !filterKeys.includes(key));
+  filter.map((key) => (result[key] = props[key]));
+  return result;
+};
