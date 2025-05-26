@@ -3,7 +3,6 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useMediaQuery from "./../Hooks/useMediaQuery";
 import {
-  loginMessage,
   toggleProductAddToCard,
   toggleProductCompare,
   toggleProductQuickView,
@@ -70,6 +69,9 @@ const Button = ({
 
 const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
   const { loadingState } = useSelector(({ PortalSlice }) => PortalSlice);
+  const { wishlistProducts } = useSelector(
+    ({ ProductsSlice }) => ProductsSlice
+  );
 
   const { heading, rating, sale, price, imgs, categorie, size } =
     details || productDetails;
@@ -110,6 +112,28 @@ const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
     },
   ];
 
+  const checkWishlistProductExist = () => {
+    return Object.values(wishlistProducts).find(
+      (product) => product.heading === heading
+    ) ? (
+      <div className="absolute right-5 top-5 group">
+        <FontAwesomeIcon icon="fa-solid fa-heart" color="black" />
+        <Button_Title title="wished" />
+      </div>
+    ) : (
+      <AddToWishlist
+        product={details}
+        clickable={true}
+        outermethod={() => setOptionComState(false)}
+        color="dark"
+        className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors cursor-pointer group"
+      >
+        <FontAwesomeIcon icon="fa-solid fa-heart" />
+        <Button_Title title="whish" />
+      </AddToWishlist>
+    );
+  };
+
   return (
     <div
       className="relative flex flex-col gap-3 text-sm group/options "
@@ -130,16 +154,7 @@ const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
           optionsComState ? "opacity-100" : "opacity-0"
         }`}
       />
-      <AddToWishlist
-        product={details}
-        clickable={true}
-        outermethod={() => setOptionComState(false)}
-        color="dark"
-        className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors cursor-pointer group"
-      >
-        <FontAwesomeIcon icon="fa-solid fa-heart" />
-        <Button_Title title="whishlist" />
-      </AddToWishlist>
+      {checkWishlistProductExist()}
       <div
         className={`flex flex-col gap-3 ${"group-hover/options:-translate-y-20 group-hover/options:shadow-top"} ${
           optionsComState && loadingState.state && "-translate-y-20 shadow-top"
