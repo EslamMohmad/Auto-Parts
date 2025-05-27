@@ -3,19 +3,35 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeOverlay } from "../../Store/PortalSlice.js";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import useMediaQuery from "../../Hooks/useMediaQuery.js";
 
 const Overlay = ({ children }) => {
-  const { overlayState, newsLetterPopupState, authState } = useSelector(
-    ({ PortalSlice }) => PortalSlice
-  );
+  const {
+    overlayState,
+    newsLetterPopupState,
+    authState,
+    cartMenuState,
+    userOptionsMenuState,
+    wishlistState,
+  } = useSelector(({ PortalSlice }) => PortalSlice);
   const action = useDispatch();
 
   const { pathname } = useLocation();
+
+  const isMobile = useMediaQuery("(max-width : 640px)");
 
   const onClickHandler = () => {
     if (pathname.includes("checkout") && authState) return;
 
     !newsLetterPopupState && action(closeOverlay());
+  };
+
+  const overlayHandler = () => {
+    return isMobile
+      ? !cartMenuState && !userOptionsMenuState && !wishlistState
+        ? "top-[60px]  z-20"
+        : "top-0 z-20"
+      : "top-0 z-30";
   };
 
   useEffect(() => {
@@ -30,8 +46,8 @@ const Overlay = ({ children }) => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className={`fixed top-0 left-0 w-full h-full backdrop-blur-[5px] z-10`}
+          exit={{ opacity: 0, transition: { delay: 0.2 } }}
+          className={`fixed ${overlayHandler()} left-0 w-full h-full backdrop-blur-[5px]`}
           onClick={onClickHandler}
         >
           {children}

@@ -53,10 +53,11 @@ const CartMenu = () => {
     <AnimatePresence>
       {cartMenuState && (
         <motion.div
-          className="absolute w-[80%] sm:w-[350px] h-full z-20 sm:z-10 bg-white pt-10 px-4 flex flex-col gap-16"
+          className="absolute w-[80%] sm:w-[350px] h-full  sm:z-10 bg-white pt-10 px-4 flex flex-col gap-16"
           initial={{ right: "-100%" }}
           animate={{ right: 0 }}
-          exit={{ right: "-100%", transition: { duration: 1 } }}
+          exit={{ right: "-100%" }}
+          transition={{ delay: 0.2 }}
           onClick={(e) => action(toggleCartMenu(true), e.stopPropagation())}
         >
           <div className="flex gap-5 items-end mr-auto">

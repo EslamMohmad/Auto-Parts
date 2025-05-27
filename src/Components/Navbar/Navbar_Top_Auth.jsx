@@ -79,7 +79,7 @@ const Navbar_Top_Auth = () => {
               initial={{ opacity: 0, top: "200%" }}
               animate={{ opacity: 1, top: "160%" }}
               exit={{ opacity: 0, top: "200%" }}
-              className="absolute bg-white px-5 rounded-md border border-black/10 flex flex-col"
+              className="absolute z-10 bg-white px-5 rounded-md border border-black/10 flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
               {accountOptions.map(({ text, path }) => (

@@ -13,7 +13,8 @@ const SearchMenu = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="absolute top-[56px] w-full bg-white z-10 h-[calc(100vh_-_56px)]"
+          transition={{ delay: 0.2 }}
+          className={`absolute w-full bg-white z-10 h-[calc(100%_-_63px)]`}
           onClick={(e) => e.stopPropagation()}
         >
           <form>

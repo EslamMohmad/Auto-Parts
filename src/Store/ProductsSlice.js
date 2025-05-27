@@ -3,8 +3,8 @@ import {
   shop_getCategories,
   shop_getProductDetails,
   shop_getProducts,
-  wishlist_addProductToUserWhishlist,
-  wishlist_getProductUserWhishlist,
+  wishlist_addProductToUserWishlist,
+  wishlist_getProductUserWishlist,
 } from "./APIS";
 
 const ProductsSlice = createSlice({
@@ -92,13 +92,14 @@ const ProductsSlice = createSlice({
     //set product to user wishlist
 
     builder.addCase(
-      wishlist_addProductToUserWhishlist.fulfilled,
+      wishlist_addProductToUserWishlist.fulfilled,
       (state, { payload }) => {
+        console.log(payload);
         state.wishlistState = payload;
       }
     );
     builder.addCase(
-      wishlist_getProductUserWhishlist.fulfilled,
+      wishlist_getProductUserWishlist.fulfilled,
       (state, { payload }) => {
         state.wishlistProducts = payload;
       }

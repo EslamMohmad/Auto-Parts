@@ -21,9 +21,8 @@ const NewsLetters_Popup = () => {
           animate={{
             opacity: 1,
             top: "50%",
-            transition: { delay: 0.5 },
           }}
-          exit={{ opacity: 0, top: "-100%", transition: { duration: 2 } }}
+          exit={{ opacity: 0, top: "-100%", transition: { duration: 1 } }}
           className="bg-white absolute rounded-2xl  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >

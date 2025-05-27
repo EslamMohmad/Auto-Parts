@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { toggleAuthState } from "../../Store/PortalSlice";
+import { useLocation, useNavigate } from "react-router-dom";
+import { toggleAuthState, toggleWishlistState } from "../../Store/PortalSlice";
 
 const Navbar_Mobile_Bottom = () => {
   const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
@@ -9,6 +9,8 @@ const Navbar_Mobile_Bottom = () => {
   const navTo = useNavigate();
 
   const action = useDispatch();
+
+  const isAccountPage = useLocation().pathname.includes("my-account");
 
   const navigation = [
     { name: "home", icon: "fa-solid fa-house", method: () => navTo("") },
@@ -18,7 +20,7 @@ const Navbar_Mobile_Bottom = () => {
       icon: "fa-regular fa-heart",
       method: () =>
         userData?.email_address
-          ? navTo("my-account/wishlist")
+          ? !isAccountPage && action(toggleWishlistState(true))
           : action(toggleAuthState(true)),
     },
     {

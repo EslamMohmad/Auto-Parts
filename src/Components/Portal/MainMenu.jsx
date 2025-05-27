@@ -27,7 +27,8 @@ const MainMenu = () => {
           initial={{ left: "-100%" }}
           animate={{ left: 0 }}
           exit={{ left: "-100%" }}
-          className="absolute w-full sm:w-[300px] sm:h-full z-10 bg-white pt-10 pb-5 px-6 h-[calc(100vh_-_56px)] top-[56px] sm:top-0"
+          transition={{ delay: 0.2 }}
+          className="absolute w-full sm:w-[300px] sm:h-full z-10 bg-white pt-10 pb-5 px-6 h-[calc(100vh_-_56px)] sm:top-0"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col h-full">

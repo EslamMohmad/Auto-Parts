@@ -14,7 +14,7 @@ const Left_Filter = () => {
       {filterMenuState && (
         <motion.div
           initial={{ left: "-100%" }}
-          animate={{ left: 0 }}
+          animate={{ left: 0, transition: { delay: 0.2 } }}
           exit={{ left: "-100%" }}
           className="absolute z-10 w-full sm:w-[300px] sm:h-full bg-white pt-10 pb-5 px-6 h-full top-0 overflow-auto"
           onClick={(e) => e.stopPropagation()}

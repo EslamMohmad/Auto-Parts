@@ -6,9 +6,13 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { auth_logoutAccount } from "../../Store/APIS";
 
 const UserMenu = () => {
-  const { userOptionsMenuState } = useSelector(
-    ({ PortalSlice }) => PortalSlice
-  );
+  const {
+    userOptionsMenuState,
+    cartMenuState,
+    mainMenuState,
+    searchMenuState,
+    wishlistState,
+  } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const action = useDispatch();
 
@@ -62,9 +66,15 @@ const UserMenu = () => {
   };
 
   return (
-    <div>
+    <div
+      className={`relative ${
+        cartMenuState || mainMenuState || searchMenuState || wishlistState
+          ? "z-10"
+          : "z-30"
+      }`}
+    >
       <div
-        className="fixed z-20 bottom-20 sm:bottom-9 left-5 bg-white hover:bg-black hover:text-white active:bg-black active:text-white w-[50px] h-[50px] leading-[50px] text-center rounded-full shadow-box cursor-pointer"
+        className="fixed z-5 bottom-20 sm:bottom-9 left-5 bg-white hover:bg-black hover:text-white active:bg-black active:text-white w-[50px] h-[50px] leading-[50px] text-center rounded-full shadow-box cursor-pointer"
         onClick={() => action(toggleUserOptionsMenu(true))}
       >
         <FontAwesomeIcon
@@ -80,11 +90,11 @@ const UserMenu = () => {
           title={list.text}
           onClick={list.method}
           key={list.text}
-          test={list.text + "   " + route}
-          style={{ transitionDuration: 300 + 200 * index + "ms" }}
-          className={`fixed z-10 shadow-box  ${handleActiveSection(
-            list.option
-          )} ${
+          style={{
+            transitionDuration: 300 + 200 * index + "ms",
+            zIndex: index,
+          }}
+          className={`fixed shadow-box  ${handleActiveSection(list.option)} ${
             userOptionsMenuState
               ? list.location + " !duration-300"
               : `bottom-22.5 sm:bottom-11.5 left-7.5`

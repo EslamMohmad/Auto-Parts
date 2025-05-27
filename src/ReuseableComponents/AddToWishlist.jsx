@@ -1,8 +1,7 @@
 import Process_Button from "./Process_Button";
 import { filteredObject } from "../Utils/Function";
 import { loginMessage } from "../Store/PortalSlice";
-import { wishlist_addProductToUserWhishlist } from "../Store/APIS";
-import { auth } from "../Firebase/Firebase";
+import { wishlist_addProductToUserWishlist } from "../Store/APIS";
 
 const AddToWishlist = (props) => {
   const filterdKeys = ["children", "afterloading", "product"];
@@ -12,7 +11,7 @@ const AddToWishlist = (props) => {
       {...filteredObject(filterdKeys, props)}
       afterloading={[
         loginMessage(true),
-        wishlist_addProductToUserWhishlist(props.product),
+        wishlist_addProductToUserWishlist(props.product),
       ]}
     >
       {props.children}

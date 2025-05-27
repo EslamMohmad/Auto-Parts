@@ -21,6 +21,7 @@ import Left_Filter from "./Left_Filter.jsx";
 import { useLocation } from "react-router-dom";
 import UserMenu from "./UserMenu.jsx";
 import WishlistMessage from "./WishlistMessage.jsx";
+import Wishlist from "./Wishlist.jsx";
 
 const Portal = () => {
   const props = useSelector(({ PortalSlice }) => PortalSlice);
@@ -64,6 +65,7 @@ const Portal = () => {
         <NewsLetters_Popup />
         <ProductQuickView />
         <Left_Filter />
+        <Wishlist />
       </Overlay>
       {isMobile && <Navbar_Mobile_Bottom />}
       {!isMobile && <Scroll_Top />}

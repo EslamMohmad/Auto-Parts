@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { child, ref, set, get } from "firebase/database";
+import { child, ref, set, get, remove } from "firebase/database";
 import { auth, database } from "../Firebase/Firebase";
 import {
   createUserWithEmailAndPassword,
@@ -113,8 +113,8 @@ export const checkout_createOrder = createAsyncThunk(
   }
 );
 
-export const wishlist_addProductToUserWhishlist = createAsyncThunk(
-  "ProductsSlice/wishlist_addProductToUserWhishlist",
+export const wishlist_addProductToUserWishlist = createAsyncThunk(
+  "ProductsSlice/wishlist_addProductToUserWishlist",
   async (payload, api) => {
     const { rejectWithValue } = api;
     try {
@@ -132,15 +132,35 @@ export const wishlist_addProductToUserWhishlist = createAsyncThunk(
         return productExist
           ? { message: "this product is aready exist", productsLength }
           : (set(myRef, payload), { message: payload.heading, productsLength });
-      } else return { message: "you have to login", productsLength };
+      }
+
+      return { message: "you have to login", productsLength };
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
 );
 
-export const wishlist_getProductUserWhishlist = createAsyncThunk(
-  "ProductsSlice/wishlist_getProductUserWhishlist",
+export const wishlist_removeProductFromUserWishlist = createAsyncThunk(
+  "ProductsSlice/wishlist_removeProductFromUserWishlist",
+  async (payload, api) => {
+    const { rejectWithValue } = api;
+    try {
+      if (auth.currentUser) {
+        const myRef = ref(
+          database,
+          `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist/${payload.heading}`
+        );
+        remove(myRef);
+      }
+    } catch (error) {
+      return rejectWithValue(error.message);
+    }
+  }
+);
+
+export const wishlist_getProductUserWishlist = createAsyncThunk(
+  "ProductsSlice/wishlist_getProductUserWishlist",
   async (_, api) => {
     const { rejectWithValue } = api;
     try {

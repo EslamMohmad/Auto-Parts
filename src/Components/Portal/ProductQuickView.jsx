@@ -34,7 +34,7 @@ const ProductQuickView = () => {
           animate={{
             opacity: 1,
             top: "50%",
-            transition: { delay: 0.5 },
+            transition: { delay: 0.2 },
           }}
           exit={{ opacity: 0, top: "20%", transition: { duration: 0.2 } }}
           className="bg-white absolute rounded-2xl  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl p-3 flex flex-col md:flex-row w-[80%] h-[80%] md:h-auto md:w-[90%] md:max-w-[1000px]"

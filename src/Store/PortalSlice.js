@@ -16,6 +16,7 @@ const PortalSlice = createSlice({
     producCompareState: false,
     productAddToCardState: false,
     authState: false,
+    wishlistState: false,
     loginMessageState: false,
     loadingState: { state: false, method: "" },
   },
@@ -68,6 +69,9 @@ const PortalSlice = createSlice({
     toggleAuthState: (state, { payload }) => {
       setTrueTargetState(["overlayState", "authState"], state, payload);
     },
+    toggleWishlistState: (state, { payload }) => {
+      setTrueTargetState(["overlayState", "wishlistState"], state, payload);
+    },
     loginMessage: (state, { payload }) => {
       state.loginMessageState = payload;
     },
@@ -95,6 +99,7 @@ export const {
   toggleProductAddToCard,
   toggleLoadingState,
   toggleAuthState,
+  toggleWishlistState,
   loginMessage,
 } = PortalSlice.actions;
 

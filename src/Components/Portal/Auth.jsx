@@ -234,12 +234,12 @@ const Auth = () => {
     <AnimatePresence>
       {authState && (
         <motion.div
-          initial={{ opacity: 0, top: "-50%" }}
+          initial={{ top: "-50%" }}
           animate={{
-            opacity: 1,
             top: "50%",
           }}
-          exit={{ opacity: 0, top: "-50%" }}
+          exit={{ top: "-50%" }}
+          transition={{ delay: 0.2 }}
           className="bg-white absolute rounded-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl w-[90%] sm:w-[400px] shadow-box overflow-hidden"
           onClick={(e) => e.stopPropagation()}
         >
