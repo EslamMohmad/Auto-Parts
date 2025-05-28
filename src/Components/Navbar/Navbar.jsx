@@ -12,14 +12,12 @@ const Navbar = () => {
     pathname === "/Auto-Parts" || pathname === "/Auto-Parts/" ? true : false;
 
   const overlayLayersHandler = () => {
-    return searchMenuState || mainMenuState
-      ? "z-30"
-      : "z-20 shadow-[0_5px_55px] shadow-black/25 sm:shadow-none";
+    return searchMenuState || mainMenuState ? "z-30" : "z-20";
   };
 
   return (
     <nav
-      className={`relative ${overlayLayersHandler()} ${
+      className={`relative shadow-[0_5px_55px] shadow-black/25 sm:shadow-none ${overlayLayersHandler()} ${
         isHome ? "bg-white" : "bg-yellow-300"
       }`}
     >

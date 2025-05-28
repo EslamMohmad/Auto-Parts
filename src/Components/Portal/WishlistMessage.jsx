@@ -16,7 +16,7 @@ const WishlistMessage = () => {
 
   useEffect(() => {
     let timer;
-    if (loginMessageState && !wishlistState.message) {
+    if (loginMessageState) {
       if (counter > 0) {
         timer = setTimeout(() => setCounter((counter -= 2)), 20);
       } else

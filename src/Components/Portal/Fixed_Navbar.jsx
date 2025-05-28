@@ -34,7 +34,7 @@ const Fixed_Navbar = () => {
           animate={{ top: 0 }}
           exit={{ top: "-100%" }}
           transition={{ duration: 1.2 }}
-          className={`fixed z-10 top-0 w-[100vw] ${
+          className={`fixed z-10 top-0 w-[100vw] shadow-bottom ${
             !isHome ? "bg-yellow-300" : "bg-white"
           }`}
         >

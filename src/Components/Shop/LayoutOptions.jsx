@@ -82,7 +82,7 @@ const SortingButton = () => {
   return (
     <>
       <button
-        className="text-sm py-3 px-5 bg-white cursor-pointer w-[max-content]"
+        className="text-sm py-3 px-5 bg-white cursor-pointer w-fit text-ellipsis overflow-hidden whitespace-nowrap max-w-[130px] border border-black/15 rounded-lg"
         onClick={() => setList({ ...list, state: !list.state })}
       >
         {list.type}

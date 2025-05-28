@@ -128,15 +128,13 @@ export const wishlist_addProductToUserWishlist = createAsyncThunk(
           `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist`
         );
         const productsLength = (await get(wishlistLength)).size;
-        const productExist = (await get(myRef)).exists();
-        return productExist
-          ? { message: "this product is aready exist", productsLength }
-          : (set(myRef, payload), { message: payload.heading, productsLength });
-      }
 
-      return { message: "you have to login", productsLength };
+        return (
+          set(myRef, payload), { message: payload.heading, productsLength }
+        );
+      } else return { message: "you have to login", productsLength: 0 };
     } catch (error) {
-      return rejectWithValue(error.message);
+      return { message: "somthing wrong please try again", productsLength: 0 };
     }
   }
 );
@@ -147,11 +145,20 @@ export const wishlist_removeProductFromUserWishlist = createAsyncThunk(
     const { rejectWithValue } = api;
     try {
       if (auth.currentUser) {
-        const myRef = ref(
-          database,
-          `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist/${payload.heading}`
-        );
-        remove(myRef);
+        if (payload?.heading) {
+          const myRef = ref(
+            database,
+            `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist/${payload.heading}`
+          );
+          remove(myRef);
+        } else {
+          const myRef = ref(
+            database,
+            `Auto-Parts-Users/${auth?.currentUser?.uid}/wishlist`
+          );
+
+          remove(myRef);
+        }
       }
     } catch (error) {
       return rejectWithValue(error.message);
