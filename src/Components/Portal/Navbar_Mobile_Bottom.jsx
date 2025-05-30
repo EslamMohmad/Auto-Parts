@@ -5,6 +5,9 @@ import { toggleAuthState, toggleWishlistState } from "../../Store/PortalSlice";
 
 const Navbar_Mobile_Bottom = () => {
   const { userData } = useSelector(({ AuthSlice }) => AuthSlice);
+  const { wishlistProducts } = useSelector(
+    ({ ProductsSlice }) => ProductsSlice
+  );
 
   const navTo = useNavigate();
 
@@ -17,7 +20,7 @@ const Navbar_Mobile_Bottom = () => {
     { name: "shopping", icon: "fa-solid fa-shop", method: () => navTo("shop") },
     {
       name: "wishlist",
-      icon: "fa-regular fa-heart",
+      icon: "fa-solid fa-heart",
       method: () =>
         userData?.email_address
           ? !isAccountPage && action(toggleWishlistState(true))
@@ -25,7 +28,7 @@ const Navbar_Mobile_Bottom = () => {
     },
     {
       name: userData?.email_address ? userData?.displayName : "account",
-      icon: "fa-regular fa-user",
+      icon: "fa-solid fa-user",
       method: () =>
         userData?.email_address
           ? navTo("my-account")
@@ -35,7 +38,7 @@ const Navbar_Mobile_Bottom = () => {
 
   return (
     <nav className="fixed bottom-0 w-full shadow-top transition-none bg-white z-[1]">
-      <ul className="flex">
+      <ul className="flex items-center">
         {navigation.map(({ name, method, icon }) => (
           <li
             key={name}
@@ -43,12 +46,18 @@ const Navbar_Mobile_Bottom = () => {
           >
             <div
               onClick={() => method()}
-              className="py-3 flex flex-col items-center justify-center"
+              className="relative py-3 flex flex-col items-center justify-center"
             >
               <FontAwesomeIcon
+                size={name === "wishlist" ? "xl" : "md"}
                 icon={icon}
                 className="group-hover:text-red-500"
               />
+              {name === "wishlist" && (
+                <span className="text-[9px] absolute left-1/2 -translate-x-1/2 top-3.5 w-[18px] h-[18px] leading-[18px] rounded-full text-center text-white">
+                  {Object.values(wishlistProducts).length}
+                </span>
+              )}
               <span className="text-[10px] text-gray-600 mt-2 overflow-hidden text-ellipsis whitespace-nowrap w-[70px] text-center">
                 {name}
               </span>

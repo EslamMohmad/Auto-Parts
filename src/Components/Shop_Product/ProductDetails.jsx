@@ -9,8 +9,18 @@ import Payment_Imgs from "../../ReuseableComponents/Payment_Imgs";
 import ProductSize from "./../../ReuseableComponents/ProductSize";
 import ProductAmount from "../../ReuseableComponents/ProductAmount";
 import AddToWishlist from "../../ReuseableComponents/AddToWishlist";
+import { useSelector } from "react-redux";
+import Button_Title from "../../ReuseableComponents/Button_Title";
 
 const ProductDetails = ({ details, loadingState }) => {
+  const { wishlistProducts } = useSelector(
+    ({ ProductsSlice }) => ProductsSlice
+  );
+
+  const { loadingState: loadingStateBtn } = useSelector(
+    ({ PortalSlice }) => PortalSlice
+  );
+
   const [size, setSize] = useState({ value: "", price: "", stock: "" });
 
   const [amount, setAmount] = useState(1);
@@ -20,6 +30,30 @@ const ProductDetails = ({ details, loadingState }) => {
     { icon: "fa-solid fa-question", text: "ask a question" },
     { icon: "fa-solid fa-share-nodes", text: "social share" },
   ];
+
+  const checkWishlistProductExist = () => {
+    return Object.values(wishlistProducts).find(
+      (product) => product.heading === details.heading
+    ) ? (
+      <div className="relative w-[50px] h-[50px] leading-[50px] text-[12px] bg-red-500 border-transparent text-center rounded-full text-white group">
+        <FontAwesomeIcon icon="fa-solid fa-heart" />
+        <Button_Title title="wished" />
+      </div>
+    ) : (
+      <AddToWishlist
+        product={details}
+        methodname="wishlist"
+        clickable={true}
+        className={`w-[50px] h-[50px] leading-[50px] rounded-3xl uppercase  text-[12px] transition-colors text-center ${
+          loadingStateBtn.state && loadingStateBtn.method === "wishlist"
+            ? "bg-red-500 border-transparent text-white"
+            : "bg-black/10 text-black hover:bg-black hover:text-white"
+        } active:bg-red-500 active:text-white transition-colors cursor-pointer hover:bg-red-500 hover:text-white`}
+      >
+        <FontAwesomeIcon icon="fa-solid fa-heart" />
+      </AddToWishlist>
+    );
+  };
 
   return (
     <div className="flex flex-col gap-5 md:px-4 lg:px-8">
@@ -45,18 +79,7 @@ const ProductDetails = ({ details, loadingState }) => {
       <div className="flex gap-2 flex-wrap">
         <ProductAmount amount={amount} setAmount={setAmount} />
         <AddToCartButton product={details} amount={amount} size={size} />
-        <AddToWishlist
-          product={details}
-          methodname="wishlist"
-          clickable={true}
-          className={`w-[50px] h-[50px] leading-[50px] rounded-3xl uppercase text-[12px] bg-black/10 text-black cursor-pointer hover:bg-black hover:text-white transition-colors text-center ${`cursor-pointer hover:bg-red-500 hover:text-white ${
-            loadingState.state && loadingState.method === "wishlist"
-              ? "bg-red-500 border-transparent"
-              : ""
-          } active:bg-red-500 active:text-white transition-colors`}`}
-        >
-          <FontAwesomeIcon icon="fa-solid fa-heart" />
-        </AddToWishlist>
+        {checkWishlistProductExist()}
         <BuyItNowButton product={details} amount={amount} size={size} />
       </div>
       <ul className="flex gap-6 lg:gap-8 py-5 flex-wrap">

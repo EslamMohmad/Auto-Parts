@@ -1,10 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { loginMessage } from "../../Store/PortalSlice";
+import { wishlistMessage } from "../../Store/PortalSlice";
 import { emptyWishList } from "../../Store/ProductsSlice";
 const WishlistMessage = () => {
-  const { loginMessageState } = useSelector(({ PortalSlice }) => PortalSlice);
+  const { wishlistMessageState } = useSelector(
+    ({ PortalSlice }) => PortalSlice
+  );
 
   const { wishlistState } = useSelector(({ ProductsSlice }) => ProductsSlice);
 
@@ -16,23 +18,25 @@ const WishlistMessage = () => {
 
   useEffect(() => {
     let timer;
-    if (loginMessageState) {
+    if (wishlistMessageState) {
       if (counter > 0) {
         timer = setTimeout(() => setCounter((counter -= 2)), 20);
       } else
-        action(loginMessage(false)), setCounter(width), action(emptyWishList());
+        action(wishlistMessage(false)),
+          setCounter(width),
+          action(emptyWishList());
     }
     return () => clearTimeout(timer);
-  }, [counter, loginMessageState]);
+  }, [counter, wishlistMessageState]);
 
   return (
     <AnimatePresence>
-      {loginMessageState && (
+      {wishlistMessageState && (
         <motion.div
           initial={{ top: "-5%", zIndex: 10 }}
-          animate={{ top: "8%", zIndex: 30 }}
-          exit={{ top: "-5%", zIndex: 15 }}
-          transition={{ duration: 0.2 }}
+          animate={{ top: "8%", zIndex: 30, transition: { delay: 0.3 } }}
+          exit={{ top: "-5%", zIndex: 2 }}
+          transition={{ duration: 0.3 }}
           className="fixed w-[200px] left-1/2 -translate-x-1/2 text-sm border border-black/20 bg-white shadow-box text-center  text-black/80 rounded-md overflow-hidden"
         >
           <div className="py-3 " style={{ width: width + "px" }}>

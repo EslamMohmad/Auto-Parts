@@ -33,9 +33,10 @@ import {
   faGears,
   faRightFromBracket,
   faUserGear,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faUser,
+  faUser as faRegUser,
   faHeart,
   faEnvelope,
   faClock,
@@ -54,6 +55,7 @@ export const globalIcons = () => {
   return library.add([
     faMagnifyingGlass,
     faUser,
+    faRegUser,
     faHeart,
     faCartShopping,
     faBars,

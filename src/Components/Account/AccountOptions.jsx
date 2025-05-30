@@ -9,7 +9,7 @@ const AccountOptions = ({ accountOptions, route }) => {
   const { order } = useParams();
 
   return (
-    <div className="w-[350px] h-fit border border-black/15 rounded-3xl overflow-hidden">
+    <div className="sm:sticky top-[80px] !w-[350px] h-fit border border-black/15 rounded-3xl overflow-hidden">
       <h1 className="p-6 px-7 text-xl uppercase">my account</h1>
       <div className="bg-black/5 rounded-t-3xl rounded-b-none flex flex-col">
         {accountOptions.map((account) => (

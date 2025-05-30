@@ -19,7 +19,7 @@ export const Orders = () => {
   }, [order]);
 
   return (
-    <section className="w-full">
+    <section className="w-full xl:w-auto xl:grow">
       {order ? (
         <Order data={tableData[order]} />
       ) : (

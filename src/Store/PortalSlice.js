@@ -17,7 +17,7 @@ const PortalSlice = createSlice({
     productAddToCardState: false,
     authState: false,
     wishlistState: false,
-    loginMessageState: false,
+    wishlistMessageState: false,
     loadingState: { state: false, method: "" },
   },
   reducers: {
@@ -72,8 +72,8 @@ const PortalSlice = createSlice({
     toggleWishlistState: (state, { payload }) => {
       setTrueTargetState(["overlayState", "wishlistState"], state, payload);
     },
-    loginMessage: (state, { payload }) => {
-      state.loginMessageState = payload;
+    wishlistMessage: (state, { payload }) => {
+      state.wishlistMessageState = payload;
     },
   },
   extraReducers: (builder) => {
@@ -100,7 +100,7 @@ export const {
   toggleLoadingState,
   toggleAuthState,
   toggleWishlistState,
-  loginMessage,
+  wishlistMessage,
 } = PortalSlice.actions;
 
 export default PortalSlice.reducer;

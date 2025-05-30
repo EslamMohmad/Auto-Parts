@@ -13,6 +13,7 @@ const Overlay = ({ children }) => {
     cartMenuState,
     userOptionsMenuState,
     wishlistState,
+    productQuickViewState,
   } = useSelector(({ PortalSlice }) => PortalSlice);
   const action = useDispatch();
 
@@ -28,7 +29,11 @@ const Overlay = ({ children }) => {
 
   const overlayHandler = () => {
     return isMobile
-      ? !cartMenuState && !userOptionsMenuState && !wishlistState
+      ? !cartMenuState &&
+        !userOptionsMenuState &&
+        !wishlistState &&
+        !productQuickViewState &&
+        !newsLetterPopupState
         ? "top-[60px]  z-20"
         : "top-0 z-20"
       : "top-0 z-30";
