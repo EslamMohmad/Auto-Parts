@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { wishlistMessage } from "../../Store/PortalSlice";
+import { setWishlistMessage } from "../../Store/PortalSlice";
 import { emptyWishList } from "../../Store/ProductsSlice";
 const WishlistMessage = () => {
   const { wishlistMessageState } = useSelector(
@@ -22,7 +22,7 @@ const WishlistMessage = () => {
       if (counter > 0) {
         timer = setTimeout(() => setCounter((counter -= 2)), 20);
       } else
-        action(wishlistMessage(false)),
+        action(setWishlistMessage(false)),
           setCounter(width),
           action(emptyWishList());
     }

@@ -17,13 +17,13 @@ const NewsLetters_Popup = () => {
     <AnimatePresence>
       {newsLetterPopupState && (
         <motion.div
-          initial={{ opacity: 0, top: "-100%" }}
+          initial={{ opacity: 0, top: "0" }}
           animate={{
             opacity: 1,
             top: "50%",
           }}
-          exit={{ opacity: 0, top: "-100%", transition: { duration: 1 } }}
-          className="bg-white absolute rounded-2xl  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl"
+          exit={{ opacity: 0, top: "0%", transition: { delay: 0.2 } }}
+          className="bg-white absolute rounded-2xl left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex flex-col sm:flex-row overflow-hidden max-h-[700vh] h-[60vh] sm:h-[500px] w-[80vw] sm:w-[600px] lg:w-[900px] rounded-2xl relative">

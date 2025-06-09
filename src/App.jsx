@@ -10,7 +10,7 @@ import Account from "./Pages/Account";
 import Orders from "./Pages/Orders";
 import Dashboard from "./Pages/Account/Dashboard";
 import Wishlist from "./Pages/Account/Wishlist";
-import { Orders as AccountOrders } from "./Pages/Account/Orders";
+import AccountOrders from "./Pages/Account/AccountOrders";
 import AccountDetails from "./Pages/Account/AccountDetails";
 import PageNotFound from "./Pages/PageNotFound";
 
@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/Auto-Parts" element={<WrapperComponent />}>
-          <Route path="" element={<Home />} />
+          <Route index element={<Home />} />
           <Route path="" element={<ParentComponent />}>
             <Route path="shop/:category?" element={<Shop />} />
             <Route path="cart" element={<Cart />} />

@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef, useState } from "react";
+import { memo } from "react";
+import SearchInput from "../../ReuseableComponents/SearchInput";
+import { useSelector } from "react-redux";
 
 const Navbar_Top_Search = ({ state }) => {
-  const [inputFocus, setInputFocus] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-
-  const inputRef = useRef();
+  const {
+    inputSearchStates: { inputValue, inputFocus },
+  } = useSelector(({ SearchSlice }) => SearchSlice);
 
   return (
     <div
@@ -14,22 +15,16 @@ const Navbar_Top_Search = ({ state }) => {
       } py-1 my-3 w-full lg:w-[400px] min-w-[190px] items-center relative shadow order-2 lg:order-none hidden sm:flex`}
     >
       <div
-        className={`text-gray-400 uppercase absolute left-6 ${
-          inputFocus ? "top-2 text-[8px]" : "top-5 text-[10px]"
-        } transition-all duration-200`}
+        className={`text-gray-400 uppercase absolute left-7 ${
+          inputValue && inputFocus ? "top-2 text-[8px]" : "top-5 text-[10px]"
+        } transition-all duration-300`}
       >
         enter your keyword
       </div>
       <form className="w-[90%]">
-        <input
+        <SearchInput
+          className="pt-4 pb-2 outline-none pl-6 text-[12px] font-extralight tracking-wider text-gray-600 w-full relative rounded-2xl ml-1"
           name="navbar-search"
-          type="text"
-          className="pt-4 pb-2 outline-none pl-6 text-[12px] font-extralight tracking-wider text-gray-600 w-full relative"
-          value={inputValue}
-          ref={inputRef}
-          onFocus={() => setInputFocus(true)}
-          onBlur={() => !inputValue && setInputFocus(false)}
-          onChange={() => setInputValue(inputRef.current.value)}
         />
       </form>
       <button className="ml-auto mr-2">
@@ -42,4 +37,4 @@ const Navbar_Top_Search = ({ state }) => {
   );
 };
 
-export default Navbar_Top_Search;
+export default memo(Navbar_Top_Search);

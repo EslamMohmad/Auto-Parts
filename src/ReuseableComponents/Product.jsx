@@ -15,6 +15,7 @@ import { addProductToQuickView } from "../Store/ProductsSlice";
 import { addProductToCart } from "../Store/CartSlice";
 import { Link, useNavigate } from "react-router-dom";
 import AddToWishlist from "./AddToWishlist";
+import heart from "../Assets/Home/ProductsBanner/heart.png";
 
 const Button = ({
   icon,
@@ -126,10 +127,14 @@ const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
         clickable={true}
         outermethod={() => setOptionComState(false)}
         color="dark"
-        className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors cursor-pointer group"
+        className="absolute right-5 top-5 text-gray-300 hover:text-black transition-colors group"
+        style={{
+          cursor: `url(${heart}) 15 15, auto`,
+        }}
+        methodname="wishlist"
       >
         <FontAwesomeIcon icon="fa-solid fa-heart" />
-        <Button_Title title="whish" />
+        <Button_Title title="wish" />
       </AddToWishlist>
     );
   };
@@ -140,20 +145,22 @@ const Product = ({ details, currentSlide, firstBtnIcon, index }) => {
       onMouseOver={() => setOptionComState(true)}
       onMouseLeave={() => !loadingState.state && setOptionComState(false)}
     >
-      <img
-        src={imgs[0]}
-        loading="lazy"
-        className={`border border-gray-300 rounded-2xl object-cover transition-all duration-500 ${
-          optionsComState ? "opacity-0" : "opacity-100"
-        }`}
-      />
-      <img
-        src={imgs[1]}
-        loading="lazy"
-        className={`border absolute top-0 left-0 border-gray-300 rounded-2xl object-cover transition-all duration-500 ${
-          optionsComState ? "opacity-100" : "opacity-0"
-        }`}
-      />
+      <Link to={`/Auto-Parts/shop/${categorie[0]}/${heading}`}>
+        <img
+          src={imgs[0]}
+          loading="lazy"
+          className={`border border-gray-300 rounded-2xl object-cover transition-all duration-500 ${
+            optionsComState ? "opacity-0" : "opacity-100"
+          }`}
+        />
+        <img
+          src={imgs[1]}
+          loading="lazy"
+          className={`border absolute top-0 left-0 border-gray-300 rounded-2xl object-cover transition-all duration-500 ${
+            optionsComState ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      </Link>
       {checkWishlistProductExist()}
       <div
         className={`flex flex-col gap-3 ${"group-hover/options:-translate-y-20 group-hover/options:shadow-top"} ${

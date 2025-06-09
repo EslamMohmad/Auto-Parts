@@ -1,10 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import SearchTags from "../../ReuseableComponents/SearchTags";
+import SearchResults from "../Search/SearchResults";
+import SearchInput from "../../ReuseableComponents/SearchInput";
 
 const SearchMenu = () => {
   const { searchMenuState } = useSelector(({ PortalSlice }) => PortalSlice);
-
-  const tags = ["aenean", "mauris", "dorman", "honda", "jsusto"];
 
   return (
     <AnimatePresence>
@@ -18,26 +19,20 @@ const SearchMenu = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <form>
-            <input
-              type="text"
-              placeholder="enter your keyword"
-              className="placeholder:uppercase p-4 text-[12px] w-full text-center border-b border-gray-300 outline-none"
+            <SearchInput
+              className="p-4 text-[12px] w-full text-center border-b border-gray-300 outline-none"
+              name="mobile-search"
+              placeholder="search for products, brands and more"
             />
           </form>
           <div className="py-10 px-5 flex flex-col gap-7">
             <h6 className="uppercase text-[11px] text-gray-600">
               popular search:
             </h6>
-            <ul className="flex gap-3 flex-wrap">
-              {tags.map((list) => (
-                <li
-                  key={list}
-                  className="text-[11px] bg-gray-200 py-2 px-5 text-gray-500 cursor-pointer hover:bg-red-500 hover:text-white active:text-white transition-colors"
-                >
-                  {list}
-                </li>
-              ))}
-            </ul>
+            <SearchTags />
+          </div>
+          <div className="px-5">
+            <SearchResults />
           </div>
         </motion.div>
       )}

@@ -2,24 +2,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleAuthState } from "../../Store/PortalSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { getUserData, toggleAccountOptions } from "../../Store/AuthSlice";
-import { Link, useLocation } from "react-router-dom";
-import { auth_logoutAccount } from "../../Store/APIS";
+import { useLocation } from "react-router-dom";
 import { auth, database } from "../../Firebase/Firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { accountOptions } from "./../../Pages/Account";
-import useMediaQuery from "../../Hooks/useMediaQuery";
 import { child, get, ref } from "firebase/database";
+import AuthOptions from "./AuthOptions";
 
 const Navbar_Top_Auth = () => {
   const { userData, accountOptionsState } = useSelector(
     ({ AuthSlice }) => AuthSlice
   );
+  const { fixedNavbarState } = useSelector(({ PortalSlice }) => PortalSlice);
 
   const action = useDispatch();
-
-  const isMobile = useMediaQuery("(max-width : 639px)");
 
   const { pathname } = useLocation();
 
@@ -30,6 +26,10 @@ const Navbar_Top_Auth = () => {
       });
     }
   }, [accountOptionsState]);
+
+  useEffect(() => {
+    action(toggleAccountOptions(false));
+  }, [fixedNavbarState]);
 
   useEffect(() => {
     auth.currentUser &&
@@ -71,41 +71,10 @@ const Navbar_Top_Auth = () => {
           </p>
         </div>
       )}
-      <AnimatePresence>
-        {!isMobile &&
-          !pathname.includes("my-account") &&
-          accountOptionsState && (
-            <motion.ul
-              initial={{ opacity: 0, top: "200%" }}
-              animate={{ opacity: 1, top: "160%" }}
-              exit={{ opacity: 0, top: "200%" }}
-              className="absolute z-10 bg-white px-5 rounded-md border border-black/10 flex flex-col"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {accountOptions.map(({ text, path }) => (
-                <Link
-                  to={
-                    text === "dashboard" ? "my-account" : `my-account/${path}`
-                  }
-                  key={path}
-                  className="text-black/70 text-[13px] px-4 py-3 pl-0 text-left whitespace-nowrap not-last-of-type:border-b hover:text-red-500 border-b-black/10"
-                  onClick={() => action(toggleAccountOptions(false))}
-                >
-                  {text}
-                </Link>
-              ))}
-              <li
-                className="text-black/70 text-[13px] px-4 py-3 pl-0 text-left whitespace-nowrap not-last-of-type:border-b hover:text-red-500 border-b-black/10"
-                onClick={() => (
-                  action(auth_logoutAccount()),
-                  action(toggleAccountOptions(false))
-                )}
-              >
-                log out
-              </li>
-            </motion.ul>
-          )}
-      </AnimatePresence>
+      <AuthOptions
+        accountOptionsState={accountOptionsState}
+        pathname={pathname}
+      />
     </button>
   );
 };

@@ -44,13 +44,14 @@ const ProductDetails = ({ details, loadingState }) => {
         product={details}
         methodname="wishlist"
         clickable={true}
-        className={`w-[50px] h-[50px] leading-[50px] rounded-3xl uppercase  text-[12px] transition-colors text-center ${
+        className={`w-[50px] h-[50px] leading-[50px] rounded-3xl text-[12px] transition-colors text-center ${
           loadingStateBtn.state && loadingStateBtn.method === "wishlist"
             ? "bg-red-500 border-transparent text-white"
             : "bg-black/10 text-black hover:bg-black hover:text-white"
-        } active:bg-red-500 active:text-white transition-colors cursor-pointer hover:bg-red-500 hover:text-white`}
+        } active:bg-red-500 active:text-white transition-colors cursor-pointer hover:bg-red-500 hover:text-white relative group`}
       >
         <FontAwesomeIcon icon="fa-solid fa-heart" />
+        <Button_Title title="wish" />
       </AddToWishlist>
     );
   };

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { child, get, ref } from "firebase/database";
 import { auth, database } from "../../Firebase/Firebase";
 
-export const Orders = () => {
+const AccountOrders = () => {
   const [tableData, setTableData] = useState({});
   const { order } = useParams();
 
@@ -19,7 +19,7 @@ export const Orders = () => {
   }, [order]);
 
   return (
-    <section className="w-full xl:w-auto xl:grow">
+    <section className="w-full lg:w-auto lg:grow">
       {order ? (
         <Order data={tableData[order]} />
       ) : (
@@ -65,3 +65,5 @@ export const Orders = () => {
     </section>
   );
 };
+
+export default AccountOrders;

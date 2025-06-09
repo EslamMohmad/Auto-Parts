@@ -1,11 +1,21 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { child, ref, set, get, remove } from "firebase/database";
+import {
+  child,
+  ref,
+  set,
+  get,
+  remove,
+  equalTo,
+  orderByValue,
+  query,
+} from "firebase/database";
 import { auth, database } from "../Firebase/Firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import { productMatchesSearch } from "../Utils/Function";
 
 export const shop_getProducts = createAsyncThunk(
   "ProductsSlice/shop_getProducts",
@@ -195,7 +205,7 @@ export const auth_loginAccount = createAsyncThunk(
         payload.password
       );
 
-      const userUID = (await response).user.uid;
+      const userUID = (await response)?.user?.uid;
       const userRef = child(ref(database), `Auto-Parts-Users/${userUID}`);
 
       return (await get(userRef)).val();
@@ -248,6 +258,32 @@ export const auth_logoutAccount = createAsyncThunk(
       return await response;
     } catch (error) {
       rejectWithValue(error.message);
+    }
+  }
+);
+
+export const search_getSearchResults = createAsyncThunk(
+  "SearchSlice/search_getSearchResults",
+  async (searchTerm, api) => {
+    const { rejectWithValue } = api;
+    try {
+      const dbRef = ref(database, "Auto-Parts");
+      const snapshot = await get(dbRef);
+      const data = snapshot.val();
+
+      if (!data) return [];
+
+      const allProducts = Object.values(data).flatMap((categoryArr) =>
+        Array.isArray(categoryArr) ? categoryArr : []
+      );
+
+      const filtered = allProducts.filter((product) =>
+        productMatchesSearch(product, searchTerm)
+      );
+
+      return filtered;
+    } catch (error) {
+      return rejectWithValue(error.message);
     }
   }
 );

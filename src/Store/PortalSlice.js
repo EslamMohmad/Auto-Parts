@@ -8,8 +8,10 @@ const PortalSlice = createSlice({
     overlayState: false,
     cartMenuState: false,
     mainMenuState: false,
-    searchMenuState: false,
+    searchMenuState: false, // for less than 1024px left side search
+    searchState: { state: false, value: "" }, // for desktop search
     newsLetterPopupState: false,
+    fixedNavbarState: false,
     userOptionsMenuState: false,
     filterMenuState: false,
     productQuickViewState: false,
@@ -18,6 +20,7 @@ const PortalSlice = createSlice({
     authState: false,
     wishlistState: false,
     wishlistMessageState: false,
+    searchState: false,
     loadingState: { state: false, method: "" },
   },
   reducers: {
@@ -35,6 +38,7 @@ const PortalSlice = createSlice({
     toggleSearchMenu: (state, { payload }) => {
       setTrueTargetState(["overlayState", "searchMenuState"], state, payload);
     },
+
     toggleNewsLetterPopup: (state, { payload }) => {
       setTrueTargetState(
         ["overlayState", "newsLetterPopupState"],
@@ -72,8 +76,11 @@ const PortalSlice = createSlice({
     toggleWishlistState: (state, { payload }) => {
       setTrueTargetState(["overlayState", "wishlistState"], state, payload);
     },
-    wishlistMessage: (state, { payload }) => {
+    setWishlistMessage: (state, { payload }) => {
       state.wishlistMessageState = payload;
+    },
+    setFixedNavbar: (state, { payload }) => {
+      state.fixedNavbarState = payload;
     },
   },
   extraReducers: (builder) => {
@@ -93,6 +100,7 @@ export const {
   toggleSearchMenu,
   toggleUserOptionsMenu,
   toggleNewsLetterPopup,
+  setFixedNavbar,
   toggleProductQuickView,
   toggleFilterMenuState,
   toggleProductCompare,
@@ -100,7 +108,7 @@ export const {
   toggleLoadingState,
   toggleAuthState,
   toggleWishlistState,
-  wishlistMessage,
+  setWishlistMessage,
 } = PortalSlice.actions;
 
 export default PortalSlice.reducer;

@@ -34,7 +34,7 @@ const Overlay = ({ children }) => {
         !wishlistState &&
         !productQuickViewState &&
         !newsLetterPopupState
-        ? "top-[60px]  z-20"
+        ? "top-[60px] z-20"
         : "top-0 z-20"
       : "top-0 z-30";
   };

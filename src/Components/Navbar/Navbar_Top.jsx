@@ -6,8 +6,9 @@ import Navbar_Top_Mobile_Search from "./Navbar_Top_Mobile_Search";
 import Navbar_Top_Auth from "./Navbar_Top_Auth";
 import Logo from "../../ReuseableComponents/Logo";
 import Navbar_Top_Wishlist from "./Navbar_Top_Wishlist";
+import useHomePage from "../../Hooks/useHomePage";
 
-const Navbar_Top = ({ fixedNavbar, isHome }) => {
+const Navbar_Top = ({ fixedNavbar }) => {
   const navigation = [
     { name: "home", path: "" },
     { name: "shop", path: "shop" },
@@ -15,13 +16,13 @@ const Navbar_Top = ({ fixedNavbar, isHome }) => {
     { name: "about us", path: "about-us" },
   ];
 
+  const isHome = useHomePage();
+
   return (
     <section
-      className={`-mx-[25px] sm:mx-auto flex items-center sm:flex-wrap lg:flex-nowrap justify-between gap-5 ${
-        fixedNavbar &&
-        `${isHome && "bg-white"}` &&
-        `${!isHome && "bg-transparent"}`
-      } ${
+      className={`-mx-[25px] sm:mx-auto flex items-center sm:flex-wrap lg:flex-nowrap justify-between gap-5 ${`${
+        isHome ? "bg-white" : "bg-yellow-300"
+      }`} ${
         fixedNavbar
           ? "px-[49px] sm:px-[24px] py-4 sm:py-[12px]"
           : "py-4 px-[15px] sm:pt-[40px] sm:pb-0 sm:px-0 lg:pb-[40px]  "
@@ -50,7 +51,7 @@ const Navbar_Top = ({ fixedNavbar, isHome }) => {
       </ul>
       {!fixedNavbar && <Navbar_Top_Search state={isHome} />}
       <div className="flex gap-5 items-center">
-        <Navbar_Top_Auth />
+        <Navbar_Top_Auth fixedNavbar={fixedNavbar} />
         <div className="flex gap-7">
           <Navbar_Top_Wishlist />
           <Navbar_Top_Cart />

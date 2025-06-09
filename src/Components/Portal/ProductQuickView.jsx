@@ -30,14 +30,13 @@ const ProductQuickView = () => {
     <AnimatePresence>
       {productQuickViewState && (
         <motion.div
-          initial={{ opacity: 0, top: "-20%" }}
+          initial={{ opacity: 0, top: "20%" }}
           animate={{
             opacity: 1,
             top: "50%",
-            transition: { delay: 0.2 },
           }}
-          exit={{ opacity: 0, top: "20%", transition: { duration: 0.2 } }}
-          className="bg-white absolute rounded-2xl  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl p-3 flex flex-col md:flex-row w-[80%] h-[80%] md:h-auto md:w-[90%] md:max-w-[1000px]"
+          exit={{ opacity: 0, top: "20%", transition: { delay: 0.2 } }}
+          className="bg-white absolute rounded-2xl left-1/2 -translate-x-1/2 -translate-y-1/2 sm:shadow-2xl p-3 flex flex-col md:flex-row w-[80%] h-[80%] md:h-auto md:w-[90%] md:max-w-[1000px]"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="absolute translate-x-1/2 sm:translate-x-0 right-1/2 sm:right-0 -top-15 sm:-top-16 w">

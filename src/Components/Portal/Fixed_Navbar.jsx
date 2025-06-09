@@ -2,15 +2,17 @@ import { useEffect, useState } from "react";
 import Navbar_Top from "../Navbar/Navbar_Top";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setFixedNavbar } from "../../Store/PortalSlice";
 
 const Fixed_Navbar = () => {
-  const { pathname } = useLocation();
-
   const isHome =
-    pathname === "/Auto-Parts" || pathname === "/Auto-Parts/" ? true : false;
+    useLocation().pathname === "/Auto-Parts" ||
+    useLocation().pathname === "/Auto-Parts/";
 
   const [scrollDownState, setScrollDownState] = useState(false);
 
+  const action = useDispatch();
   //scroll => show fixed navbar
   useEffect(() => {
     function onScrollFunc() {
@@ -26,6 +28,10 @@ const Fixed_Navbar = () => {
     return () => document.body.removeEventListener("scroll", onScrollFunc);
   }, [scrollDownState]);
 
+  useEffect(() => {
+    action(setFixedNavbar(scrollDownState));
+  }, [scrollDownState]);
+
   return (
     <AnimatePresence>
       {scrollDownState && (
@@ -35,7 +41,7 @@ const Fixed_Navbar = () => {
           exit={{ top: "-100%" }}
           transition={{ duration: 1.2 }}
           className={`fixed z-10 top-0 w-[100vw] shadow-bottom ${
-            !isHome ? "bg-yellow-300" : "bg-white"
+            isHome ? "bg-white" : "bg-yellow-300"
           }`}
         >
           <div className="max-w-screen-2xl mx-auto ">

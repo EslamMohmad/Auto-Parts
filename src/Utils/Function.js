@@ -71,3 +71,36 @@ export const filteredObject = (filterKeys, props) => {
   filter.map((key) => (result[key] = props[key]));
   return result;
 };
+
+export const productMatchesSearch = (product, searchTerm) => {
+  const keysToSearch = [
+    "SKU",
+    "brands",
+    "categorie",
+    "heading",
+    "id",
+    "price",
+    "rating",
+    "sale",
+    "size",
+    "tags",
+    "text",
+  ];
+
+  return keysToSearch.some((key) => {
+    const value = product[key];
+    if (!value) return false;
+    if (typeof value === "string")
+      return value.toLowerCase().includes(searchTerm.toLowerCase());
+    if (typeof value === "number")
+      return value.toString().toLowerCase().includes(searchTerm.toLowerCase());
+    if (Array.isArray(value))
+      return value.join(" ").toLowerCase().includes(searchTerm.toLowerCase());
+    if (typeof value === "object")
+      return Object.values(value)
+        .join(" ")
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+    return false;
+  });
+};

@@ -22,12 +22,17 @@ import { useLocation } from "react-router-dom";
 import UserMenu from "./UserMenu.jsx";
 import WishlistMessage from "./WishlistMessage.jsx";
 import Wishlist from "./Wishlist.jsx";
+import Searchbar from "./Searchbar.jsx";
+import {
+  setInputSearchStates,
+  setSearchState,
+} from "../../Store/SearchSlice.js";
 
 const Portal = () => {
   const props = useSelector(({ PortalSlice }) => PortalSlice);
 
   const lessDesktop = useMediaQuery("(max-width : 1024px)");
-  const isMobile = useMediaQuery("(max-width : 639px)");
+  const isMobileScreen = useMediaQuery("(max-width : 639px)");
 
   const action = useDispatch();
 
@@ -40,8 +45,14 @@ const Portal = () => {
       !lessDesktop &&
       !props.authState &&
       action(closeOverlay());
-    props?.searchMenuState && !isMobile && action(toggleSearchMenu(false));
-  }, [lessDesktop, isMobile, props?.searchMenuState]);
+    props?.searchMenuState &&
+      !isMobileScreen &&
+      action(toggleSearchMenu(false));
+
+    isMobileScreen &&
+      action(setSearchState({ state: false, value: "" })) &&
+      action(setInputSearchStates({ inputValue: "", inputFocus: false }));
+  }, [lessDesktop, isMobileScreen, props?.searchMenuState]);
 
   //newsletter popup
   useEffect(() => {
@@ -57,6 +68,7 @@ const Portal = () => {
   return createPortal(
     <>
       <Fixed_Navbar />
+      {!isMobileScreen && <Searchbar />}
       <Overlay>
         <Auth />
         <MainMenu />
@@ -67,8 +79,8 @@ const Portal = () => {
         <Left_Filter />
         <Wishlist />
       </Overlay>
-      {isMobile && <Navbar_Mobile_Bottom />}
-      {!isMobile && <Scroll_Top />}
+      {isMobileScreen && <Navbar_Mobile_Bottom />}
+      {!isMobileScreen && <Scroll_Top />}
       {pathname.includes("my-account") && lessDesktop && <UserMenu />}
       <WishlistMessage />
     </>,

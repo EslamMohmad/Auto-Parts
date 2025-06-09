@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMainMenu } from "../../Store/PortalSlice.js";
-import { js } from "@eslint/js";
 
 const Navbar_Top_Menu = () => {
   const { mainMenuState } = useSelector(({ PortalSlice }) => PortalSlice);
