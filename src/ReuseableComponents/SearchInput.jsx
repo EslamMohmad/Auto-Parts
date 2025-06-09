@@ -48,7 +48,7 @@ const SearchInput = ({ className, name, placeholder }) => {
       onChange={() => setInputValue(inputRef.current.value)}
       onFocus={() => setInputFocus(true)}
       onBlur={() => !inputValue && setInputFocus(false)}
-      value={inputValue}
+      value={inputSearchStates.inputValue}
       className={className}
       name={name}
       autoComplete="off"

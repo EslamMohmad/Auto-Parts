@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import useMediaQuery from "../../Hooks/useMediaQuery";
 import FilterByButton from "./FilterByButton";
 
 const TableGrid = ({ props, setGrids }) => {
@@ -79,11 +78,27 @@ const SortingButton = () => {
     "sort by price : high to low",
   ];
 
+  useEffect(() => {
+    if (list.state) {
+      const handleClickOutside = () =>
+        setList((prev) => ({ ...prev, state: false }));
+
+      document.body.addEventListener("click", () => handleClickOutside());
+
+      return () => {
+        document.body.removeEventListener("click", handleClickOutside);
+      };
+    }
+  }, [list.state]);
+
   return (
     <>
       <button
-        className="text-sm py-3 px-5 bg-white cursor-pointer w-fit text-ellipsis overflow-hidden whitespace-nowrap max-w-[130px] border border-black/15 rounded-lg"
-        onClick={() => setList({ ...list, state: !list.state })}
+        className="text-sm py-3 px-5 bg-white cursor-pointer w-fit text-ellipsis overflow-hidden whitespace-nowrap max-w-[130px] sm:max-w-[200px] border border-black/15 rounded-lg"
+        onClick={(e) => (
+          e.stopPropagation(),
+          setList((prev) => ({ ...prev, state: !prev.state }))
+        )}
       >
         {list.type}
         {list.state ? (

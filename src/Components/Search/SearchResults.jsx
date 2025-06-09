@@ -72,7 +72,7 @@ const SearchResults = () => {
               >
                 <img
                   src={product.imgs[0]}
-                  className="w-full max-h-[300px] object-cover"
+                  className="sm:w-full mx-auto max-h-[200px] sm:max-h-[300px] object-cover"
                 />
               </Link>
               <Link

@@ -5,7 +5,8 @@ import { useSelector } from "react-redux";
 
 const Navbar_Top_Search = ({ state }) => {
   const {
-    inputSearchStates: { inputValue, inputFocus },
+    inputSearchStates: { inputFocus },
+    searchState,
   } = useSelector(({ SearchSlice }) => SearchSlice);
 
   return (
@@ -16,7 +17,9 @@ const Navbar_Top_Search = ({ state }) => {
     >
       <div
         className={`text-gray-400 uppercase absolute left-7 ${
-          inputValue && inputFocus ? "top-2 text-[8px]" : "top-5 text-[10px]"
+          searchState.state || inputFocus
+            ? "top-2 text-[8px]"
+            : "top-5 text-[10px]"
         } transition-all duration-300`}
       >
         enter your keyword

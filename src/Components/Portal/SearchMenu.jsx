@@ -25,7 +25,7 @@ const SearchMenu = () => {
               placeholder="search for products, brands and more"
             />
           </form>
-          <div className="py-10 px-5 flex flex-col gap-7">
+          <div className="py-5 sm:py-10 px-5 flex flex-col gap-7">
             <h6 className="uppercase text-[11px] text-gray-600">
               popular search:
             </h6>

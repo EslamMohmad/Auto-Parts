@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { setSearchState } from "../Store/SearchSlice";
+import { setInputSearchStates, setSearchState } from "../Store/SearchSlice";
 
 const ProductMap = ({ product }) => {
   const action = useDispatch();
@@ -10,7 +10,8 @@ const ProductMap = ({ product }) => {
       top: 0,
       behavior: "smooth",
     });
-    // action(setSearchState({ state: true, value: tag }));
+    action(setSearchState({ state: true, value: tag }));
+    // action(setInputSearchStates({ inputFocus: true, inputValue: tag }));
   };
 
   return (

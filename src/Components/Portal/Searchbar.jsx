@@ -1,13 +1,17 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 import SearchResults from "../Search/SearchResults";
 import SearchTags from "../../ReuseableComponents/SearchTags";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { setInputSearchStates, setSearchState } from "../../Store/SearchSlice";
 
 const Searchbar = () => {
   const { searchState } = useSelector(({ SearchSlice }) => SearchSlice);
 
   const isTablet = useMediaQuery("(max-width: 1024px)");
+
+  const action = useDispatch();
 
   return (
     <AnimatePresence>
@@ -27,6 +31,17 @@ const Searchbar = () => {
               <SearchTags />
             </div>
             <SearchResults />
+            <button
+              className="relative bg-black text-white shadow-bottom border border-black/10 w-[50px] h-[50px] leading-[50px] text-center rounded-full cursor-pointer hover:bg-red-600 transition-colors ml-auto"
+              onClick={() => (
+                action(setSearchState({ state: false, value: "" })),
+                action(
+                  setInputSearchStates({ inputFocus: false, inputValue: "" })
+                )
+              )}
+            >
+              <FontAwesomeIcon icon="fa-solid fa-xmark" />
+            </button>
           </div>
         </motion.div>
       )}

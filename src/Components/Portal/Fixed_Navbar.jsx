@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import Navbar_Top from "../Navbar/Navbar_Top";
 import { AnimatePresence, motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setFixedNavbar } from "../../Store/PortalSlice";
+import useHomePage from "../../Hooks/useHomePage";
 
 const Fixed_Navbar = () => {
-  const isHome =
-    useLocation().pathname === "/Auto-Parts" ||
-    useLocation().pathname === "/Auto-Parts/";
+  const isHome = useHomePage();
 
   const [scrollDownState, setScrollDownState] = useState(false);
 
@@ -29,7 +27,7 @@ const Fixed_Navbar = () => {
   }, [scrollDownState]);
 
   useEffect(() => {
-    action(setFixedNavbar(scrollDownState));
+    !scrollDownState && action(setFixedNavbar(scrollDownState));
   }, [scrollDownState]);
 
   return (
@@ -40,7 +38,7 @@ const Fixed_Navbar = () => {
           animate={{ top: 0 }}
           exit={{ top: "-100%" }}
           transition={{ duration: 1.2 }}
-          className={`fixed z-10 top-0 w-[100vw] shadow-bottom ${
+          className={`fixed z-[11] top-0 w-[100vw] shadow-bottom ${
             isHome ? "bg-white" : "bg-yellow-300"
           }`}
         >
